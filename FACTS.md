@@ -1,0 +1,76 @@
+# GH-300 공식 문서 사실 정리 (2026-11-04 조사)
+
+교안과 가이드의 기술 내용은 **이 파일에 있는 것만** 쓴다. 출처 URL이 없는 내용은 쓰지 않는다. "(검색 요약)"은 페이지를 직접 열지 못하고 검색 결과로만 확인한 것이라, 가이드에서는 "화면 이름이 다를 수 있음"을 함께 적는다.
+
+## 1. VS Code 설정
+- VS Code 1.116(2026-04-15)부터 **Copilot Chat이 기본 내장**. 확장을 따로 설치하지 않는다. https://code.visualstudio.com/updates/v1_116
+- 로그인: 상태 표시줄의 Copilot 아이콘에 마우스 → **Use AI Features** → 로그인 방법 선택. 또는 계정 메뉴에서 GitHub로 로그인, 또는 명령 팔레트 **GitHub Copilot: Sign in**. 구독이 없는 계정은 Copilot Free가 된다. https://code.visualstudio.com/docs/copilot/setup
+- 상태 표시줄의 **Copilot status dashboard**에서 월 사용량(%)을 본다. https://code.visualstudio.com/docs/copilot/setup
+- github.com에서 플랜 확인: 개인 설정 → **Billing & licensing** 또는 Copilot 설정. https://docs.github.com/en/copilot/how-tos/manage-your-account/get-started-with-a-copilot-plan
+- 사용한 AI Credits는 GitHub 설정의 Copilot 사용량 페이지에서 본다. https://github.blog/changelog/2026-07-20-copilot-users-can-now-see-ai-credits-used-per-billing-cycle/
+- 프록시: VS Code는 시스템 프록시를 따른다. 인증 방식 Basic, Digest, NTLM, Negotiate. SSL 오류면 프록시 인증서를 OS 신뢰 저장소에. https://code.visualstudio.com/docs/setup/network
+- 회사 방화벽 허용 주소(개인 플랜): `github.com/login/*`, `github.githubassets.com`, `avatars.githubusercontent.com`, `*.individual.githubcopilot.com`, `copilot-proxy.githubusercontent.com`, `origin-tracker.githubusercontent.com`. https://docs.github.com/en/copilot/reference/copilot-allowlist-reference
+
+## 2. Copilot Pro 플랜
+- 월 10달러, 매월 **AI Credits 1,500**(기본 1,000 + 유연 500). https://docs.github.com/en/copilot/get-started/plans
+- 1 크레딧 = 0.01달러. 모델과 토큰(입력, 출력, 캐시)에 따라 차감. 기본 크레딧부터 쓰고 매월 1일 00:00 UTC 초기화, 이월 없음. https://docs.github.com/copilot/concepts/billing/usage-based-billing-for-individuals
+- **자동 모델 선택(Auto)을 쓰면 모델 비용 10% 할인**. 같은 URL
+- 크레딧을 쓰는 것: Chat, CLI, 클라우드 에이전트, Spaces, 타사 코딩 에이전트. 같은 URL
+- **코드 완성(인라인 제안)과 다음 편집 제안(NES)은 유료 플랜에서 무제한, 크레딧을 쓰지 않는다.** 같은 URL
+- 크레딧이 다 떨어지면: 상위 플랜으로 올리거나, 추가 사용 예산을 정하거나, 다음 달 초기화까지 기다린다. 같은 URL
+- Pro에 포함: 에이전트 모드, 클라우드 에이전트, 코드 리뷰, MCP, Copilot CLI, 리포지토리·개인 사용자 지정 지침, 프롬프트 파일, 공개 코드 필터, PR 요약. **포함 안 됨: 콘텐츠 제외(Content exclusion), 조직 지침.** https://docs.github.com/en/copilot/get-started/plans
+- Opus 계열 모델은 Pro에서 쓸 수 없다. 같은 URL
+- 코드 리뷰는 **AI Credits와 Actions 사용 시간**을 쓴다. 리뷰 1회 평균 Lite 약 0.25달러, Balanced 약 1.50달러, Max 약 10달러. 기본 강도는 2026-09-28부터 Balanced. https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing , https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing/
+- Pro, Pro+ 신규 가입이 2026-04-20에 일시 중단됐다가 2026-06-17부터 단계적으로 다시 열림. 지금 열려 있는지는 확인 못 함. https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/ , https://github.blog/changelog/2026-06-17-copilot-individual-plan-sign-ups-are-reopening
+- Spark는 github.com에서 종료(2026-08-04 신규 중단). https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com/
+- 2026-06-01부터 모든 플랜이 premium request 대신 AI Credits로 과금. https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/
+
+## 3. VS Code의 Copilot 기능
+- 단축키(Mac / Windows): Chat 보기 ⌃⌘I / Ctrl+Alt+I, 인라인 채팅 ⌘I / Ctrl+I(터미널에서도), Quick Chat ⇧⌥⌘L / Ctrl+Shift+Alt+L, 인라인 제안 수락 Tab, 거절 Esc. https://code.visualstudio.com/docs/agents/reference/ai-features-cheat-sheet
+- **하네스(Harness)**: 언어 모델, 맥락, 도구를 조율하는 층. Copilot(일상 작업에 권장, 기본), Local(VS Code 내장, 창을 닫으면 멈춤), Claude, Codex. Chat 보기에서 **+(New Chat)** 후 **Session Target** 컨트롤로 고른다. 활성 하네스는 채팅 제목 앞에 표시. https://code.visualstudio.com/docs/agents/run/agent-harnesses
+- **역할(Agent 선택기)**: **Ask**(질문, 코드 설명. 읽기 전용 도구만), **Agent**(변경을 구현하고 검증), **Plan**(조사 후 구현 계획. Copilot 하네스에서는 `/plan`). Edit 역할은 없다. 사용자 지정 에이전트도 같은 선택기에 나온다. Autopilot은 역할이 아니라 Copilot 하네스의 모드. 같은 URL
+- 빠른 시작 기본값: Session Target **Copilot**, Agent **Agent**, Language model **Auto**, Permissions **Manual**(도구 사용을 내가 승인). https://code.visualstudio.com/docs/agents/quickstart
+- 변경 검토: 채팅에 바뀐 파일과 diff 통계가 보이고, 눌러서 본다. **Changes** 패널 ⌃⇧G / Ctrl+Shift+G. diff에서 부분을 선택해 수정 요청 가능. 같은 URL
+- 되돌리기: 이전 요청에 마우스를 올리고 **Restore Checkpoint**. 파일과 채팅 기록을 되돌리지만 터미널 명령, 네트워크 요청, 배포, 외부 서비스는 되돌리지 않는다. 같은 URL
+- 실행 중 조정: Send 드롭다운의 **Steer with Message**, **Stop and Send**. 멈춰도 이미 한 작업은 그대로. 같은 URL
+- Agents 창: 제목 표시줄의 **Open in Agents** 또는 명령 **Chat: Open Agents window**. 같은 URL
+- 슬래시 명령: `/plan /explain /fix /tests /doc /new /compact /clear /help /models /tools /init /agents /instructions /skills /prompts /create-instructions /create-prompt /create-skill /create-agent` 등. https://code.visualstudio.com/docs/agents/reference/ai-features-cheat-sheet
+- 맥락: `#`를 치면 맥락 항목 목록(`#codebase`, `#fetch` 확인됨). **+(Add Context)** 버튼으로 Files & Folders, Symbols, Issue, Pull Request. 파일, 이미지 끌어다 놓기. **`@workspace` 같은 @참여자는 더 이상 쓰지 않으며 Copilot 하네스에서 동작하지 않는다.** https://code.visualstudio.com/docs/chat/copilot-chat-context
+- 권한 수준 설정 `chat.permissions.default`: Manual(기본), Assisted, Allow all, Autopilot. 터미널 명령 자동 승인 `chat.tools.terminal.autoApprove`. 읽기 전용 명령은 자동, `rm`, `del`은 승인 필요. https://code.visualstudio.com/docs/agents/run/approvals
+
+## 4. 사용자 지정 파일
+- 항상 적용되는 지침: `.github/copilot-instructions.md`(리포지토리 루트의 .github 폴더) 또는 루트의 `AGENTS.md`. 개인: `~/.copilot/copilot-instructions.md`. 명령 팔레트 **Chat: New Instructions File**. 적용 확인: 새 채팅에서 작업 후 응답의 **References**를 펼쳐 지침 파일이 들어갔는지 본다. https://code.visualstudio.com/docs/agent-customization/custom-instructions
+- 대상 지정 지침: `.github/instructions/*.instructions.md`, 머리말 `description`, `applyTo: '**/*.py'`. 같은 URL
+- 프롬프트 파일: `.github/prompts/*.prompt.md`. 명령 **Chat: New Prompt File**. 실행은 Chat에서 `/이름` 또는 **Chat: Run Prompt**. **프롬프트 파일은 Chat 보기의 Local 하네스 세션에서만 실행된다.** 다른 하네스에서 재사용하려면 에이전트 스킬을 쓴다. 머리말 `description`, `agent`(ask/agent/plan), `model`, `tools`. 본문에서 `${selection}` 사용 예. https://code.visualstudio.com/docs/agent-customization/prompt-files
+- 사용자 지정 에이전트: `.github/agents/*.agent.md`. 머리말 `name`, `description`, `tools`. 예전 `.chatmode.md`는 `.agent.md`로. https://code.visualstudio.com/docs/agent-customization/custom-agents
+- 스킬: `.github/skills/<이름>/SKILL.md`. `name`은 소문자와 하이픈, 폴더 이름과 같게. `description`에 무엇을 하는지와 언제 쓰는지. `/이름`으로 실행하거나 요청이 맞으면 자동 로드. https://code.visualstudio.com/docs/agent-customization/agent-skills
+
+## 5. MCP
+- 추가: 명령 **MCP: Add Server**(HTTP 또는 Command), 또는 Chat의 Customizations → MCP Servers, 또는 확장 보기에서 `@mcp` 검색. 개인 설정 파일 `~/.copilot/mcp-config.json`. `.vscode/mcp.json`은 호환용으로만 남음. https://code.visualstudio.com/docs/agent-customization/mcp-servers
+- GitHub MCP 서버 원격 주소 `https://api.githubcopilot.com/mcp/`, 기본 OAuth. (검색 요약) https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/set-up-the-github-mcp-server
+
+## 6. github.com의 Copilot
+- 코드 리뷰: PR의 **Reviewers**에서 Copilot 옆 **Request**. 기본은 댓글형 리뷰(승인, 변경 요청이 아님). (검색 요약) https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/copilot-code-review
+- PR 요약: PR 설명이나 댓글 칸의 Copilot 메뉴 → **Summary**. Free에서는 안 됨. (검색 요약) https://docs.github.com/en/copilot/responsible-use/pull-request-summaries
+- 클라우드 에이전트(예전 이름 coding agent): Pro 포함. 이슈의 **Assignees**에서 **Copilot**을 지정하면 작업 후 항상 PR을 연다. (검색 요약) https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github
+- github.com의 Copilot 진입점: github.com/copilot, 리포지토리의 **Agents** 탭. https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github
+- Spaces: 모든 플랜. github.com/copilot/spaces → **Create space**. 질문은 크레딧 사용. https://docs.github.com/en/copilot/concepts/context/spaces
+
+## 7. Copilot CLI
+- 설치: `npm install -g @github/copilot`(Node 22 이상), `winget install GitHub.Copilot`, `brew install --cask copilot-cli`. Windows는 PowerShell 6 이상. 로그인 `/login`. 모든 플랜 포함. https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli
+- 실행 `copilot`. Shift+Tab으로 standard → plan → autopilot 전환. `@파일`로 파일 첨부, `!명령`으로 셸 실행. https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference
+
+## 8. 개인정보와 안전장치 (개인 플랜)
+- 프로필 사진 → **Copilot settings** → **Suggestions matching public code**: Allow 또는 Block. https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies
+- **2026-04-24부터 Free, Pro, Pro+ 사용자의 상호작용이 모델 학습에 쓰일 수 있다(기본값).** 끄려면 Copilot settings → **Allow GitHub to use my data for AI model training** → Disabled. Business, Enterprise는 해당 없음. 같은 URL
+- 콘텐츠 제외는 Business, Enterprise 기능. Pro에는 없다. https://docs.github.com/en/copilot/concepts/context/content-exclusion
+- 코드 참조: 공개 코드 일치를 허용하면 일치한 출처와 라이선스를 보여 준다. 인라인 제안의 1% 미만에서 일치가 생긴다. https://docs.github.com/en/copilot/concepts/completions/code-referencing
+
+## 9. 프롬프트 작성 (GitHub 문서 "Prompt engineering for GitHub Copilot Chat")
+- 9가지 전략(문서 순서): Start general, then get specific(넓게 시작해 구체적으로) / Give examples(예시를 준다) / Break complex tasks into simpler tasks(쪼갠다) / Avoid ambiguity(모호함을 피한다) / Provide relevant context(관련 맥락을 준다) / Experiment and iterate(바꿔 가며 반복) / Keep history relevant(대화 기록을 관련 있게, 필요 없으면 새 채팅) / Review Copilot's output(결과를 검토) / Follow good coding practices(좋은 코드 습관을 따른다). https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat
+
+## 10. GH-300 시험 범위 (2026-08-07 기준)
+책임 있는 사용 15~20% / Copilot 기능 사용 25~30% / 데이터와 구조 10~15% / 프롬프트와 맥락 10~15% / 생산성 10~15% / 개인정보, 콘텐츠 제외, 안전장치 10~15%. https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300
+
+## 11. 2025년 자료가 틀리는 것 (교안에 쓰지 말 것)
+- premium request(→ AI Credits), Ask/Edit/Agent 모드(→ 하네스 + 역할 Ask/Agent/Plan), `@workspace`(→ `#codebase`), Copilot 확장 설치(→ 내장), coding agent(→ 클라우드 에이전트), Spark(종료), `.vscode/mcp.json`(→ 호환용), `.chatmode.md`(→ `.agent.md`).
