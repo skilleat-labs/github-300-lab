@@ -30,12 +30,14 @@
 - **하네스(Harness)**: 언어 모델, 맥락, 도구를 조율하는 층. Copilot(일상 작업에 권장, 기본), Local(VS Code 내장, 창을 닫으면 멈춤), Claude, Codex. Chat 보기에서 **+(New Chat)** 후 **Session Target** 컨트롤로 고른다. 활성 하네스는 채팅 제목 앞에 표시. https://code.visualstudio.com/docs/agents/run/agent-harnesses
 - **역할(Agent 선택기)**: **Ask**(질문, 코드 설명. 읽기 전용 도구만), **Agent**(변경을 구현하고 검증), **Plan**(조사 후 구현 계획. Copilot 하네스에서는 `/plan`). Edit 역할은 없다. 사용자 지정 에이전트도 같은 선택기에 나온다. Autopilot은 역할이 아니라 Copilot 하네스의 모드. 같은 URL
 - 빠른 시작 기본값: Session Target **Copilot**, Agent **Agent**, Language model **Auto**, Permissions **Manual**(도구 사용을 내가 승인). https://code.visualstudio.com/docs/agents/quickstart
-- 변경 검토: 채팅에 바뀐 파일과 diff 통계가 보이고, 눌러서 본다. **Changes** 패널 ⌃⇧G / Ctrl+Shift+G. diff에서 부분을 선택해 수정 요청 가능. 같은 URL
+- 변경 검토: 채팅에 바뀐 파일과 diff 통계가 보이고, 눌러서 본다. diff에서 부분을 선택해 수정 요청 가능. 같은 URL
+- ⌃⇧G / Ctrl+Shift+G는 **Source Control 보기**. **Changes**(스테이징 전), **Staged Changes** 목록. (에이전트 빠른 시작 문서는 같은 단축키를 Changes 패널로 부르지만, 가이드는 소스 제어 보기로 통일) https://code.visualstudio.com/docs/sourcecontrol/overview
 - 되돌리기: 이전 요청에 마우스를 올리고 **Restore Checkpoint**. 파일과 채팅 기록을 되돌리지만 터미널 명령, 네트워크 요청, 배포, 외부 서비스는 되돌리지 않는다. 같은 URL
 - 실행 중 조정: Send 드롭다운의 **Steer with Message**, **Stop and Send**. 멈춰도 이미 한 작업은 그대로. 같은 URL
 - Agents 창: 제목 표시줄의 **Open in Agents** 또는 명령 **Chat: Open Agents window**. 같은 URL
 - 슬래시 명령: `/plan /explain /fix /tests /doc /new /compact /clear /help /models /tools /init /agents /instructions /skills /prompts /create-instructions /create-prompt /create-skill /create-agent` 등. https://code.visualstudio.com/docs/agents/reference/ai-features-cheat-sheet
 - 맥락: `#`를 치면 맥락 항목 목록(`#codebase`, `#fetch` 확인됨). **+(Add Context)** 버튼으로 Files & Folders, Symbols, Issue, Pull Request. 파일, 이미지 끌어다 놓기. **`@workspace` 같은 @참여자는 더 이상 쓰지 않으며 Copilot 하네스에서 동작하지 않는다.** https://code.visualstudio.com/docs/chat/copilot-chat-context
+- Manual은 자동 승인되지 않은 작업만 확인을 요청한다. 읽기 전용 명령, 이미 허용한 규칙은 묻지 않을 수 있다. 버튼: **Allow Once**, in this Session, **Always Allow**. https://code.visualstudio.com/docs/agents/run/approvals
 - 권한 수준 설정 `chat.permissions.default`: Manual(기본), Assisted, Allow all, Autopilot. 터미널 명령 자동 승인 `chat.tools.terminal.autoApprove`. 읽기 전용 명령은 자동, `rm`, `del`은 승인 필요. https://code.visualstudio.com/docs/agents/run/approvals
 
 ## 4. 사용자 지정 파일
@@ -53,6 +55,10 @@
 - 코드 리뷰: PR의 **Reviewers**에서 Copilot 옆 **Request**. 기본은 댓글형 리뷰(승인, 변경 요청이 아님). (검색 요약) https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/copilot-code-review
 - PR 요약: PR 설명이나 댓글 칸의 Copilot 메뉴 → **Summary**. Free에서는 안 됨. (검색 요약) https://docs.github.com/en/copilot/responsible-use/pull-request-summaries
 - 클라우드 에이전트(예전 이름 coding agent): Pro 포함. 이슈의 **Assignees**에서 **Copilot**을 지정하면 작업 후 항상 PR을 연다. (검색 요약) https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github
+- 클라우드 에이전트 PR: 기본 설정에서는 Copilot이 올린 변경에 워크플로가 자동 실행되지 않음. 병합 영역의 **Approve and run workflows**(쓰기 권한 필요)를 누른다. 먼저 변경, 특히 `.github/workflows/`를 읽는다. 끝나면 리뷰를 요청함. PR 댓글의 `@copilot`으로 수정 요청. https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github
+- Copilot은 PR을 **Ready for review**로 바꾸거나 승인, 병합할 수 없음. 맡긴 사람은 그 PR을 승인할 수 없음. https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations
+- Pages 사용자 지정 워크플로: 배포 작업에 최소 `pages: write`, `id-token: write`, `environment`(기본 `github-pages`) 필요. 예제 `configure-pages@v5`, `upload-pages-artifact@v4`, `deploy-pages@v4`. 무료 플랜 계정의 리포지토리는 Public이어야 함. https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages , https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+- 병합 충돌: 같은 파일의 같은 줄을 다르게 고치거나 한쪽이 파일을 지울 때 발생. 다른 줄, 다른 파일은 보통 자동 병합. 해결은 최종 내용을 정하는 일. https://docs.github.com/en/pull-requests/reference/merge-conflicts
 - github.com의 Copilot 진입점: github.com/copilot, 리포지토리의 **Agents** 탭. https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github
 - Spaces: 모든 플랜. github.com/copilot/spaces → **Create space**. 질문은 크레딧 사용. https://docs.github.com/en/copilot/concepts/context/spaces
 

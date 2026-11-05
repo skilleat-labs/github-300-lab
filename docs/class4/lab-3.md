@@ -5,7 +5,7 @@
     - PR 설명을 Copilot의 **Summary**로 만들고, 자동 테스트(CI) "테스트"가 초록 체크인지 확인합니다.
     - 혼자 쓰는 리포지토리이므로 직접 병합하고, VS Code의 main을 최신으로 맞춥니다.
 
-**소요 시간** 약 8분  **실습 장소** VS Code와 github.com의 `room-practice`  **관련 교안** [4교시 교안](index.md)
+**소요 시간** 약 7분  **실습 장소** VS Code와 github.com의 `room-practice`  **관련 교안** [4교시 교안](index.md)
 
 ## 준비
 

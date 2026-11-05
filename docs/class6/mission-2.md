@@ -5,13 +5,16 @@
     - 팀이 체크리스트로 워크플로를 검토하고, PR로 병합합니다.
     - main에 병합되면 현황판이 GitHub Pages 주소로 자동 배포되는 것을 확인합니다. CI(테스트)와 CD(배포)를 함께 정리합니다.
 
-**소요 시간** 약 12분  **실습 장소** 팀 리포지토리 `room-booking-team<번호>`  **관련 교안** [6교시 교안](index.md)
+**소요 시간** 약 11분  **실습 장소** 팀 리포지토리 `room-booking-team<번호>`  **관련 교안** [6교시 교안](index.md)
 
 ## 준비
 
 - 미션 6-1에서 스토리 PR이 모두 병합되어 있으면 좋습니다. 덜 끝났어도 이 미션은 시작할 수 있습니다.
 - 4-4에서 PO가 **Settings** → **Pages** → Source를 **GitHub Actions**로 바꿔 두었어야 합니다.
 - 작업은 **개발자 한 명**이 VS Code에서 하고, 나머지는 화면을 같이 보며 STEP 3 검토를 함께 합니다.
+
+!!! info "예약 명령과 현황판의 관계"
+    예약 명령 실행 → 예약 규칙 검사 → JSON에 저장 → `build_site.py`로 HTML 생성 → Pages에 게시. S1~S4는 예약 명령의 동작을 바꾸는 기능이라, 병합해도 현황판에는 데이터의 5건이 그대로 보입니다. 정상입니다. 현황판 웹페이지에서 예약을 입력하는 기능은 이번 과정에서 만들지 않습니다.
 
 !!! info "CD가 뭔가요?"
     CD(Continuous Deployment, 지속적 배포)는 main에 병합될 때마다 결과물을 자동으로 내보내는 것입니다. 우리 팀은 `python build_site.py`로 만든 현황판 `site/index.html`을 GitHub Pages(GitHub가 제공하는 무료 웹페이지 호스팅)에 올립니다. `site/` 폴더는 `.gitignore`에 들어 있어 커밋되지 않습니다. 그래서 GitHub Actions가 서버에서 직접 만들어 올려야 합니다.
@@ -58,8 +61,12 @@ Copilot이 만든 워크플로는 매번 조금씩 다릅니다. 순서나 버�
 | 이름 | `name: 현황판 배포` | Actions 탭에서 찾는 이름 |
 | 실행 시점 | `on:` 아래 `push:`와 `branches: [main]` | main에 병합될 때만 배포 |
 | 수동 실행 | `workflow_dispatch:` | 데이터만 바꿨을 때 손으로 다시 배포 |
-| 권한 | `pages: write`, `id-token: write` | Pages에 배포하려면 꼭 필요 |
+| 권한 | `contents: read`, `pages: write`, `id-token: write` | 코드를 읽고 Pages에 배포하는 데 필요 |
+| 배포 환경 | `environment:` 아래 `name: github-pages` | GitHub 문서가 요구하는 항목 |
+| 코드 받기 | `actions/checkout` | 저장소 파일을 가져옴 |
+| Python 준비 | `actions/setup-python`과 3.12 | `build_site.py` 실행 환경 |
 | 사이트 만들기 | `run: python build_site.py` | `site/index.html` 생성 |
+| 설정 | `actions/configure-pages` | Pages 배포 준비 |
 | 올리기 | `actions/upload-pages-artifact`와 `path: site` | `site/` 폴더를 배포 묶음으로 |
 | 배포 | `actions/deploy-pages` | 실제 배포 |
 
@@ -69,10 +76,10 @@ Copilot이 만든 워크플로는 매번 조금씩 다릅니다. 순서나 버�
 permissions에 pages: write와 id-token: write가 없습니다. 추가해 주세요.
 ```
 
-확인: 표의 7개 항목을 모두 찾았습니다.
+확인: 표의 항목을 모두 찾았습니다. 버전 숫자나 순서는 달라도 됩니다.
 
 ??? example "강사 참고 정답"
-    아래는 비교용 참고 워크플로입니다. Copilot 결과와 비교만 하고, 그대로 복사하지 않습니다. `concurrency`(동시에 두 번 배포되지 않게)와 `environment`(배포 주소 표시)는 있으면 좋은 항목입니다.
+    아래는 비교용 참고 워크플로입니다. Copilot 결과와 비교만 하고, 그대로 복사하지 않습니다. `concurrency`(동시에 두 번 배포되지 않게)는 있으면 좋은 항목입니다. 위 표의 항목은 모두 있어야 합니다.
 
     ```yaml
     name: 현황판 배포
@@ -104,7 +111,7 @@ permissions에 pages: write와 id-token: write가 없습니다. 추가해 주세
               python-version: "3.12"
           - run: python build_site.py
           - uses: actions/configure-pages@v5
-          - uses: actions/upload-pages-artifact@v3
+          - uses: actions/upload-pages-artifact@v4
             with:
               path: site
           - id: deployment

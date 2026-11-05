@@ -63,14 +63,14 @@
     ```
 
 3. 승인 요청이 뜨면 무엇을 실행하는지 읽고 승인합니다. 삭제 명령이나 `git push`는 승인하지 않습니다.
-4. 채팅의 바뀐 파일 목록과 **Changes** 패널(Windows ++ctrl+shift+g++, Mac ⌃⇧G)에서 diff를 읽습니다.
+4. 채팅의 바뀐 파일 목록이나 소스 제어 보기(Windows ++ctrl+shift+g++, Mac ⌃⇧G)의 **Changes** 목록에서 diff를 읽습니다.
 5. 터미널에서 직접 테스트를 실행합니다.
 
     ```text
     python -m pytest
     ```
 
-확인: `failed` 없이 `4 passed`보다 많은 테스트가 통과합니다. 바뀐 파일이 [팀 백로그](index.md#backlog)의 "바꿀 곳"과 테스트 파일뿐입니다.
+확인: `failed`가 없고, 내 스토리의 인수 조건마다 테스트가 있습니다. 바뀐 파일이 [팀 백로그](index.md#backlog)의 "바꿀 곳"과 테스트 파일뿐입니다.
 
 ## STEP 4. 인수 조건대로 직접 확인하기
 

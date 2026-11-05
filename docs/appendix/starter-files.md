@@ -63,7 +63,7 @@ meeting-room-starter/
 
 ## build_site.py
 
-예약 현황판을 만드는 스크립트입니다. 제목과 예약자를 그대로 HTML에 넣고(7-1 XSS), 연락처를 그대로 보여 줍니다(6-3 CR-001).
+예약 현황판을 만드는 스크립트입니다. 제목과 예약자를 그대로 HTML에 넣고(7-2 XSS), 연락처를 그대로 보여 줍니다(6-3 CR-001).
 
 ```python
 --8<-- "starter/build_site.py"

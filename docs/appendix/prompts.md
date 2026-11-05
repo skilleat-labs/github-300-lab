@@ -276,35 +276,7 @@ CR-001: 현황판이 회의실 앞 태블릿과 사외에서도 보입니다. �
 
 ## 7교시 책임과 보안
 
-**7-1 보안 검토** (Ask, `build_site.py` 첨부) [실습 7-1](../class7/lab-1.md)
-
-```text
-build_site.py를 보안 관점에서 검토해 주세요.
-이 현황판은 회의실 앞 태블릿과 사외에서도 열리는 웹페이지입니다.
-- 보안 위험을 위험도 순서로 알려 주세요.
-- 각 위험마다 근거가 되는 코드 줄과, 어떻게 악용될 수 있는지 한 줄씩 써 주세요.
-- 고치는 방법을 제안해 주세요. 아직 코드는 바꾸지 마세요.
-```
-
-**7-1 XSS 고치기** (Agent)
-
-```text
-build_site.py의 XSS를 고쳐 주세요.
-- Python 표준 라이브러리 html.escape()를 써 주세요.
-- 사용자가 입력하는 값 title, booker, team, phone을 모두 escape해 주세요.
-- 화면 모양과 다른 동작은 바꾸지 마세요.
-```
-
-**7-1 XSS 테스트**
-
-```text
-/tests build_site.py의 XSS 방지를 확인하는 테스트를 tests/ 폴더에 추가해 주세요.
-- 제목과 예약자에 <script>가 들어간 예약으로 HTML을 만들었을 때 결과에 <script>가 없고 &lt;script&gt;가 있어야 합니다.
-- 실제 data/reservations.json과 site/ 폴더는 건드리지 않게 해 주세요.
-- 테스트를 쉽게 하려고 build_site.py를 바꿔야 하면 무엇을 왜 바꾸는지 먼저 설명해 주세요.
-```
-
-**7-2 클라우드 에이전트에게 맡길 이슈** (github.com 이슈 본문, Assignees에 Copilot) [실습 7-2](../class7/lab-2.md)
+**7-1 클라우드 에이전트에게 맡길 이슈** (github.com 이슈 본문, Assignees에 Copilot) [실습 7-1](../class7/lab-1.md)
 
 ```text
 ## 배경
@@ -319,6 +291,34 @@ booking/report.py의 usage_report()는 중첩 if와 한 글자 변수(t, c, a, b
 - 동작은 바꾸지 않습니다. python -m booking report 출력이 지금과 같아야 합니다.
 - 다른 파일의 동작은 바꾸지 않습니다.
 - 기존 테스트는 모두 통과해야 합니다.
+```
+
+**7-2 보안 검토** (Ask, `build_site.py` 첨부) [실습 7-2](../class7/lab-2.md)
+
+```text
+build_site.py를 보안 관점에서 검토해 주세요.
+이 현황판은 회의실 앞 태블릿과 사외에서도 열리는 웹페이지입니다.
+- 보안 위험을 위험도 순서로 알려 주세요.
+- 각 위험마다 근거가 되는 코드 줄과, 어떻게 악용될 수 있는지 한 줄씩 써 주세요.
+- 고치는 방법을 제안해 주세요. 아직 코드는 바꾸지 마세요.
+```
+
+**7-2 XSS 고치기** (Agent)
+
+```text
+build_site.py의 XSS를 고쳐 주세요.
+- Python 표준 라이브러리 html.escape()를 써 주세요.
+- 사용자가 입력하는 값 title, booker, team, phone을 모두 escape해 주세요.
+- 화면 모양과 다른 동작은 바꾸지 마세요.
+```
+
+**7-2 XSS 테스트**
+
+```text
+/tests build_site.py의 XSS 방지를 확인하는 테스트를 tests/ 폴더에 추가해 주세요.
+- 제목과 예약자에 <script>가 들어간 예약으로 HTML을 만들었을 때 결과에 <script>가 없고 &lt;script&gt;가 있어야 합니다.
+- 실제 data/reservations.json과 site/ 폴더는 건드리지 않게 해 주세요.
+- 테스트를 쉽게 하려고 build_site.py를 바꿔야 하면 무엇을 왜 바꾸는지 먼저 설명해 주세요.
 ```
 
 **7-3 지침 적용 확인** (Ask, 새 채팅) [실습 7-3](../class7/lab-3.md)
