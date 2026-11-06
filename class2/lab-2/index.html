@@ -29,7 +29,7 @@
     
     
       
-        <title>실습 2-2 코드 설명 듣기 - GitHub Copilot 실습 가이드 (GH-300)</title>
+        <title>실습 2-2 코드 설명 듣고 설명 주석 받기 - GitHub Copilot 실습 가이드 (GH-300)</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              실습 2-2 코드 설명 듣기
+              실습 2-2 코드 설명 듣고 설명 주석 받기
             
           </span>
         </div>
@@ -410,7 +410,7 @@
   
     
   
-  7교시 책임과 보안
+  7교시 책임과 내 업무 적용
 
         </a>
       </li>
@@ -426,7 +426,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../appendix/prompts/" class="md-tabs__link">
+        <a href="../../appendix/vscode-copilot/" class="md-tabs__link">
           
   
   
@@ -782,7 +782,7 @@
   <span class="md-ellipsis">
     
   
-    실습 1-2 내 리포지토리 만들고 가져오기
+    실습 1-2 내 리포지토리 만들고 VS Code 익히기
   
 
     
@@ -960,7 +960,7 @@
   <span class="md-ellipsis">
     
   
-    실습 2-2 코드 설명 듣기
+    실습 2-2 코드 설명 듣고 설명 주석 받기
   
 
     
@@ -978,7 +978,7 @@
   <span class="md-ellipsis">
     
   
-    실습 2-2 코드 설명 듣기
+    실습 2-2 코드 설명 듣고 설명 주석 받기
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    실습 3-3 프롬프트 파일 만들기
+    실습 3-3 프롬프트 파일로 아이디어 검토
   
 
     
@@ -1481,6 +1481,8 @@
       
         
       
+        
+      
     
     
     
@@ -1580,6 +1582,34 @@
     
   
     미션 5-2 스토리 구현
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class5/mission-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-3 클라우드 에이전트에 맡기기
   
 
     
@@ -1811,7 +1841,7 @@
   <span class="md-ellipsis">
     
   
-    7교시 책임과 보안
+    7교시 책임과 내 업무 적용
   
 
     
@@ -1833,7 +1863,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    7교시 책임과 보안
+    7교시 책임과 내 업무 적용
   
 
           </label>
@@ -1855,7 +1885,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-1 클라우드 에이전트에 맡기기
+    실습 7-1 보안 검토
   
 
     
@@ -1883,7 +1913,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-2 보안 검토
+    실습 7-2 내 업무 자동화 도구
   
 
     
@@ -1911,7 +1941,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-3 팀 사용 규칙과 정리
+    실습 7-3 팀 규칙, 활용 사례와 정리
   
 
     
@@ -1940,6 +1970,8 @@
   
     
     
+      
+        
       
         
       
@@ -1995,6 +2027,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/vscode-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code와 Copilot 한 장 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2213,21 +2273,22 @@
 
 
 
-<h1 id="2-2">실습 2-2. 코드 설명 듣기<a class="headerlink" href="#2-2" title="Permanent link">&para;</a></h1>
+<h1 id="2-2">실습 2-2. 코드 설명 듣고 설명 주석 받기<a class="headerlink" href="#2-2" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">이 실습에서 할 일</p>
 <ul>
 <li>아무도 손대기 싫어하는 <code>booking/report.py</code>를 <code>/explain</code>으로 설명받습니다.</li>
 <li><strong>인라인 채팅</strong>으로 특정 줄만 콕 집어 묻습니다.</li>
 <li>설명을 그대로 믿지 않고, 프로그램을 직접 실행해 숫자로 검증합니다.</li>
+<li><code>/doc</code>으로 설명 주석 초안을 받아 코드와 맞는지 읽습니다.</li>
 </ul>
-<p><strong>예상 시간</strong> 약 10분</p>
+<p><strong>예상 시간</strong> 약 12분</p>
 </div>
 <h2 id="_1">준비<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>room-practice</code>가 VS Code에 열려 있어야 합니다.</li>
 <li>Chat 보기를 엽니다(Windows <code>Ctrl+Alt+I</code>, Mac <code>⌃⌘I</code>). Session Target <strong>Copilot</strong>, 역할 <strong>Ask</strong>, 모델 <strong>Auto</strong>.</li>
-<li>이 실습은 파일을 고치지 않습니다. 설명만 듣습니다.</li>
+<li>이 실습은 끝날 때 파일을 바꾸지 않습니다. 설명 주석은 받아서 읽고 되돌립니다.</li>
 </ul>
 <h2 id="step-1-reportpy">STEP 1. report.py 열어 보기<a class="headerlink" href="#step-1-reportpy" title="Permanent link">&para;</a></h2>
 <ol>
@@ -2254,6 +2315,10 @@
 <li>회의실마다 예약 <strong>건수</strong>와 예약된 <strong>총 시간</strong>을 더한다.</li>
 <li>총 시간이 6시간 넘으면 "높음", 2시간 넘으면 "보통", 그 이하는 "낮음", 예약이 없으면 "없음".</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">오른쪽 클릭으로도 부를 수 있어요</p>
+<p>코드를 선택하고 오른쪽 클릭 → <strong>Explain</strong>을 눌러도 설명을 받습니다.</p>
+</div>
 <h2 id="step-3">STEP 3. 인라인 채팅으로 한 줄만 묻기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
 <p><strong>인라인 채팅</strong>은 Chat 보기로 가지 않고 편집기 안에서 바로 묻는 방법입니다.</p>
 <ol>
@@ -2347,12 +2412,33 @@
 </ul>
 <p>숫자가 들어간 설명은 항상 실제 실행 결과 한두 개로 대조해 봅니다.</p>
 </div>
+<h2 id="step-6-doc">STEP 6. /doc으로 설명 주석 받기<a class="headerlink" href="#step-6-doc" title="Permanent link">&para;</a></h2>
+<p>코드 설명과 문서는 Copilot이 초안을 쓰기 좋은 일입니다. 틀린 설명이 문서로 남지 않게 읽는 것은 사람의 몫입니다.</p>
+<ol>
+<li><code>report.py</code>에서 <code>def usage_report</code> 줄을 클릭합니다.</li>
+<li>Windows <code>Ctrl+I</code>, Mac <code>⌘I</code>로 인라인 채팅을 엽니다.</li>
+<li>
+<p>입력하고 Enter를 누릅니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/doc 이 함수가 무엇을 계산하는지 기획자가 읽을 수 있는 한국어 설명 주석을 써 주세요. 이용률 기준을 포함해 주세요.
+</span></code></pre></div>
+</li>
+<li>
+<p>제안된 주석을 읽습니다. 기준이 "2시간을 <strong>넘으면</strong> 보통"인지 STEP 5에서 본 코드와 비교합니다.</p>
+</li>
+<li>받지 않고 인라인 채팅을 닫습니다. 소스 제어 <strong>Changes</strong>에 <code>report.py</code>가 있으면 <strong>Discard Changes</strong>를 누릅니다.</li>
+</ol>
+<p>확인: 주석 초안을 읽고 기준이 코드와 맞는지 판단했습니다. <code>report.py</code>는 바뀌지 않았습니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">다른 방법</p>
+<p>오른쪽 클릭 → <strong>Generate Code</strong> → <strong>Generate Docs</strong>로도 받습니다. 오늘 오후에는 클라우드 에이전트에게 사용 설명 문서를 맡겨 봅니다.</p>
+</div>
 <h2 id="_2">다 됐는지 확인<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>report.py</code> 전체를 선택하고 <code>/explain</code>으로 설명을 받았습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 인라인 채팅(<code>Ctrl+I</code> / <code>⌘I</code>)으로 <code>lv</code>에 대해 물었습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>python -m booking report</code>를 실행하고, 소회의실 A의 숫자를 손으로 검증했습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 중회의실 2.0시간이 "낮음"인 이유를 설명할 수 있습니다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>/doc</code>으로 받은 주석의 기준을 코드와 비교했습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>report.py</code>는 바뀌지 않았습니다(소스 제어 <strong>Changes</strong>가 비어 있음).</li>
 </ul>
 <h2 id="_3">막히면<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>

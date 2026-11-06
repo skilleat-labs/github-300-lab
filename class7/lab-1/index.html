@@ -29,7 +29,7 @@
     
     
       
-        <title>실습 7-1 클라우드 에이전트에 맡기기 - GitHub Copilot 실습 가이드 (GH-300)</title>
+        <title>실습 7-1 보안 검토 - GitHub Copilot 실습 가이드 (GH-300)</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#7-1" class="md-skip">
+        <a href="#7-1-xss" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              실습 7-1 클라우드 에이전트에 맡기기
+              실습 7-1 보안 검토
             
           </span>
         </div>
@@ -410,7 +410,7 @@
   
     
   
-  7교시 책임과 보안
+  7교시 책임과 내 업무 적용
 
         </a>
       </li>
@@ -426,7 +426,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../appendix/prompts/" class="md-tabs__link">
+        <a href="../../appendix/vscode-copilot/" class="md-tabs__link">
           
   
   
@@ -782,7 +782,7 @@
   <span class="md-ellipsis">
     
   
-    실습 1-2 내 리포지토리 만들고 가져오기
+    실습 1-2 내 리포지토리 만들고 VS Code 익히기
   
 
     
@@ -948,7 +948,7 @@
   <span class="md-ellipsis">
     
   
-    실습 2-2 코드 설명 듣기
+    실습 2-2 코드 설명 듣고 설명 주석 받기
   
 
     
@@ -1142,7 +1142,7 @@
   <span class="md-ellipsis">
     
   
-    실습 3-3 프롬프트 파일 만들기
+    실습 3-3 프롬프트 파일로 아이디어 검토
   
 
     
@@ -1376,6 +1376,8 @@
       
         
       
+        
+      
     
     
     
@@ -1475,6 +1477,34 @@
     
   
     미션 5-2 스토리 구현
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class5/mission-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-3 클라우드 에이전트에 맡기기
   
 
     
@@ -1709,7 +1739,7 @@
   <span class="md-ellipsis">
     
   
-    7교시 책임과 보안
+    7교시 책임과 내 업무 적용
   
 
     
@@ -1731,7 +1761,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    7교시 책임과 보안
+    7교시 책임과 내 업무 적용
   
 
           </label>
@@ -1762,7 +1792,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-1 클라우드 에이전트에 맡기기
+    실습 7-1 보안 검토
   
 
     
@@ -1780,7 +1810,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-1 클라우드 에이전트에 맡기기
+    실습 7-1 보안 검토
   
 
     
@@ -1820,7 +1850,7 @@
   <a href="#step-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 1. 지금 동작 기록해 두기
+        STEP 1. 문제 재현하기
       
     </span>
   </a>
@@ -1828,10 +1858,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-pm-copilot" class="md-nav__link">
+  <a href="#step-2-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 2. (PM) 이슈 쓰고 Copilot에게 맡기기
+        STEP 2. Copilot에게 보안 검토 맡기기
       
     </span>
   </a>
@@ -1839,10 +1869,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3" class="md-nav__link">
+  <a href="#step-3-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 3. 맡겨 두고 다른 실습하기
+        STEP 3. Copilot 제안도 검토하기
       
     </span>
   </a>
@@ -1850,10 +1880,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-pr" class="md-nav__link">
+  <a href="#step-4-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 4. (팀 함께) PR 검토하기
+        STEP 4. Agent로 고치기
       
     </span>
   </a>
@@ -1864,7 +1894,18 @@
   <a href="#step-5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 5. 병합 여부 결정하기
+        STEP 5. 다시 열어 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 6. 정리하고 커밋하기
       
     </span>
   </a>
@@ -1916,7 +1957,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-2 보안 검토
+    실습 7-2 내 업무 자동화 도구
   
 
     
@@ -1944,7 +1985,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-3 팀 사용 규칙과 정리
+    실습 7-3 팀 규칙, 활용 사례와 정리
   
 
     
@@ -1973,6 +2014,8 @@
   
     
     
+      
+        
       
         
       
@@ -2028,6 +2071,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/vscode-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code와 Copilot 한 장 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2189,7 +2260,7 @@
   <a href="#step-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 1. 지금 동작 기록해 두기
+        STEP 1. 문제 재현하기
       
     </span>
   </a>
@@ -2197,10 +2268,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-pm-copilot" class="md-nav__link">
+  <a href="#step-2-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 2. (PM) 이슈 쓰고 Copilot에게 맡기기
+        STEP 2. Copilot에게 보안 검토 맡기기
       
     </span>
   </a>
@@ -2208,10 +2279,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3" class="md-nav__link">
+  <a href="#step-3-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 3. 맡겨 두고 다른 실습하기
+        STEP 3. Copilot 제안도 검토하기
       
     </span>
   </a>
@@ -2219,10 +2290,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-pr" class="md-nav__link">
+  <a href="#step-4-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 4. (팀 함께) PR 검토하기
+        STEP 4. Agent로 고치기
       
     </span>
   </a>
@@ -2233,7 +2304,18 @@
   <a href="#step-5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 5. 병합 여부 결정하기
+        STEP 5. 다시 열어 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 6. 정리하고 커밋하기
       
     </span>
   </a>
@@ -2279,187 +2361,202 @@
 
 
 
-<h1 id="7-1">실습 7-1. 클라우드 에이전트에 이슈 맡기기<a class="headerlink" href="#7-1" title="Permanent link">&para;</a></h1>
+<h1 id="7-1-xss">실습 7-1. 보안 검토 (XSS)<a class="headerlink" href="#7-1-xss" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">이 실습에서 할 일</p>
 <ul>
-<li>PM이 리팩터링 이슈를 쓰고 <strong>Assignees</strong>에 <strong>Copilot</strong>을 지정해 클라우드 에이전트에게 맡깁니다.</li>
-<li>클라우드 에이전트가 GitHub에서 작업해 PR을 엽니다.</li>
-<li>팀이 PR을 검토(테스트 통과, 동작이 그대로인지)하고 병합 여부를 결정합니다.</li>
+<li>개인 리포지토리 <code>room-practice</code>에서 회의 제목에 스크립트를 넣어 현황판의 보안 문제(XSS)를 직접 재현합니다.</li>
+<li>Copilot에게 보안 검토를 맡기고, 제안을 검토해 Agent로 고칩니다. Copilot 결과도 놓친 곳이 없는지 사람이 확인합니다.</li>
+<li>다시 열어 스크립트가 글자로만 보이는지 확인하고 커밋합니다.</li>
 </ul>
 </div>
-<p><strong>소요 시간</strong> 이슈 맡기기 약 5분 (에이전트 작업 시간 별도, 수업 안에 끝나지 않아도 됩니다)  <strong>실습 장소</strong> 팀 리포지토리 <code>room-booking-team&lt;번호&gt;</code> (github.com)  <strong>관련 교안</strong> <a href="../">7교시 교안</a></p>
+<p><strong>소요 시간</strong> 약 8분  <strong>실습 장소</strong> 개인 리포지토리 <code>room-practice</code> (VS Code)  <strong>관련 교안</strong> <a href="../">7교시 교안</a></p>
 <h2 id="_1">준비<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">팀당 1건만 맡깁니다</p>
-<p>클라우드 에이전트는 AI Credits와 GitHub Actions 사용 시간을 씁니다. <strong>팀당 이슈 1건만</strong> 맡깁니다. 팀원이 각자 맡기지 않습니다.</p>
-</div>
 <ul>
-<li>이 실습은 PM 한 명이 이슈를 쓰고, 나머지는 같이 화면을 보며 검토합니다. 3인 팀은 PO가 합니다.</li>
+<li>팀 리포지토리가 아니라 <strong>개인 리포지토리</strong>에서 합니다. 팀원끼리 같은 파일을 동시에 고쳐 충돌이 나지 않게 하려는 것입니다.</li>
+<li>VS Code에서 <strong>File</strong> → <strong>Open Recent</strong>(또는 <strong>Open Folder</strong>)로 <code>문서/copilot-lab/room-practice</code>를 엽니다.</li>
+<li>상태 표시줄 브랜치가 <code>main</code>인지 보고, 동기화 아이콘을 눌러 최신으로 맞춥니다.</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">클라우드 에이전트와 VS Code의 Agent는 무엇이 다른가요?</p>
-<p>VS Code의 Agent는 <strong>내 PC</strong>에서 내가 지켜보며 승인하고 일합니다. 클라우드 에이전트는 <strong>GitHub 쪽</strong>에서 혼자 일하고, 끝나면 항상 PR을 엽니다. 내 PC를 꺼도 일이 진행됩니다. 결과는 PR로 받으니, 오늘 해 온 PR 검토를 그대로 하면 됩니다.</p>
+<p class="admonition-title">XSS가 뭔가요?</p>
+<p>XSS(Cross-Site Scripting, 사이트 간 스크립트)는 사용자가 입력한 글자에 스크립트가 섞여 있을 때, 웹페이지가 그것을 글자가 아니라 <strong>실행할 코드</strong>로 처리해서 생기는 보안 문제입니다. 현황판은 누구나 회의 제목을 적을 수 있고, 회의실 앞 태블릿과 사외에서도 열립니다. 제목 하나로 보는 사람의 브라우저에서 무엇이든 실행될 수 있다는 뜻입니다.</p>
 </div>
-<h2 id="step-1">STEP 1. 지금 동작 기록해 두기<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h2>
-<p>리팩터링(refactoring)은 동작은 그대로 두고 코드를 읽기 쉽게 고치는 것입니다. "그대로인지" 확인하려면 지금 결과를 먼저 적어 둡니다.</p>
+<h2 id="step-1">STEP 1. 문제 재현하기<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h2>
 <ol>
-<li>VS Code에서 팀 리포지토리를 열고 main을 최신으로 맞춥니다.</li>
 <li>
-<p>터미널에서 실행합니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python -m booking report
+<p>터미널에서 회의 제목에 스크립트를 넣어 예약합니다. 따옴표를 그대로 복사합니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python -m booking add --room R1 --title "&lt;script&gt;alert('예약')&lt;/script&gt;" --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 2
 </span></code></pre></div>
-<p>Starter 데이터 그대로라면 이렇게 나옵니다. 우리 팀이 데이터를 바꿨다면 다를 수 있습니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>소회의실 A {'건수': 2, '시간': 2.5, '이용률': '보통'}
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>소회의실 B {'건수': 1, '시간': 1.0, '이용률': '낮음'}
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>중회의실 {'건수': 1, '시간': 2.0, '이용률': '낮음'}
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>대회의실 {'건수': 1, '시간': 2.0, '이용률': '낮음'}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[예약 완료] #6 2026-11-13 10:00~11:00 R1 &lt;script&gt;alert('예약')&lt;/script&gt;
 </span></code></pre></div>
 </li>
 <li>
-<p>결과를 메모장에 복사해 둡니다.</p>
+<p>현황판을 만듭니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python build_site.py
+</span></code></pre></div>
 </li>
-<li><code>booking/report.py</code>를 열어 봅니다. 중첩된 <code>if</code>와 <code>t</code>, <code>c</code>, <code>a</code>, <code>b</code>, <code>lv</code> 같은 한 글자 변수가 보입니다.</li>
+<li>
+<p>탐색기에서 <code>site/index.html</code> 오른쪽 클릭 → <strong>Reveal in File Explorer</strong>(Mac은 <strong>Reveal in Finder</strong>) → <code>index.html</code>을 더블클릭해 브라우저로 엽니다.</p>
+</li>
 </ol>
-<p>확인: <code>report</code> 결과를 메모해 두었습니다.</p>
-<h2 id="step-2-pm-copilot">STEP 2. (PM) 이슈 쓰고 Copilot에게 맡기기<a class="headerlink" href="#step-2-pm-copilot" title="Permanent link">&para;</a></h2>
-<ol>
-<li>github.com 팀 리포지토리 → <strong>Issues</strong> → <strong>New issue</strong>를 클릭합니다.</li>
-<li>
-<p>제목과 본문을 입력합니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>report.py를 읽기 쉽게 리팩터링하고 테스트 추가 (동작은 그대로)
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>## 배경
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>booking/report.py의 usage_report()는 중첩 if와 한 글자 변수(t, c, a, b, lv)가 많아 읽기 어렵습니다.
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>## 할 일
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>- 변수 이름을 뜻이 드러나게 바꾸고, 중첩 if를 줄여 주세요.
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>- 시간 계산은 booking/rules.py의 to_minutes()를 재사용할 수 있으면 써 주세요.
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>- tests/test_report.py에 usage_report() 테스트를 추가해 주세요. 건수, 시간, 이용률(없음, 낮음, 보통, 높음)을 확인해 주세요.
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>## 지켜야 할 것
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>- 동작은 바꾸지 않습니다. python -m booking report 출력이 지금과 같아야 합니다.
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>- 다른 파일의 동작은 바꾸지 않습니다.
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>- 기존 테스트는 모두 통과해야 합니다.
-</span></code></pre></div>
-</li>
-<li>
-<p>오른쪽 <strong>Assignees</strong> 톱니 → 목록에서 <strong>Copilot</strong>을 고릅니다.</p>
-</li>
-<li><strong>Create</strong>(화면에 따라 <strong>Submit new issue</strong>)를 클릭합니다.</li>
-</ol>
-<p>확인: 이슈의 <strong>Assignees</strong>에 <strong>Copilot</strong>이 보입니다.</p>
-<div class="admonition note">
-<p class="admonition-title">화면이 조금 다를 수 있어요</p>
-<p>이슈의 <strong>Assignees</strong>에서 <strong>Copilot</strong>을 지정하는 방법은 공식 문서 검색 요약으로 확인한 것입니다. 목록에 Copilot이 없으면 강사에게 알립니다. 리포지토리의 <strong>Agents</strong> 탭도 github.com에서 Copilot을 쓰는 입구입니다.</p>
+<p>확인: 브라우저에 <strong>"예약"이라는 알림창</strong>이 뜹니다. 이것이 보안 문제가 재현된 것입니다. 알림창의 <strong>확인</strong>을 누릅니다.</p>
+<div class="admonition warning">
+<p class="admonition-title">알림창은 가장 순한 예입니다</p>
+<p>지금은 알림창만 띄웠지만, 같은 자리에 다른 스크립트를 넣으면 화면을 바꾸거나 다른 사이트로 보내는 일도 할 수 있습니다. 실습 밖의 서비스에서는 절대 시도하지 않습니다.</p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">이슈를 잘 쓰는 것이 프롬프트입니다</p>
-<p>클라우드 에이전트는 이슈 본문을 보고 일합니다. 3교시에 배운 좋은 프롬프트 구조(배경, 할 일, 지켜야 할 것, 확인 방법)가 그대로 이슈 본문이 됩니다.</p>
-</div>
-<h2 id="step-3">STEP 3. 맡겨 두고 다른 실습하기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
-<p>클라우드 에이전트는 작업에 몇 분에서 십여 분이 걸립니다.</p>
+<h2 id="step-2-copilot">STEP 2. Copilot에게 보안 검토 맡기기<a class="headerlink" href="#step-2-copilot" title="Permanent link">&para;</a></h2>
 <ol>
-<li>기다리지 않습니다. 바로 <a href="../lab-2/">실습 7-2</a>를 진행하고, 이어서 <a href="../lab-3/">실습 7-3</a>을 합니다.</li>
-<li>가끔 <strong>Pull requests</strong> 탭을 봅니다. Copilot이 연 PR이 생기면 엽니다.</li>
-<li>PR의 <strong>Conversation</strong> 탭에서 Copilot이 쓴 작업 설명을 읽습니다.</li>
-</ol>
-<p>확인: Copilot이 연 PR이 있고, 이슈와 연결되어 있습니다.</p>
-<h2 id="step-4-pr">STEP 4. (팀 함께) PR 검토하기<a class="headerlink" href="#step-4-pr" title="Permanent link">&para;</a></h2>
-<p>Copilot은 작업을 마치면 리뷰를 요청합니다. 알림이나 PR 화면에서 확인합니다. 아래 순서를 지킵니다.</p>
-<ol>
-<li><strong>Files changed</strong>를 <strong>먼저</strong> 읽습니다. 바뀐 파일이 <code>booking/report.py</code>와 테스트 파일 정도인지 봅니다. <code>.github/workflows/</code>를 바꿨으면 특히 주의합니다.</li>
-<li>이상이 없으면 쓰기 권한이 있는 사람이 PR 병합 영역의 <strong>Approve and run workflows</strong>를 클릭합니다. 기본 설정에서는 Copilot이 올린 변경에 워크플로가 자동으로 돌지 않으니, 이 버튼 없이 기다려도 검사가 시작되지 않습니다.</li>
-<li><strong>Checks</strong>에서 <strong>테스트 / test</strong>가 초록인지 봅니다.</li>
-<li>변수 이름이 읽기 쉬워졌는지 팀이 같이 읽어 봅니다.</li>
+<li>Chat <strong>+</strong>(<strong>New Chat</strong>) → Session Target <strong>Copilot</strong>, Agent <strong>Ask</strong>를 고릅니다.</li>
+<li><strong>+</strong>(<strong>Add Context</strong>) → <strong>Files &amp; Folders</strong>로 <code>build_site.py</code>를 추가합니다.</li>
 <li>
-<p>동작이 같은지 직접 비교합니다. VS Code에서</p>
-<ol>
-<li>소스 제어의 동기화 아이콘을 누르거나 명령 팔레트에서 <code>Git: Fetch</code>를 실행합니다.</li>
-<li>상태 표시줄 브랜치 이름 클릭 → PR 위쪽에 보이는 Copilot 브랜치 이름(<code>origin/</code>으로 시작)을 고릅니다.</li>
-<li>
-<p>실행합니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python -m booking report
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python -m pytest
+<p>Chat에 붙여 넣기</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>build_site.py를 보안 관점에서 검토해 주세요.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>이 현황판은 회의실 앞 태블릿과 사외에서도 열리는 웹페이지입니다.
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>- 보안 위험을 위험도 순서로 알려 주세요.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>- 각 위험마다 근거가 되는 코드 줄과, 어떻게 악용될 수 있는지 한 줄씩 써 주세요.
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>- 고치는 방법을 제안해 주세요. 아직 코드는 바꾸지 마세요.
 </span></code></pre></div>
 </li>
 <li>
-<p>STEP 1에서 메모한 결과와 한 글자씩 비교합니다.</p>
+<p>답을 읽고 아래를 찾습니다.</p>
+<ul>
+<li>사용자가 입력한 값(제목 등)을 HTML에 그대로 넣는다는 지적 (XSS)</li>
+<li>고치는 방법으로 Python 표준 라이브러리 <code>html.escape()</code></li>
+<li>연락처를 공개한다는 개인정보 지적이 함께 나올 수도 있습니다</li>
+</ul>
 </li>
-<li>끝나면 상태 표시줄에서 다시 <code>main</code>으로 돌아옵니다.</li>
 </ol>
-</li>
-</ol>
-<p>확인: 테스트가 통과하고, <code>report</code> 출력이 STEP 1과 같습니다.</p>
-<h2 id="step-5">STEP 5. 병합 여부 결정하기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
+<p>확인: 답에 XSS와 <code>html.escape()</code>가 있습니다.</p>
+<h2 id="step-3-copilot">STEP 3. Copilot 제안도 검토하기<a class="headerlink" href="#step-3-copilot" title="Permanent link">&para;</a></h2>
+<p>Copilot의 보안 검토도 <strong>검토 대상</strong>입니다. 제안이 회의 제목(<code>title</code>)만 말하고 끝날 때가 많습니다.</p>
+<ol>
+<li><code>build_site.py</code>에서 <code>rows +=</code>로 시작하는 부분을 엽니다.</li>
+<li>
+<p><code>{r.</code> 로 시작하는 값을 모두 찾습니다. 사람이 입력할 수 있는 값은 아래 4개입니다.</p>
 <table>
 <thead>
 <tr>
-<th>검토 결과</th>
-<th>결정</th>
+<th>값</th>
+<th>어디서 들어오나</th>
+<th>escape 필요</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>테스트 통과, 출력 같음, 읽기 쉬워짐</td>
-<td>Draft이면 <strong>Ready for review</strong>를 클릭하고, BA가 <strong>Approve</strong>, PM이 병합</td>
+<td><code>r.title</code></td>
+<td><code>--title</code></td>
+<td>예</td>
 </tr>
 <tr>
-<td>출력이 다름</td>
-<td>병합하지 않음. PR에 무엇이 다른지 댓글로 남김</td>
+<td><code>r.booker</code></td>
+<td><code>--booker</code></td>
+<td>예</td>
 </tr>
 <tr>
-<td>범위 밖 파일을 바꿈</td>
-<td>병합하지 않음. 이유를 댓글로 남김</td>
+<td><code>r.team</code></td>
+<td><code>--team</code></td>
+<td>예</td>
+</tr>
+<tr>
+<td><code>r.phone</code></td>
+<td><code>--phone</code></td>
+<td>예</td>
 </tr>
 </tbody>
 </table>
-<p>확인: 팀이 병합하거나, 병합하지 않는 이유를 PR 댓글로 남겼습니다.</p>
-<div class="admonition warning">
-<p class="admonition-title">사람이 해야 하는 일</p>
-<p>Copilot은 자기 PR을 <strong>Ready for review</strong>로 바꾸거나 승인, 병합할 수 없습니다. 그리고 Copilot에게 일을 맡긴 사람(PM)은 그 PR을 승인할 수 없습니다. 그래서 BA나 PO가 승인합니다. 고칠 점이 있으면 PR 댓글에 <code>@copilot</code>을 붙여 요청합니다.</p>
-</div>
+</li>
+<li>
+<p>Copilot 제안이 4개를 모두 다루는지 봅니다. 빠진 것이 있으면 메모합니다.</p>
+</li>
+</ol>
+<p>확인: 제안에서 빠진 필드를 찾았거나, 4개를 모두 다룬다는 것을 확인했습니다.</p>
+<h2 id="step-4-agent">STEP 4. Agent로 고치기<a class="headerlink" href="#step-4-agent" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Agent 선택기를 <strong>Agent</strong>로 바꿉니다.</li>
+<li>
+<p>Chat에 붙여 넣기</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>build_site.py의 XSS를 고쳐 주세요.
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>- Python 표준 라이브러리 html.escape()를 써 주세요.
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>- 사용자가 입력하는 값 title, booker, team, phone을 모두 escape해 주세요.
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>- 화면 모양과 다른 동작은 바꾸지 마세요.
+</span></code></pre></div>
+</li>
+<li>
+<p>승인 요청을 읽고 승인합니다.</p>
+</li>
+<li>diff를 읽고 <code>html.escape</code>가 4곳에 모두 들어갔는지 봅니다.</li>
+</ol>
+<p>확인: <code>build_site.py</code>에 <code>import html</code>(또는 비슷한 import)과 escape 4곳이 있습니다.</p>
+<h2 id="step-5">STEP 5. 다시 열어 확인하기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>현황판을 다시 만듭니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python build_site.py
+</span></code></pre></div>
+</li>
+<li>
+<p>브라우저의 현황판 탭에서 새로 고침합니다. Windows <span class="keys"><kbd class="key-f5">F5</kbd></span>, Mac <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-r">R</kbd></span></p>
+</li>
+</ol>
+<p>확인: 알림창이 뜨지 않고, 회의 칸에 <code>&lt;script&gt;alert('예약')&lt;/script&gt;</code>가 <strong>글자 그대로</strong> 보입니다.</p>
 <div class="admonition tip">
-<p class="admonition-title">시간 안에 안 끝나면</p>
-<p>PR이 열린 것까지만 확인하고 7-3으로 넘어갑니다. 검토와 병합은 다음 날 해도 됩니다. 일을 맡겨 두고 다른 일을 하는 것이 클라우드 에이전트를 쓰는 이유입니다.</p>
+<p class="admonition-title">브라우저 개발자 도구로 더 확인하려면 (선택)</p>
+<p>페이지에서 오른쪽 클릭 → 페이지 소스 보기를 열면 <code>&amp;lt;script&amp;gt;</code>처럼 바뀌어 있습니다. <code>&lt;</code>가 <code>&amp;lt;</code>로 바뀌어 브라우저가 코드가 아닌 글자로 그립니다.</p>
+</div>
+<h2 id="step-6">STEP 6. 정리하고 커밋하기<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h2>
+<ol>
+<li>실습용 예약을 되돌립니다. <strong>소스 제어</strong>에서 <code>data/reservations.json</code> → <strong>Discard Changes</strong></li>
+<li>
+<p>바뀐 파일이 <code>build_site.py</code>뿐인지 보고 커밋합니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>현황판 XSS 방지 (html.escape)
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Sync Changes</strong>로 올립니다.</p>
+</li>
+</ol>
+<p>확인: 커밋이 GitHub에 올라갔고, <code>data/reservations.json</code>은 바뀌지 않았습니다.</p>
+<details class="tip">
+<summary>수업 뒤에 테스트까지 추가해 보려면 (선택)</summary>
+<p>Chat에 붙여 넣습니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/tests build_site.py의 XSS 방지를 확인하는 테스트를 tests/ 폴더에 추가해 주세요.
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>- 제목과 예약자에 &lt;script&gt;가 들어간 예약으로 HTML을 만들었을 때 결과에 &lt;script&gt;가 없고 &amp;lt;script&amp;gt;가 있어야 합니다.
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>- 실제 data/reservations.json과 site/ 폴더는 건드리지 않게 해 주세요.
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>- 테스트를 쉽게 하려고 build_site.py를 바꿔야 하면 무엇을 왜 바꾸는지 먼저 설명해 주세요.
+</span></code></pre></div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">팀 리포지토리는요?</p>
+<p>팀 리포지토리의 <code>build_site.py</code>에도 같은 문제가 남아 있을 수 있습니다. 6-3에서 CR-001을 구현하며 escape했는지 확인해 보세요. 고쳐야 하면 같은 흐름(이슈 → 브랜치 → PR)으로 반영합니다.</p>
 </div>
 <h2 id="_2">다 됐는지 확인<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>report</code> 결과를 미리 메모했다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (PM) 이슈를 쓰고 Assignees에 Copilot을 지정했다 (팀당 1건)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 변경을 먼저 읽고 <strong>Approve and run workflows</strong>를 눌렀다 (또는 다음 날 하기로 했다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 테스트 통과와 <code>report</code> 출력이 같은지 확인했다 (또는 다음 날 확인하기로 했다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 병합 여부를 팀이 결정했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 제목에 스크립트를 넣어 알림창이 뜨는 것을 재현했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Copilot Ask로 보안 검토를 받고 XSS와 <code>html.escape()</code>를 확인했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Copilot 제안이 <code>title</code> 외에 <code>booker</code>, <code>team</code>, <code>phone</code>도 다루는지 검토했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 고친 뒤 스크립트가 글자로만 보였다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터 변경을 되돌리고 커밋했다</li>
 </ul>
 <h2 id="_3">막히면<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <details class="failure">
-<summary>Assignees 목록에 Copilot이 없어요</summary>
-<p>이슈를 만든 사람의 Copilot 플랜을 봅니다. 클라우드 에이전트는 Pro에 포함되지만 Free에는 없습니다. 리포지토리 소유자(PO)가 Pro인지 확인하고, PO가 지정해 봅니다.</p>
+<summary>알림창이 처음부터 안 떠요</summary>
+<p><code>python build_site.py</code>를 예약을 넣은 <strong>뒤에</strong> 실행했는지 봅니다. 또 브라우저에서 예전 <code>index.html</code>을 보고 있을 수 있으니 새로 고침합니다.</p>
 </details>
 <details class="failure">
-<summary>한참 기다려도 PR이 안 열려요</summary>
-<p>클라우드 에이전트는 시간이 걸릴 수 있습니다. 7-3을 먼저 하고 돌아옵니다. 수업이 끝날 때까지 안 열리면 다음 날 확인합니다.</p>
+<summary>터미널에서 add 명령이 따옴표 오류로 실패해요</summary>
+<p>명령 전체를 그대로 복사했는지 봅니다. 제목은 큰따옴표 <code>"</code>로 감싸고, 안의 <code>'예약'</code>은 작은따옴표입니다.</p>
 </details>
 <details class="failure">
-<summary>PR이 열렸는데 테스트가 돌지 않아요</summary>
-<p>정상입니다. 변경 내용을 읽은 뒤 PR 병합 영역의 <strong>Approve and run workflows</strong>를 누릅니다.</p>
+<summary>고쳤는데도 알림창이 떠요</summary>
+<p><code>python build_site.py</code>를 다시 실행하지 않았거나, 새로 고침하지 않은 것입니다. 그래도 뜨면 <code>title</code>에 escape가 실제로 들어갔는지 diff를 다시 봅니다.</p>
 </details>
 <details class="failure">
-<summary>병합 버튼이 안 눌려요</summary>
-<p>Draft 상태입니다. <strong>Ready for review</strong>를 먼저 누릅니다. 승인은 일을 맡긴 사람이 아닌 팀원이 합니다.</p>
+<summary>테스트가 실제 data 파일을 바꿔 버렸어요</summary>
+<p><strong>소스 제어</strong>에서 <code>data/reservations.json</code>을 <strong>Discard Changes</strong>로 되돌리고, Chat에 "테스트는 임시 데이터만 써야 합니다. 실제 data 파일을 건드리지 않게 고쳐 주세요"라고 요청합니다.</p>
 </details>
 <details class="failure">
-<summary>테스트가 실패한 PR이 열렸어요</summary>
-<p>병합하지 않습니다. <strong>Details</strong> 로그의 실패 줄을 PR 댓글에 남깁니다. 이것도 검토의 결과입니다.</p>
-</details>
-<details class="failure">
-<summary>Copilot 브랜치로 바꿨더니 report 결과가 달라요</summary>
-<p>동작이 바뀐 것입니다. 어떤 줄이 다른지 PR 댓글로 남기고 병합하지 않습니다. 이용률 경계값(2시간, 6시간)에서 <code>&gt;</code>와 <code>&gt;=</code>가 바뀐 경우가 많습니다.</p>
-</details>
-<details class="failure">
-<summary>브랜치 목록에 Copilot 브랜치가 없어요</summary>
-<p>아직 가져오지 않은 것입니다. 명령 팔레트에서 <code>Git: Fetch</code>를 실행하고 다시 봅니다.</p>
+<summary>Copilot이 escape 대신 직접 replace로 바꿨어요</summary>
+<p><code>replace("&lt;", "&amp;lt;")</code>처럼 직접 바꾸면 빠뜨리는 글자가 생기기 쉽습니다. "표준 라이브러리 html.escape()로 바꿔 주세요"라고 요청합니다.</p>
 </details>
 
 
@@ -2515,13 +2612,13 @@
         
         
           
-          <a href="../lab-2/" class="md-footer__link md-footer__link--next" aria-label="다음: 실습 7-2 보안 검토">
+          <a href="../lab-2/" class="md-footer__link md-footer__link--next" aria-label="다음: 실습 7-2 내 업무 자동화 도구">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 다음
               </span>
               <div class="md-ellipsis">
-                실습 7-2 보안 검토
+                실습 7-2 내 업무 자동화 도구
               </div>
             </div>
             <div class="md-footer__button md-icon">

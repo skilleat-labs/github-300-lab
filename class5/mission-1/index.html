@@ -410,7 +410,7 @@
   
     
   
-  7교시 책임과 보안
+  7교시 책임과 내 업무 적용
 
         </a>
       </li>
@@ -426,7 +426,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../appendix/prompts/" class="md-tabs__link">
+        <a href="../../appendix/vscode-copilot/" class="md-tabs__link">
           
   
   
@@ -782,7 +782,7 @@
   <span class="md-ellipsis">
     
   
-    실습 1-2 내 리포지토리 만들고 가져오기
+    실습 1-2 내 리포지토리 만들고 VS Code 익히기
   
 
     
@@ -948,7 +948,7 @@
   <span class="md-ellipsis">
     
   
-    실습 2-2 코드 설명 듣기
+    실습 2-2 코드 설명 듣고 설명 주석 받기
   
 
     
@@ -1142,7 +1142,7 @@
   <span class="md-ellipsis">
     
   
-    실습 3-3 프롬프트 파일 만들기
+    실습 3-3 프롬프트 파일로 아이디어 검토
   
 
     
@@ -1372,6 +1372,8 @@
       
         
           
+        
+      
         
       
         
@@ -1648,6 +1650,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mission-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-3 클라우드 에이전트에 맡기기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1866,7 +1896,7 @@
   <span class="md-ellipsis">
     
   
-    7교시 책임과 보안
+    7교시 책임과 내 업무 적용
   
 
     
@@ -1888,7 +1918,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    7교시 책임과 보안
+    7교시 책임과 내 업무 적용
   
 
           </label>
@@ -1910,7 +1940,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-1 클라우드 에이전트에 맡기기
+    실습 7-1 보안 검토
   
 
     
@@ -1938,7 +1968,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-2 보안 검토
+    실습 7-2 내 업무 자동화 도구
   
 
     
@@ -1966,7 +1996,7 @@
   <span class="md-ellipsis">
     
   
-    실습 7-3 팀 사용 규칙과 정리
+    실습 7-3 팀 규칙, 활용 사례와 정리
   
 
     
@@ -1995,6 +2025,8 @@
   
     
     
+      
+        
       
         
       
@@ -2050,6 +2082,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/vscode-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code와 Copilot 한 장 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2559,16 +2619,6 @@
 <li>S2, S3, S4도 반복합니다. 같은 채팅에서 스토리와 완료 기준만 바꿔 보냅니다.</li>
 </ol>
 <p>확인: 스토리 이슈 본문에 Given-When-Then 인수 조건이 3개씩 있습니다. 시간이 모자라면 완료 기준을 기본으로 삼고, 빠진 경우만 인수 조건으로 보완합니다. 다른 팀원은 BA를 기다리지 않고 미션 5-2를 시작합니다.</p>
-<details class="tip">
-<summary>3교시에 만든 <code>/story</code> 프롬프트 파일을 다시 쓰려면 (선택)</summary>
-<p>팀 리포지토리는 템플릿에서 새로 만들어 <code>.github/prompts/story.prompt.md</code>가 없습니다. 쓰고 싶으면 개인 <code>room-practice</code>의 그 파일을 팀 리포지토리의 같은 위치에 복사합니다. 팀에서 같이 쓰려면 main에 <strong>별도로 커밋</strong>하고 모두 동기화합니다. 혼자 한 번 쓸 거라면 쓴 뒤 <strong>삭제</strong>합니다. 기능 커밋에 섞이면 안 됩니다.</p>
-<ol>
-<li>이슈 본문(스토리와 완료 기준)을 VS Code의 새 파일에 붙여 넣고, 그 글을 선택합니다. <code>/story</code>는 선택한 글(<code>${selection}</code>)을 읽습니다.</li>
-<li>프롬프트 파일은 <strong>Local</strong> 하네스에서만 실행됩니다. <strong>+</strong>(<strong>New Chat</strong>) → Session Target <strong>Local</strong>을 고릅니다.</li>
-<li><code>/</code>를 입력하고 <strong>story</strong>를 고른 뒤 <span class="keys"><kbd class="key-enter">Enter</kbd></span>를 누릅니다.</li>
-</ol>
-<p>결과 검토 기준은 위 표와 같습니다. 끝나면 Session Target을 <strong>Copilot</strong>으로 돌려 둡니다.</p>
-</details>
 <h2 id="step-5">STEP 5. (개발자) 바꿀 파일과 충돌 위험 분석하기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
 <ol>
 <li>VS Code Chat 보기에서 <strong>+</strong>(<strong>New Chat</strong>)를 클릭합니다. Session Target <strong>Copilot</strong>, Agent <strong>Ask</strong>를 고릅니다.</li>
@@ -2638,10 +2688,6 @@
 <details class="failure">
 <summary>이슈 본문의 Edit 메뉴를 못 찾겠어요</summary>
 <p>이슈 본문 상자 오른쪽 위 <strong>...</strong>(점 3개)을 누르면 <strong>Edit</strong>가 있습니다. 내가 만든 이슈가 아니어도 Write 권한이 있으면 고칠 수 있습니다.</p>
-</details>
-<details class="failure">
-<summary>/story를 쳤는데 아무것도 안 나와요</summary>
-<p>Session Target이 <strong>Local</strong>이 아니거나, 파일이 <code>.github/prompts/story.prompt.md</code> 위치에 없는 것입니다. 시간이 없으면 STEP 4의 기본 프롬프트를 씁니다.</p>
 </details>
 
 
