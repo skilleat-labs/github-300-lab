@@ -9,16 +9,18 @@ meeting-room-starter/
 ├── README.md                    실행, 테스트 방법
 ├── pyproject.toml               pytest 설정
 ├── requirements-dev.txt         pytest
-├── .gitignore                   __pycache__, .venv, .pytest_cache, site/
+├── .gitignore                   __pycache__, .venv, .pytest_cache, site/, reports/
 ├── .vscode/settings.json        VS Code에서 pytest 켬
 ├── .github/workflows/ci.yml     자동 테스트 "테스트" (job test)
 ├── docs/
 │   ├── 00_현업요청.md            총무팀 최수연 대리의 요청
 │   ├── 01_킥오프_회의록.md       결정한 것 4개, 결정하지 못한 것 3개
-│   └── 02_현행_업무.md           엑셀 흐름, 회의실 표, 운영 규칙
+│   ├── 02_현행_업무.md           엑셀 흐름, 회의실 표, 운영 규칙
+│   └── 04_월간집계_업무.md       총무팀 월간 집계 업무 (3-3, 7-2)
 ├── data/
 │   ├── rooms.json               회의실 4개 (R1~R4)
-│   └── reservations.json        예약 5건
+│   ├── reservations.json        예약 5건
+│   └── room_usage_2026-10.csv   10월 사용 기록 120행 (7-2)
 ├── booking/
 │   ├── models.py                Room, Reservation
 │   ├── store.py                 JSON 읽기, 쓰기
@@ -63,7 +65,7 @@ meeting-room-starter/
 
 ## build_site.py
 
-예약 현황판을 만드는 스크립트입니다. 제목과 예약자를 그대로 HTML에 넣고(7-2 XSS), 연락처를 그대로 보여 줍니다(6-3 CR-001).
+예약 현황판을 만드는 스크립트입니다. 제목과 예약자를 그대로 HTML에 넣고(7-1 XSS), 연락처를 그대로 보여 줍니다(6-3 CR-001).
 
 ```python
 --8<-- "starter/build_site.py"

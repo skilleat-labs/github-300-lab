@@ -40,6 +40,12 @@
 - Manual은 자동 승인되지 않은 작업만 확인을 요청한다. 읽기 전용 명령, 이미 허용한 규칙은 묻지 않을 수 있다. 버튼: **Allow Once**, in this Session, **Always Allow**. https://code.visualstudio.com/docs/agents/run/approvals
 - 권한 수준 설정 `chat.permissions.default`: Manual(기본), Assisted, Allow all, Autopilot. 터미널 명령 자동 승인 `chat.tools.terminal.autoApprove`. 읽기 전용 명령은 자동, `rm`, `del`은 승인 필요. https://code.visualstudio.com/docs/agents/run/approvals
 
+- 화면 이름: Activity Bar, Primary Side Bar, Secondary Side Bar(기본으로 Chat 보기), Editor, Panel, Status Bar. 단축키: Command Palette ⇧⌘P / Ctrl+Shift+P, Quick Open ⌘P / Ctrl+P, Primary Side Bar ⌘B / Ctrl+B. https://code.visualstudio.com/docs/getstarted/userinterface
+- 자동 저장: **File** → **Auto Save**. https://code.visualstudio.com/docs/editor/codebasics
+- 스마트 작업: 소스 제어 입력 칸의 반짝이 아이콘 **Generate Commit Message**. 코드 선택 후 오른쪽 클릭 **Explain**, **Generate Code** → **Generate Docs**, **Generate Tests**, **Fix**, **Review**. 터미널에서 실패한 명령 옆 반짝이 아이콘으로 설명과 수정. 병합 충돌 **Resolve Merge Conflict with AI**(실험 기능). https://code.visualstudio.com/docs/copilot/copilot-smart-actions
+- 새 채팅 ⌘N / Ctrl+N, 터미널 인라인 채팅 ⌘I / Ctrl+I, `/doc`은 인라인 채팅에서 문서 주석 생성. https://code.visualstudio.com/docs/copilot/reference/copilot-vscode-features
+- 맥락 항목 `#selection`(선택한 글), 파일 선택. 쓸 수 있는 `#` 목록은 하네스, 확장에 따라 다르고 도구 이름은 하네스마다 다를 수 있다. https://code.visualstudio.com/docs/agents/reference/tools-reference
+
 ## 4. 사용자 지정 파일
 - 항상 적용되는 지침: `.github/copilot-instructions.md`(리포지토리 루트의 .github 폴더) 또는 루트의 `AGENTS.md`. 개인: `~/.copilot/copilot-instructions.md`. 명령 팔레트 **Chat: New Instructions File**. 적용 확인: 새 채팅에서 작업 후 응답의 **References**를 펼쳐 지침 파일이 들어갔는지 본다. https://code.visualstudio.com/docs/agent-customization/custom-instructions
 - 대상 지정 지침: `.github/instructions/*.instructions.md`, 머리말 `description`, `applyTo: '**/*.py'`. 같은 URL

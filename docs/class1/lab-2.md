@@ -1,11 +1,11 @@
-# 실습 1-2. 템플릿으로 내 리포지토리 만들고 VS Code로 가져오기
+# 실습 1-2. 내 리포지토리 만들고 VS Code 익히기
 
 !!! abstract "이 실습에서 할 일"
     - Starter 템플릿으로 오늘 오전 내내 쓸 개인 리포지토리 `room-practice`를 만듭니다.
     - VS Code의 **Git: Clone**으로 내 PC에 가져오고, 테스트와 프로그램을 한 번씩 실행합니다.
     - 파일 탐색기로 프로젝트 구조를 둘러봅니다.
 
-    **예상 시간** 약 10분
+    **예상 시간** 약 11분
 
 ## 준비
 
@@ -130,15 +130,36 @@ python -m pytest
 
 확인: 두 명령의 결과가 위와 같습니다.
 
-## STEP 8. 프로젝트 구조 둘러보기
+## STEP 8. VS Code 화면 익히기
+
+처음 쓰는 분은 천천히 해 봅니다. 이미 익숙하면 건너뜁니다.
+
+| 이름 | 어디에 | 하는 일 |
+|---|---|---|
+| **Activity Bar** (활동 막대) | 맨 왼쪽 아이콘 줄 | 탐색기, 소스 제어 같은 보기 바꾸기 |
+| **Primary Side Bar** (기본 사이드바) | 왼쪽 | 파일 목록 |
+| **Editor** (편집기) | 가운데 | 파일을 읽고 고치기 |
+| **Secondary Side Bar** (보조 사이드바) | 오른쪽 | 기본으로 Chat 보기가 있는 곳 |
+| **Panel** (패널) | 아래 | 터미널 |
+| **Status Bar** (상태 표시줄) | 맨 아래 줄 | 브랜치 이름, Copilot 아이콘 |
+
+1. Windows `Ctrl+B`, Mac `⌘B`를 두 번 눌러 왼쪽 사이드바를 닫았다가 엽니다.
+2. Windows `Ctrl+P`, Mac `⌘P`를 누르고 `rules`를 입력해 Enter를 누릅니다. 파일 이름으로 바로 열립니다.
+3. Windows `Ctrl+Shift+P`, Mac `⇧⌘P`를 누릅니다. 명령 팔레트(모든 명령을 찾는 입력 칸)가 열립니다. **Esc**로 닫습니다.
+4. **File** → **Auto Save**를 켭니다. 저장을 잊어 Copilot과 내가 다른 내용을 보는 일을 줄입니다.
+5. Windows `Ctrl+Alt+I`, Mac `⌃⌘I`로 Chat 보기를 엽니다.
+
+확인: 파일 열기, 터미널, Chat 보기를 단축키로 열 수 있습니다. 전체 목록은 [VS Code와 Copilot 한 장 정리](../appendix/vscode-copilot.md)에 있습니다.
+
+## STEP 9. 프로젝트 구조 둘러보기
 
 왼쪽 활동 막대의 **Explorer**(탐색기, 종이 두 장 모양) 아이콘을 누르고, 폴더를 하나씩 펼쳐 봅니다.
 
 | 폴더, 파일 | 무엇인가 | 오늘 쓰는 곳 |
 |---|---|---|
-| `docs/` | 현업 요청(`00_현업요청.md`), 킥오프 회의록(`01_킥오프_회의록.md`), 현행 업무(`02_현행_업무.md`) | 1-3, 2-3, 3교시 |
+| `docs/` | 현업 요청(`00_현업요청.md`), 킥오프 회의록(`01_킥오프_회의록.md`), 현행 업무(`02_현행_업무.md`), 월간 집계 업무(`04_월간집계_업무.md`) | 1-3, 2-3, 3교시, 7-2 |
 | `booking/` | 예약 프로그램. `rules.py`(예약 규칙 검사), `service.py`(예약하기, 목록), `report.py`(이용률 보고서), `__main__.py`(명령 처리) | 2교시부터 계속 |
-| `data/` | `rooms.json`(회의실 4개), `reservations.json`(예약 5건) | 프로그램이 읽고 씀 |
+| `data/` | `rooms.json`(회의실 4개), `reservations.json`(예약 5건), `room_usage_2026-10.csv`(10월 사용 기록) | 프로그램이 읽고 씀, 7-2 |
 | `tests/` | `test_rules.py`(테스트 4개) | 코드를 바꿀 때마다 |
 | `build_site.py` | 예약 현황판 웹페이지 만들기 | 6, 7교시 |
 | `.github/workflows/` | `ci.yml`(GitHub에서 테스트 자동 실행) | 2-3, 4교시 |
@@ -154,6 +175,7 @@ python -m pytest
 - [ ] VS Code에서 `room-practice` 폴더가 열려 있고 신뢰했습니다.
 - [ ] `python -m pytest`가 **4 passed**입니다.
 - [ ] `python -m booking rooms`와 `python -m booking list --date 2026-11-10`이 위 결과와 같습니다.
+- [ ] 왼쪽 사이드바, 파일 열기(`Ctrl+P` / `⌘P`), 명령 팔레트, Chat 보기를 열어 봤습니다.
 - [ ] `docs/`, `booking/`, `data/`, `tests/`가 각각 무엇인지 말할 수 있습니다.
 
 ## 막히면
