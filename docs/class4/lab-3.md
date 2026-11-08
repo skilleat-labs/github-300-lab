@@ -88,6 +88,20 @@
 
 확인: PR 제목 아래 보라색 **Merged**, **Actions** 탭에 **테스트** 실행 기록 2개(PR 때, 병합 때)가 보입니다.
 
+!!! info "병합 버튼 옆 화살표의 세 가지"
+    초록 버튼 옆 **▼**를 누르면 병합 방법이 보입니다. 셋 다 코드는 똑같이 main에 들어가고, main에 기록이 남는 모양만 다릅니다.
+
+    | 방법 | main에 남는 기록 |
+    |---|---|
+    | **Create a merge commit** (기본) | 브랜치의 커밋이 모두 남고 병합 커밋이 하나 더 생깁니다. **오늘은 이것** |
+    | **Squash and merge** | PR의 커밋을 커밋 하나로 합칩니다 |
+    | **Rebase and merge** | 병합 커밋 없이 커밋을 main 끝에 일렬로 붙입니다 |
+
+    버튼 이름이 **Merge pull request**가 아니면 **▼**에서 **Create a merge commit**을 고릅니다. 보이는 방법은 리포지토리 설정에 따라 다를 수 있습니다.
+
+!!! note "팀에서는 병합 전에 리뷰가 있습니다"
+    오늘 오후에는 다른 팀원이 **Files changed** → **Review changes**에서 **Comment**(의견), **Approve**(병합해도 됨), **Request changes**(고친 뒤 병합) 중 하나로 리뷰합니다. 작성자는 자기 PR을 승인할 수 없습니다. 고칠 점을 받으면 같은 브랜치에 커밋하고 **Sync Changes**를 누릅니다. 새 PR을 열지 않아도 같은 PR에 이어 붙습니다.
+
 ## STEP 6. VS Code를 main으로 돌아와 최신으로 맞추기
 
 1. VS Code 상태 표시줄의 브랜치 이름 `overlap-check`를 클릭합니다.

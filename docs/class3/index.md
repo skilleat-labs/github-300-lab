@@ -141,16 +141,6 @@ GitHub 문서 'Prompt engineering for GitHub Copilot Chat'에 나오는 전략�
 
 Copilot에게 반복해서 시키는 일은 파일로 만들어 팀과 함께 쓸 수 있어요. 리포지토리에 많이 두는 순서대로 보면, 먼저 지침 파일이에요. 항상 자동으로 붙는 규칙이에요. 경로별 지침은 applyTo로 정한 파일, 예를 들어 파이썬 파일을 다룰 때만 붙는 규칙이에요. 스킬은 반복하는 작업 하나의 순서와 형식을 담아요. 슬래시 이름으로 부르거나, 요청이 설명과 맞으면 Copilot이 스스로 불러와요. 사용자 지정 에이전트는 역할과 쓸 도구를 정해 둔 나만의 에이전트예요. 오늘은 지침 파일과 스킬을 직접 만들어요.
 
-### 스킬은 한 번 만들면 여러 곳에서 씁니다
-
-| 어디서 | 리포지토리 | 내 컴퓨터 |
-|---|---|---|
-| GitHub Copilot (VS Code, CLI, github.com 클라우드 에이전트, 코드 리뷰) | .github/skills/ | ~/.copilot/skills/ |
-| Claude | .claude/skills/ | ~/.claude/skills/ |
-| OpenAI Codex | .agents/skills/ | ~/.agents/skills/ |
-
-스킬은 GitHub만의 기능이 아니에요. Agent Skills라는 개방형 표준이라서, SKILL.md가 든 폴더라는 같은 형식을 여러 AI 도구가 읽어요. 그래서 한 번 익혀 두면 다른 도구에서도 그대로 써요. 오늘은 GitHub Copilot 기준으로 .github/skills에 만들어요. 리포지토리에 커밋하면 VS Code뿐 아니라 github.com의 클라우드 에이전트와 코드 리뷰도 같은 스킬을 쓸 수 있어요. GitHub Copilot은 .claude/skills나 .agents/skills에 있는 스킬도 읽어요. 다만 남이 만든 스킬을 받아 올 때는 GitHub가 검증하지 않으니, 숨은 지시가 없는지 내용을 먼저 열어 봐요. 자세한 표와 주의점은 실습 3-3에 있어요.
-
 ### 스킬로 업무 아이디어를 검토합니다
 
 전체 내용은 [실습 3-3](lab-3.md)에 있습니다.
