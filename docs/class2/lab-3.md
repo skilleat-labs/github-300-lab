@@ -163,6 +163,20 @@ STEP 4의 예약 완료로 `data/reservations.json`에 #6이 추가되었습니�
 
 ## STEP 7. 커밋하고 GitHub에 올리기
 
+처음 커밋하기 전에 소스 제어 보기를 한 번 둘러봅니다. 왼쪽 활동 막대의 **소스 제어** 아이콘(가지 모양)을 누릅니다.
+
+| 부분 | 어디에 | 하는 일 | 같은 Git 명령 |
+|---|---|---|---|
+| 메시지 입력 칸 | 맨 위 | 커밋에 남길 한 줄 설명. 반짝이 아이콘으로 Copilot 초안 받기 | |
+| **Commit** 버튼 | 입력 칸 아래 | 바뀐 것을 기록으로 남기기. 커밋한 뒤에는 **Sync Changes**로 바뀜 | `git add` + `git commit` |
+| **Changes** | 버튼 아래 목록 | 커밋하지 않은 변경 파일. 내가 고친 것도, Copilot이 고친 것도 여기 보임 | `git status` |
+| 파일 클릭 | Changes 목록 | 바뀌기 전과 후를 비교(diff) | `git diff` |
+| **Discard Changes** (굽은 화살표) | 파일에 마우스를 올리면 | 그 파일을 마지막 커밋 상태로 되돌리기 | `git restore` |
+| **Sync Changes** | 커밋한 뒤 버튼 자리 | GitHub의 새 커밋 받고 내 커밋 올리기 | `git pull` + `git push` |
+| **그래프** | 맨 아래 | 커밋 기록. main과 구름 표시가 같은 줄이면 GitHub와 같은 상태 | `git log` |
+
+확인: **Changes**에 `booking/rules.py`가 있습니다. `data/reservations.json`도 있으면 STEP 5로 돌아가 되돌립니다.
+
 1. 소스 제어 보기 위쪽의 메시지 입력 칸을 클릭합니다.
 2. 칸 안의 반짝이 아이콘(**Generate Commit Message**)을 눌러 Copilot의 초안을 받아 봅니다. 그다음 무엇을 왜 바꿨는지 드러나게 고칩니다. 예:
 
