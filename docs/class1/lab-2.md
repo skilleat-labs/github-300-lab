@@ -236,11 +236,14 @@
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "Use this template 버튼이 안 보입니다"
     로그인이 안 되어 있거나 주소가 틀린 경우입니다. 오른쪽 위에 프로필 사진이 있는지, 주소가 정확히 `https://github.com/skilleat-labs/meeting-room-starter`인지 확인합니다. 창이 좁으면 버튼이 아래로 밀려 있을 수 있으니 창을 넓혀 봅니다.
 
 ??? failure "The repository room-practice already exists 라고 나옵니다"
-    같은 이름의 리포지토리가 이미 있습니다. 강사에게 알리고, 안내에 따라 이름 뒤에 숫자를 붙여 만듭니다. 이후 실습의 `room-practice`는 바꾼 이름으로 읽습니다.
+    같은 이름의 리포지토리가 이미 있습니다. 이름 뒤에 숫자를 붙여 만듭니다(예: `room-practice2`). 이후 실습의 `room-practice`는 바꾼 이름으로 읽습니다.
 
 ??? failure "Git: Clone이 목록에 없거나 Git을 찾을 수 없다고 나옵니다"
     Git이 설치되지 않았거나 Git 설치 전에 열어 둔 VS Code입니다. [설치할 것](../setup/1-install.md)의 STEP 2를 확인하고 VS Code를 완전히 닫았다가 다시 엽니다.

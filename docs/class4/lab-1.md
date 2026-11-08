@@ -147,6 +147,9 @@ Chat에 붙여 넣기
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "상태 표시줄에 브랜치 이름이 안 보여요"
     VS Code가 Git 리포지토리 폴더가 아닌 곳을 열고 있을 수 있습니다. **File** → **Open Folder**로 `문서/copilot-lab/room-practice`를 다시 엽니다. 폴더 안에 `.git` 폴더가 있어야 브랜치가 보입니다.
 

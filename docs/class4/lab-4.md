@@ -142,6 +142,9 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "Use this template 버튼이 안 보여요"
     로그인이 안 되어 있거나 주소가 틀린 경우입니다. 오른쪽 위에 내 프로필 사진이 보이는지, 주소가 `skilleat-labs/meeting-room-starter`인지 확인합니다.
 

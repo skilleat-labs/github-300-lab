@@ -141,6 +141,9 @@ STEP 1에서 메모한 것과 비교합니다.
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "References에 지침 파일이 보이지 않습니다"
     1. 파일 위치가 `.github/copilot-instructions.md`인지 확인합니다. `.github/workflows/` 안에 만들었으면 탐색기에서 끌어 `.github` 폴더로 옮깁니다.
     2. 파일 이름의 철자(`copilot-instructions.md`, s 포함)를 확인합니다.

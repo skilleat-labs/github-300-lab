@@ -149,6 +149,9 @@
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "References에 지침 파일이 안 보여요"
     파일 위치가 리포지토리 루트의 `.github/copilot-instructions.md`인지 봅니다. 폴더 이름 앞의 점(`.`)이 빠지기 쉽습니다. 새 채팅을 열어 다시 물어봅니다.
 

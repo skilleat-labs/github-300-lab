@@ -138,6 +138,9 @@
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "숫자가 표와 달라요"
     끝 시간이 빈 행을 뺐는지, 노쇼를 사용 시간에서만 뺐는지, 노쇼율의 분모가 118인지 봅니다. 다른 규칙을 Chat에 그대로 적어 고치게 합니다.
 
@@ -148,4 +151,4 @@
     명령을 `room-practice` 폴더에서 실행했는지 봅니다. 실패 메시지를 Chat에 붙여 고치게 합니다.
 
 ??? failure "room_usage_2026-10.csv가 없어요"
-    새 Starter로 만들기 전의 리포지토리일 수 있습니다. 강사에게 알립니다. [Starter 파일 보기](../appendix/starter-files.md)에서 파일 목록을 확인합니다.
+    파일이 추가되기 전에 템플릿으로 만든 리포지토리입니다. github.com의 `skilleat-labs/meeting-room-starter`에서 `data/room_usage_2026-10.csv`와 `docs/04_월간집계_업무.md`를 열고 **Raw** 내용을 같은 위치에 새 파일로 저장합니다.

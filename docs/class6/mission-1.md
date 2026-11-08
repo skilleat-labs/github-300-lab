@@ -208,8 +208,11 @@ S1, S2, S4는 모두 `booking/rules.py`와 `tests/test_rules.py`를 고쳤습니
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "Reviewers에 Copilot이 없어요"
-    Copilot Pro 라이선스가 활성인지 확인합니다. 프로필 사진 → **Copilot settings**에서 플랜을 봅니다. 시간이 없으면 Copilot 리뷰 없이 BA 리뷰만 진행하고 강사에게 알립니다.
+    Copilot Pro 라이선스가 활성인지 확인합니다. 프로필 사진 → **Copilot settings**에서 플랜을 봅니다. 시간이 없으면 Copilot 리뷰 없이 BA 리뷰만 진행합니다.
 
 ??? failure "Copilot 리뷰가 몇 분이 지나도 안 와요"
     Copilot 리뷰는 Actions 사용 시간도 쓰기 때문에 몇 분 걸릴 수 있습니다. 다시 Request하면 크레딧을 또 씁니다. 기다리는 동안 BA 리뷰를 먼저 진행합니다.

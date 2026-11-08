@@ -88,7 +88,7 @@
         python3 -c "from booking.store import load_reservations; from booking.format import format_reservation; print(format_reservation(load_reservations()[0]))"
         ```
 
-확인: `2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)`과 비슷한 한 줄이 나옵니다. 오류가 나면 Copilot이 만든 코드에 문제가 있는 것입니다. 오류 줄을 읽고 강사와 같이 봅니다.
+확인: `2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)`과 비슷한 한 줄이 나옵니다. 오류가 나면 Copilot이 만든 코드에 문제가 있는 것입니다. 터미널의 오류 줄을 복사해 Chat(Ask)에 붙여 넣고 "원인과 고치는 방법을 알려 주세요"라고 묻습니다.
 
 !!! tip "함수 이름이 다르면"
     Copilot이 함수 이름을 바꿔 제안했다면 명령의 `format_reservation`을 그 이름으로 바꿔 실행합니다.
@@ -128,6 +128,9 @@
 - [ ] Copilot status dashboard의 사용량이 이 실습 동안 늘지 않은 것을 확인했습니다.
 
 ## 막히면
+
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
 
 ??? failure "회색 제안이 나오지 않습니다"
     `def format_reservation(r):` 다음 줄에서 띄어쓰기 4칸을 넣고 `return`까지 직접 입력해 봅니다. 그래도 안 나오면 상태 표시줄 Copilot 아이콘에서 로그인 상태를 확인합니다.

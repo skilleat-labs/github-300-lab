@@ -185,6 +185,9 @@ STEP 4의 예약 완료로 `data/reservations.json`에 #6이 추가되었습니�
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "Copilot이 파일을 고치지 않고 설명만 합니다"
     역할이 **Ask**인 경우입니다. 역할 선택기에서 **Agent**를 고르고 다시 요청합니다.
 

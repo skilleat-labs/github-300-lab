@@ -280,6 +280,9 @@
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "S3: cancel이라는 명령이 없다고 나와요"
     `booking/__main__.py`에 `cancel` 하위 명령이 추가되지 않은 것입니다. 채팅에 "python -m booking cancel --id 3을 실행하면 invalid choice가 나옵니다. __main__.py에 cancel 명령을 추가해 주세요"라고 요청합니다.
 

@@ -139,6 +139,9 @@
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "/를 입력해도 idea가 목록에 없습니다"
     1. Session Target이 **Local**인지 확인합니다. Copilot 하네스에서는 프롬프트 파일이 실행되지 않습니다.
     2. 파일 위치가 `.github/prompts/idea.prompt.md`인지, 이름이 `.prompt.md`로 끝나는지 확인합니다.
@@ -151,4 +154,4 @@
     파일 첫 줄이 정확히 `---`인지 봅니다. 앞에 빈 줄이나 공백이 있으면 머리말로 인식되지 않습니다.
 
 ??? failure "Session Target에 Local이 보이지 않습니다"
-    **+**(**New Chat**)를 먼저 눌러 새 채팅을 연 뒤 Session Target 컨트롤을 엽니다. 그래도 없으면 VS Code 버전(1.116 이상)을 확인하고 강사에게 화면을 보여 줍니다.
+    **+**(**New Chat**)를 먼저 눌러 새 채팅을 연 뒤 Session Target 컨트롤을 엽니다. 그래도 없으면 VS Code 버전(1.116 이상)을 확인합니다. **Help** → **Check for Updates**로 최신으로 올린 뒤 다시 엽니다.

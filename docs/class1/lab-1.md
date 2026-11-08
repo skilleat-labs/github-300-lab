@@ -120,6 +120,9 @@ Chat 입력 칸에 붙여 넣고 Enter를 누릅니다.
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "상태 표시줄에 Copilot 아이콘이 없습니다"
     VS Code 버전이 낮을 수 있습니다. **Help** → **About**(Mac은 **Code** → **About Visual Studio Code**)에서 1.116 이상인지 확인하고, 낮으면 업데이트 후 다시 시작합니다. 상태 표시줄 자체가 안 보이면 **View** → **Appearance** → **Status Bar**를 켭니다.
 

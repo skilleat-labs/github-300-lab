@@ -193,6 +193,9 @@ flowchart TB
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "현황판 배포가 빨간 X이고 Pages 관련 오류가 나와요"
     PO가 **Settings** → **Pages** → Source를 **GitHub Actions**로 바꿨는지 확인합니다. 바꾼 뒤 **Actions** → **현황판 배포** → **Run workflow** → **Run workflow**로 다시 실행합니다.
 

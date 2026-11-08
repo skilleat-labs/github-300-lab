@@ -206,6 +206,9 @@
 
 ## 막히면
 
+!!! tip "먼저 Copilot과 함께 해결합니다"
+    오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
+
 ??? failure "Assignees 목록에 팀원 이름이 없어요"
     팀원이 4-4의 초대를 아직 수락하지 않은 것입니다. PO가 **Settings** → **Collaborators**에서 상태를 보고, 팀원은 초대 주소에서 **Accept invitation**을 누릅니다.
 
