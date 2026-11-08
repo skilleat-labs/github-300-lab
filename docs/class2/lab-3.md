@@ -208,6 +208,18 @@ STEP 4의 예약 완료로 `data/reservations.json`에 #6이 추가되었습니�
     - `Initial commit`: 템플릿으로 리포지토리를 만들 때 생긴 첫 커밋입니다.
     - 최신 커밋 옆 **main** 표시와 구름 모양 표시가 함께 있으면, 내 PC와 GitHub가 같은 커밋에 있다는 뜻입니다. push가 된 것입니다.
 
+??? info "`f7 (HEAD -> main, origin/main, origin/HEAD)` 같은 표시는 뭔가요?"
+    터미널의 `git log`나 Copilot 답에서 보이는 표시로, 커밋 하나와 그 커밋을 가리키는 이름표입니다.
+
+    | 표시 | 뜻 |
+    |---|---|
+    | `f7...` | 커밋의 짧은 번호(해시). 커밋마다 붙는 고유 번호 |
+    | `HEAD -> main` | 내가 지금 있는 곳이 `main` 브랜치이고, 그 끝이 이 커밋 |
+    | `origin/main` | GitHub에 있는 `main`도 이 커밋을 가리킴. `origin`은 GitHub 리포지토리의 별명 |
+    | `origin/HEAD` | GitHub 리포지토리의 기본 브랜치. 보통 `origin/main`과 같음 |
+
+    `HEAD -> main`과 `origin/main`이 같은 줄에 있으면 내 PC와 GitHub가 같은 상태입니다. 그래프에서 **main**과 구름 표시가 같은 줄에 있는 것과 같은 뜻입니다. `origin/main`이 아래 커밋에 있으면 아직 push하지 않은 커밋이 있는 것입니다.
+
 그다음 GitHub에서 봅니다.
 
 2. 브라우저에서 `https://github.com/내아이디/room-practice`를 엽니다.
