@@ -2178,6 +2178,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#bug-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        버그는 Agent에게, 한 일과 나온 결과부터 알려 줍니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#copilot_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2295,6 +2306,10 @@
 <p>Chat에서는 Agent 선택기로 Ask와 Agent 중 하나를 골라요. Ask는 묻기 전용이에요. 읽기만 하는 도구만 써서 파일을 바꾸지 않으니, 코드를 이해하거나 비교할 때 안심하고 쓰면 돼요. Agent는 실제로 파일을 고치고 터미널 명령도 실행하고 결과까지 확인해요. 계획 세우기는 선택기에 없어요. Copilot 하네스에서는 입력 칸에 /plan을 치고 요청을 이어 써요. 바로 고치지 않고 먼저 조사해서 구현 계획을 써 줘요. 예전 자료에 나오는 Edit 모드는 지금은 없어요.</p>
 <h3 id="_2">맥락을 직접 붙이면 답이 정확해집니다<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Copilot이 엉뚱한 답을 하는 가장 흔한 이유는 맥락이 부족해서예요. 맥락은 직접 붙일 수 있어요. 채팅 칸의 플러스 버튼으로 파일이나 이슈를 고르거나, 탐색기에서 파일을 끌어다 놓아요. 샵을 치면 맥락 목록이 나오는데, #codebase는 프로젝트 전체에서 관련 코드를 찾아 줘요. 코드를 선택하고 물으면 그 부분이 맥락이 돼요. 예전 자료나 블로그에 나오는 @workspace는 지금 Copilot 하네스에서는 동작하지 않아요. #codebase를 쓰세요.</p>
+<div class="admonition tip">
+<p class="admonition-title">키보드로 파일 붙이기</p>
+<p>입력 칸에 <code>#</code>와 파일 이름 일부를 치면(예: <code>#rules</code>) 파일 목록이 좁혀집니다. <code>↑</code> <code>↓</code>로 고르고 <code>Enter</code>를 누르면 파일이 맥락으로 붙습니다. 마우스로 <strong>+</strong>를 누르거나 끌어다 놓지 않아도 됩니다.</p>
+</div>
 <h3 id="_3">자주 쓰는 슬래시 명령<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2377,6 +2392,40 @@
 </tbody>
 </table>
 <p>Copilot은 채팅 창에만 있지 않아요. 일하는 자리에서 바로 부를 수 있어요. 편집기에서 코드를 선택하고 오른쪽 클릭하면 Explain으로 설명을 받고, Generate Code 메뉴로 설명 주석이나 테스트를 만들어요. 터미널에서도 Command I나 Ctrl I로 물을 수 있고, 명령이 실패하면 옆에 나오는 반짝이 아이콘으로 오류 설명을 받아요. 소스 제어의 메시지 칸에 있는 반짝이 아이콘은 커밋 메시지 초안을 만들어요. 초안은 꼭 읽고 고쳐요. 다 외울 필요 없어요. 가이드 부록 'VS Code와 Copilot 한 장 정리'에 모아 두었어요.</p>
+<h3 id="bug-prompt">버그는 Agent에게, 한 일과 나온 결과부터 알려 줍니다<a class="headerlink" href="#bug-prompt" title="Permanent link">&para;</a></h3>
+<p>버그를 고칠 때는 Agent 역할을 써요. 대신 "이거 고쳐 줘"처럼 짧게 말하지 말고 자세히 알려 줘요. 순서는 네 가지예요. 무엇을 했는지, 무엇이 나왔는지, 원래 무엇이 나와야 하는지, 지켜야 할 것이 무엇인지예요. Copilot은 내 화면을 보지 못하니까, 실행한 명령과 결과를 그대로 붙여 주는 게 가장 좋은 맥락이에요.</p>
+<table>
+<thead>
+<tr>
+<th>순서</th>
+<th>무엇을 쓰나</th>
+<th>2-3의 예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 한 일</td>
+<td>실행한 명령, 누른 버튼</td>
+<td><code>python -m booking add ... --start 17:00 --end 18:00</code></td>
+</tr>
+<tr>
+<td>② 나온 결과</td>
+<td>오류 메시지, 출력을 그대로</td>
+<td><code>[예약 실패] 운영 시간(09:00~18:00) 밖입니다.</code></td>
+</tr>
+<tr>
+<td>③ 원하는 결과</td>
+<td>근거와 함께</td>
+<td>운영 규칙 "18:00에 끝나는 예약은 가능". 17:30~18:30은 계속 막힘</td>
+</tr>
+<tr>
+<td>④ 지킬 것</td>
+<td>바꿀 범위</td>
+<td><code>booking/rules.py</code>만 고치고 data 폴더는 바꾸지 않음</td>
+</tr>
+</tbody>
+</table>
+<p>근거 문서와 고칠 파일은 <code>#02_현행_업무.md</code>, <code>#rules.py</code>처럼 붙여요. 실제 프롬프트는 <a href="lab-3/">실습 2-3 STEP 2</a>에 있어요.</p>
 <h3 id="copilot_1">Copilot도 틀립니다. 그래서 세 가지로 검증합니다<a class="headerlink" href="#copilot_1" title="Permanent link">&para;</a></h3>
 <p>Copilot은 그럴듯하지만 틀린 답을 낼 수 있어요. 언어 모델의 한계예요. 그래서 오늘은 결과를 세 가지로 검증해요. 첫째, 직접 실행해서 기대한 결과가 나오는지 봐요. 둘째, 현업 요청이나 회의록, 운영 규칙 같은 근거 문서와 맞는지 대조해요. 셋째, 테스트를 돌려요. PR을 열면 테스트가 자동으로 돌아요. 2-3에서 실제 버그로 이 세 가지를 다 해 봐요.</p>
 <div class="admonition tip">
