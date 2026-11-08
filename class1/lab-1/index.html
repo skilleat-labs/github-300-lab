@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -2495,7 +2495,7 @@
 </tr>
 <tr>
 <td><strong>Agent</strong> 선택기 (역할)</td>
-<td><strong>Ask</strong>(질문, 설명. 파일을 고치지 않음), <strong>Agent</strong>(변경을 구현하고 검증), <strong>Plan</strong>(계획)</td>
+<td><strong>Ask</strong>(질문, 설명. 파일을 고치지 않음), <strong>Agent</strong>(변경을 구현하고 검증). 계획은 선택기에 없고 4교시에 <code>/plan</code> 명령으로 씁니다</td>
 <td>지금은 <strong>Ask</strong></td>
 </tr>
 <tr>
@@ -2514,6 +2514,7 @@
 <p>확인: 새 채팅의 Session Target이 <strong>Copilot</strong>, 역할이 <strong>Ask</strong>, 모델이 <strong>Auto</strong>입니다.</p>
 <div class="admonition note">
 <p class="admonition-title">화면이 조금 다를 수 있어요</p>
+<p>Agent 선택기에 Ask, Agent 말고 다른 이름이 여러 개 보이면, 설치한 확장(예: Azure)이 추가한 사용자 지정 에이전트입니다. 오늘은 <strong>Ask</strong>와 <strong>Agent</strong>만 씁니다.</p>
 <p>VS Code는 매달 업데이트되어 선택기의 위치와 모양이 바뀔 수 있습니다. 이름(<strong>Session Target</strong>, <strong>Ask</strong>, <strong>Auto</strong>)으로 찾으면 됩니다. 활성 하네스 이름은 채팅 제목 앞에 표시됩니다.</p>
 </div>
 <div class="admonition tip">
@@ -2522,7 +2523,7 @@
 </div>
 <h2 id="step-8">STEP 8. 첫 인사 보내기<a class="headerlink" href="#step-8" title="Permanent link">&para;</a></h2>
 <p>Chat 입력 칸에 붙여 넣고 Enter를 누릅니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>안녕하세요. 지금 어떤 역할(Ask, Agent, Plan)로 대화하고 있는지와, 이 역할로 할 수 있는 일을 두 줄로 알려 주세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>안녕하세요. 지금 어떤 역할(Ask, Agent)로 대화하고 있는지와, 이 역할로 할 수 있는 일을 두 줄로 알려 주세요.
 </span></code></pre></div>
 <p>확인: 한국어 답이 돌아옵니다. Ask 역할이라 파일은 고치지 않는다는 내용이 들어 있으면 됩니다. 문장은 사람마다 다릅니다.</p>
 <h2 id="_2">다 됐는지 확인<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -2554,6 +2555,10 @@
 <details class="failure">
 <summary>Chat에 로그인하라는 안내만 나옵니다</summary>
 <p>STEP 1의 로그인이 끝나지 않은 상태입니다. 상태 표시줄 Copilot 아이콘 → <strong>Use AI Features</strong>로 로그인하거나, 명령 팔레트에서 <code>GitHub Copilot: Sign in</code>을 실행합니다.</p>
+</details>
+<details class="failure">
+<summary>OO MCP을(를) 인증하는 중... 뒤에 No response was returned 오류가 나요</summary>
+<p>설치한 확장이 추가한 MCP 서버(외부 도구 연결)가 로그인을 기다리다 실패한 것입니다. 오늘 실습에는 MCP 서버가 필요 없습니다. 명령 팔레트에서 <strong>Chat: Open Customizations</strong> → <strong>MCP Servers</strong> → 그 서버의 <strong>...</strong> → <strong>Disable</strong>로 끄고, 새 채팅에서 다시 보냅니다.</p>
 </details>
 
 
@@ -2655,7 +2660,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
