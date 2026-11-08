@@ -15,7 +15,25 @@
 | 언제 쓰이나 | 모든 채팅에 **항상** 자동으로 | `/이름`으로 **부를 때**, 또는 요청이 **설명과 맞을 때** 자동으로 |
 | 무엇을 쓰나 | 늘 지켜야 할 규칙 | 반복하는 작업 하나의 순서와 형식 |
 
-좋은 검토 요청을 스킬로 저장해 두면 `/idea` 한 번으로 같은 형식의 결과를 받고, 팀과 나눠 쓸 수 있습니다. 스킬은 Copilot 하네스, Copilot CLI 등 여러 곳에서 똑같이 씁니다.
+좋은 검토 요청을 스킬로 저장해 두면 `/idea` 한 번으로 같은 형식의 결과를 받고, 팀과 나눠 쓸 수 있습니다.
+
+### 한 번 만들면 여러 곳에서 씁니다
+
+스킬은 GitHub만의 기능이 아니라 **Agent Skills라는 개방형 표준**입니다. "`SKILL.md`가 든 폴더 하나"라는 같은 형식을 여러 AI 도구가 읽습니다.
+
+| 어디서 | 스킬을 두는 곳 (리포지토리, 내 컴퓨터) |
+|---|---|
+| **GitHub Copilot**: VS Code, Visual Studio, JetBrains, Copilot CLI, github.com의 클라우드 에이전트와 코드 리뷰 | `.github/skills/`, `~/.copilot/skills/` |
+| Claude | `.claude/skills/`, `~/.claude/skills/` |
+| OpenAI Codex | `.agents/skills/`, `~/.agents/skills/` |
+
+- 오늘은 **`.github/skills/`**에 만듭니다. 리포지토리에 커밋하면 VS Code뿐 아니라 github.com에서 일하는 Copilot 클라우드 에이전트(5-3)와 코드 리뷰(6-1)도 이 스킬을 쓸 수 있습니다.
+- GitHub 문서는 리포지토리의 `.claude/skills/`, `.agents/skills/`도 Copilot이 읽는 스킬 위치로 안내합니다. 다른 도구용으로 만든 스킬도 리포지토리에 있으면 Copilot이 씁니다.
+- 읽는 위치와 쓸 수 있는 머리말은 도구마다 조금 다릅니다. 다른 도구에서 쓸 때는 그 도구의 문서를 확인합니다.
+- 스킬 폴더에는 `SKILL.md` 말고도 예시, 스크립트, 참고 자료를 함께 넣을 수 있습니다. 오늘은 `SKILL.md` 하나만 씁니다.
+
+!!! warning "남이 만든 스킬은 열어 보고 씁니다"
+    GitHub CLI의 `gh skill install`로 공개된 스킬을 받아 올 수 있습니다. GitHub는 스킬을 검증하지 않으며, 숨은 지시나 악성 스크립트가 들어 있을 수 있습니다. 받기 전에 `gh skill preview`로 내용을 먼저 봅니다. (오늘 PC에는 GitHub CLI를 설치하지 않으므로 소개만 합니다.)
 
 ## STEP 1. skills 폴더와 파일 만들기
 
