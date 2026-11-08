@@ -53,7 +53,7 @@ main에서 바로 고치지 않고, 이번 기능만을 위한 작업 공간(브
 1. Chat 보기를 엽니다. Windows는 ++ctrl+alt+i++, Mac은 ++ctrl+cmd+i++
 2. Chat 보기 위쪽 **+**(**New Chat**, 새 채팅)를 클릭합니다. 앞 실습의 대화가 섞이지 않게 하려는 것입니다.
 3. 입력 칸 아래 **Session Target**(세션 대상)이 **Copilot**인지 봅니다. 아니면 눌러서 **Copilot**을 고릅니다.
-4. 모델이 **Auto**, 권한이 **Manual**인지 봅니다.
+4. 모델이 **Copilot Fusion**, 권한이 **Manual**인지 봅니다.
 
 확인: 새 채팅이 비어 있고, Session Target이 **Copilot**입니다.
 

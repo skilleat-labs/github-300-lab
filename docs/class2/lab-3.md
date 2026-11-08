@@ -49,7 +49,7 @@
 
 1. Chat 보기를 엽니다(Windows `Ctrl+Alt+I`, Mac `⌃⌘I`).
 2. **+**(**New Chat**)로 새 채팅을 엽니다.
-3. Session Target **Copilot**, 역할은 **Agent**, 모델 **Auto**로 맞춥니다.
+3. Session Target **Copilot**, 역할은 **Agent**, 모델 **Copilot Fusion**로 맞춥니다.
 4. 입력 칸에 `#02_현행_업무.md`와 `#rules.py`를 차례로 골라 첨부합니다. 탐색기에서 끌어다 놓아도 됩니다.
 5. Chat에 붙여 넣고 Enter를 누릅니다. 프롬프트는 ① 한 일 ② 나온 결과 ③ 원하는 결과와 근거 ④ 지킬 것 순서입니다. [왜 이렇게 쓰나요?](index.md#bug-prompt)
 

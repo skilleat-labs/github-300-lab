@@ -14,7 +14,7 @@
 ## 2. Copilot Pro 플랜
 - 월 10달러, 매월 **AI Credits 1,500**(기본 1,000 + 유연 500). https://docs.github.com/en/copilot/get-started/plans
 - 1 크레딧 = 0.01달러. 모델과 토큰(입력, 출력, 캐시)에 따라 차감. 기본 크레딧부터 쓰고 매월 1일 00:00 UTC 초기화, 이월 없음. https://docs.github.com/copilot/concepts/billing/usage-based-billing-for-individuals
-- **자동 모델 선택(Auto)을 쓰면 모델 비용 10% 할인**. 같은 URL
+- 자동 모델 선택(Auto) 10% 할인 → 화면에서 Auto가 사라지고 Copilot Fusion(30% 할인, 11-30까지)으로 바뀜. 아래 2026-11-08 항목 참고. 같은 URL
 - 크레딧을 쓰는 것: Chat, CLI, 클라우드 에이전트, Spaces, 타사 코딩 에이전트. 같은 URL
 - **코드 완성(인라인 제안)과 다음 편집 제안(NES)은 유료 플랜에서 무제한, 크레딧을 쓰지 않는다.** 같은 URL
 - 크레딧이 다 떨어지면: 상위 플랜으로 올리거나, 추가 사용 예산을 정하거나, 다음 달 초기화까지 기다린다. 같은 URL
@@ -52,6 +52,9 @@
 - 대상 지정 지침: `.github/instructions/*.instructions.md`, 머리말 `description`, `applyTo: '**/*.py'`. 같은 URL
 - 프롬프트 파일: `.github/prompts/*.prompt.md`. 명령 **Chat: New Prompt File**. 실행은 Chat에서 `/이름` 또는 **Chat: Run Prompt**. **프롬프트 파일은 Chat 보기의 Local 하네스 세션에서만 실행된다.** 다른 하네스에서 재사용하려면 에이전트 스킬을 쓴다. 머리말 `description`, `agent`(ask/agent/plan), `model`, `tools`. 본문에서 `${selection}` 사용 예. https://code.visualstudio.com/docs/agent-customization/prompt-files
 - 사용자 지정 에이전트: `.github/agents/*.agent.md`. 머리말 `name`, `description`, `tools`. 예전 `.chatmode.md`는 `.agent.md`로. https://code.visualstudio.com/docs/agent-customization/custom-agents
+- (2026-11-08 확인) **Local 하네스는 관리되지 않는 편집기에서 기본으로 숨겨짐.** 보이게 하려면 실험 설정 `chat.editor.localAgent.enabled`. Copilot 하네스가 자동 선호(`chat.defaultToCopilotHarness`, `chat.editor.preferCopilotHarness`). 조직 정책으로 막힐 수 있음. 그래서 3-3은 프롬프트 파일 대신 스킬. https://code.visualstudio.com/docs/agents/run/agent-harnesses
+- (화면 확인 2026-11-08) Session Target은 채팅 입력 칸 아래 줄에 하네스 이름(예: Copilot)으로 표시. 모델 선택기에 **Auto 없음**, 맨 위 **Copilot Fusion**(Standard). Fusion: 모델을 고르거나 조합. Standard는 모든 플랜, High/Max는 Max/Business/Enterprise. 2026-11-30까지 유료 플랜 모델 비용 30% 할인. https://docs.github.com/en/copilot/concepts/models/copilot-fusion (Auto 대체 여부는 공식 문서에 직접 문장 없음, 커뮤니티 공지 https://github.com/orgs/community/discussions/211017)
+- 스킬 머리말 추가: `argument-hint`, `user-invocable`, `disable-model-invocation`, `context: fork`. `name` 최대 64자, 잘못된 문자면 조용히 로드 실패. `description` 최대 1024자. `/idea 뒤에 글`처럼 명령 뒤에 맥락을 이어 씀. 만들기: **Chat: Open Customizations** → Skills → New Skill. 개인 스킬 `~/.copilot/skills/`. 스킬은 Copilot in VS Code, Copilot CLI, Copilot app 등에서 동작. 같은 URL 아래
 - 스킬: `.github/skills/<이름>/SKILL.md`. `name`은 소문자와 하이픈, 폴더 이름과 같게. `description`에 무엇을 하는지와 언제 쓰는지. `/이름`으로 실행하거나 요청이 맞으면 자동 로드. https://code.visualstudio.com/docs/agent-customization/agent-skills
 
 ## 5. MCP

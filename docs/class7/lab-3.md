@@ -112,9 +112,9 @@
 
 | 교시 | 배운 기능 | 오늘 해 본 것 |
 |---|---|---|
-| 1 | VS Code 내장 Copilot Chat, 로그인, Copilot settings, 하네스(Copilot, Local) | 공개 코드 일치, 학습 데이터 설정, 첫 질문 |
+| 1 | VS Code 내장 Copilot Chat, 로그인, Copilot settings, 하네스(Copilot), 모델 Copilot Fusion | 공개 코드 일치, 학습 데이터 설정, 첫 질문 |
 | 2 | 인라인 제안(Tab, Esc), 다음 편집 제안(NES), 인라인 채팅, `/explain`, `/fix`, 역할 Ask와 Agent | 18시 버그 고치고 커밋 |
-| 3 | 프롬프트 전략, zero-shot과 few-shot, 지침 파일, 프롬프트 파일(`/idea`, Local) | 회의록에서 사용자 스토리, 아이디어 검토 |
+| 3 | 프롬프트 전략, zero-shot과 few-shot, 지침 파일, 스킬(`/idea`) | 회의록에서 사용자 스토리, 아이디어 검토 |
 | 4 | `/plan`, Agent, 승인(Manual), 소스 제어 보기, Restore Checkpoint, `/tests`, PR Summary, CI | 겹침 검사, PR, 병합 |
 | 5 | 맥락(`#codebase`, Add Context), 역할별 Copilot 활용, 클라우드 에이전트 | 이슈 S1~S4, 인수 조건, 각자 구현, 이슈 맡기기 |
 | 6 | Copilot 코드 리뷰, 충돌 해결, Agent로 워크플로 만들기, CD(Pages) | 현황판 자동 배포, CR-001 |
@@ -127,7 +127,7 @@
 | 책임 있는 사용 (15~20%) | 5-1 정책을 지어내지 않기, 6-1 Copilot 리뷰를 사람이 판단, 7-1 보안 검토, 7-3 팀 규칙 |
 | Copilot 기능 사용 (25~30%) | 2교시 인라인 제안과 채팅, 4교시 Plan과 Agent, 6-1 코드 리뷰, 5-3 클라우드 에이전트 |
 | 데이터와 구조 (10~15%) | 1-1 하네스와 설정, 3-2 지침 파일, 5-1 `#codebase` 맥락 |
-| 프롬프트와 맥락 (10~15%) | 3교시 프롬프트 전략, zero-shot과 few-shot, 프롬프트 파일 |
+| 프롬프트와 맥락 (10~15%) | 3교시 프롬프트 전략, zero-shot과 few-shot, 지침 파일과 스킬 |
 | 생산성 (10~15%) | `/tests`, `/doc`, PR Summary, CI와 CD, 7-2 자동화 도구 |
 | 개인정보, 콘텐츠 제외, 안전장치 (10~15%) | 1-1 공개 코드 일치와 학습 데이터 설정, 6-3 연락처 제거 |
 

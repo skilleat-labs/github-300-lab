@@ -3,7 +3,7 @@
 !!! abstract "이 실습에서 할 일"
     - VS Code에서 Copilot에 로그인되어 있는지, 플랜이 Pro인지 확인합니다.
     - github.com의 Copilot 설정에서 **공개 코드와 일치하는 제안 차단**, **내 데이터의 모델 학습 사용 끄기**를 합니다.
-    - Chat을 열고 오늘 쓸 기본값(Session Target **Copilot**, 역할 **Ask**, 모델 **Auto**)을 맞춥니다.
+    - Chat을 열고 오늘 쓸 기본값(Session Target **Copilot**, 역할 **Ask**, 모델 **Copilot Fusion**)을 맞춥니다.
 
     **예상 시간** 약 7분
 
@@ -82,22 +82,22 @@ Chat에는 세 가지 선택기가 있습니다. 하나씩 확인합니다.
 |---|---|---|
 | **Session Target** | 어떤 하네스(Copilot이 일하는 방식)로 대화할지 | **Copilot** |
 | **Agent** 선택기 (역할) | **Ask**(질문, 설명. 파일을 고치지 않음), **Agent**(변경을 구현하고 검증). 계획은 선택기에 없고 4교시에 `/plan` 명령으로 씁니다 | 지금은 **Ask** |
-| 모델 | 어떤 언어 모델을 쓸지 | **Auto** |
+| 모델 | 어떤 언어 모델을 쓸지 | **Copilot Fusion** (Standard) |
 
 1. Chat 보기 위쪽의 **+**(**New Chat**, 새 채팅)를 클릭합니다.
 2. **Session Target** 컨트롤에서 **Copilot**을 고릅니다. 이미 Copilot이면 그대로 둡니다.
 3. 입력 칸 근처의 **Agent** 선택기를 클릭하고 **Ask**를 고릅니다.
-4. 모델 선택기를 클릭하고 **Auto**를 고릅니다.
+4. 모델 선택기를 클릭하고 맨 위의 **Copilot Fusion**을 고릅니다. 옆의 수준은 **Standard**로 둡니다.
 
-확인: 새 채팅의 Session Target이 **Copilot**, 역할이 **Ask**, 모델이 **Auto**입니다.
+확인: 새 채팅의 Session Target이 **Copilot**, 역할이 **Ask**, 모델이 **Copilot Fusion**입니다.
 
 !!! note "화면이 조금 다를 수 있어요"
     Agent 선택기에 Ask, Agent 말고 다른 이름이 여러 개 보이면, 설치한 확장(예: Azure)이 추가한 사용자 지정 에이전트입니다. 오늘은 **Ask**와 **Agent**만 씁니다.
 
-    VS Code는 매달 업데이트되어 선택기의 위치와 모양이 바뀔 수 있습니다. 이름(**Session Target**, **Ask**, **Auto**)으로 찾으면 됩니다. 활성 하네스 이름은 채팅 제목 앞에 표시됩니다.
+    VS Code는 매달 업데이트되어 선택기의 위치와 모양이 바뀔 수 있습니다. 이름(**Session Target**, **Ask**, **Copilot Fusion**)으로 찾으면 됩니다. Session Target은 입력 칸 아래에 지금 하네스 이름(**Copilot**)으로 보입니다. 활성 하네스 이름은 채팅 제목 앞에 표시됩니다.
 
-!!! tip "왜 Auto인가요?"
-    **Auto**는 작업에 맞는 모델을 자동으로 고르고, 모델 비용을 10% 할인받습니다. 오늘은 모델을 바꾸지 않고 Auto로 진행합니다.
+!!! tip "왜 Copilot Fusion인가요?"
+    **Copilot Fusion**은 특정 모델이 아니라, 작업마다 알맞은 모델을 고르거나 여러 모델을 함께 써서 답을 만듭니다. 예전 자료의 **Auto**(자동 모델 선택) 자리에 있습니다. 2026년 11월 30일까지 모델 비용이 30% 할인됩니다. Pro에서는 **Standard**만 쓸 수 있고, 오늘은 모델을 바꾸지 않고 진행합니다.
 
 ## STEP 8. 첫 인사 보내기
 
@@ -115,7 +115,7 @@ Chat 입력 칸에 붙여 넣고 Enter를 누릅니다.
 - [ ] Copilot settings에서 플랜이 **Copilot Pro**입니다.
 - [ ] **Suggestions matching public code**가 **Block**입니다.
 - [ ] **Allow GitHub to use my data for AI model training**이 **Disabled**입니다.
-- [ ] Chat이 열리고, Session Target **Copilot**, 역할 **Ask**, 모델 **Auto**입니다.
+- [ ] Chat이 열리고, Session Target **Copilot**, 역할 **Ask**, 모델 **Copilot Fusion**입니다.
 - [ ] Chat에서 한국어 답을 받았습니다.
 
 ## 막히면
@@ -141,5 +141,5 @@ Chat 입력 칸에 붙여 넣고 Enter를 누릅니다.
 ??? failure "OO MCP을(를) 인증하는 중... 뒤에 No response was returned 오류가 나요"
     설치한 확장이 추가한 MCP 서버(외부 도구 연결)가 로그인을 기다리다 실패한 것입니다. 오늘 실습에는 MCP 서버가 필요 없습니다. 명령 팔레트에서 **Chat: Open Customizations** → **MCP Servers** → 그 서버의 **...** → **Disable**로 끄고, 새 채팅에서 다시 보냅니다.
 
-??? failure "모델 칸에 Auto가 아니라 다른 확장 이름(예: Select a Foundry project...)이 보이고 답이 오지 않아요"
-    설치한 다른 확장의 모델이 선택된 것입니다. 모델 선택기를 클릭하고 **Auto**를 고른 뒤 새 채팅에서 다시 보냅니다. 새 창을 열 때마다 바뀌면 확장 보기에서 그 확장을 **Disable**합니다.
+??? failure "모델 칸에 Copilot Fusion이 아니라 다른 확장 이름(예: Select a Foundry project...)이 보이고 답이 오지 않아요"
+    설치한 다른 확장의 모델이 선택된 것입니다. 모델 선택기를 클릭하고 **Copilot Fusion**을 고른 뒤 새 채팅에서 다시 보냅니다. 새 창을 열 때마다 바뀌면 확장 보기에서 그 확장을 **Disable**합니다.

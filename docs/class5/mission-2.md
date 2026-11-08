@@ -29,7 +29,7 @@
 
 ## STEP 2. 이슈를 근거로 계획 받기
 
-1. Chat 보기 **+**(**New Chat**)를 클릭합니다. Session Target **Copilot**, 모델 **Auto**, 권한 **Manual**인지 봅니다.
+1. Chat 보기 **+**(**New Chat**)를 클릭합니다. Session Target **Copilot**, 모델 **Copilot Fusion**, 권한 **Manual**인지 봅니다.
 2. github.com에서 내 이슈를 열고 본문 전체(스토리, 바꿀 곳, 완료 기준, 인수 조건)를 복사합니다.
 3. Chat에 붙여 넣기. `(여기에 이슈 본문)` 자리에 복사한 내용을 넣습니다.
 

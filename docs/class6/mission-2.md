@@ -32,7 +32,7 @@
 
 ## STEP 2. (개발자) Agent에게 워크플로 만들게 하기
 
-1. Chat 보기 **+**(**New Chat**) → Session Target **Copilot**, Agent **Agent**, 모델 **Auto**를 고릅니다.
+1. Chat 보기 **+**(**New Chat**) → Session Target **Copilot**, Agent **Agent**, 모델 **Copilot Fusion**를 고릅니다.
 2. **+**(**Add Context**) → **Files & Folders**로 `build_site.py`, `.github/workflows/ci.yml`을 추가합니다.
 3. Chat에 붙여 넣기
 

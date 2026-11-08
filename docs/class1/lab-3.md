@@ -10,7 +10,7 @@
 ## 준비
 
 - [실습 1-2](lab-2.md)에서 `room-practice`를 VS Code로 열어 두었어야 합니다.
-- Chat 보기를 엽니다(Windows `Ctrl+Alt+I`, Mac `⌃⌘I`). Session Target **Copilot**, 역할 **Ask**, 모델 **Auto**인지 확인합니다.
+- Chat 보기를 엽니다(Windows `Ctrl+Alt+I`, Mac `⌃⌘I`). Session Target **Copilot**, 역할 **Ask**, 모델 **Copilot Fusion**인지 확인합니다.
 
 ## STEP 1. 맥락 없이 물어보기
 

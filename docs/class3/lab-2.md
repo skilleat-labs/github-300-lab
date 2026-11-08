@@ -51,7 +51,7 @@
 
 ## STEP 1. 지침 파일 없이 먼저 물어보기 (전)
 
-1. Chat에서 **+**(**New Chat**)로 새 채팅을 엽니다. Session Target **Copilot**, 역할 **Ask**, 모델 **Auto**.
+1. Chat에서 **+**(**New Chat**)로 새 채팅을 엽니다. Session Target **Copilot**, 역할 **Ask**, 모델 **Copilot Fusion**.
 2. Chat에 붙여 넣고 Enter를 누릅니다.
 
     ```text
@@ -154,7 +154,7 @@
 ??? tip "파일을 직접 만들거나 명령으로 만들려면"
     - 탐색기에서 `.github` 폴더를 오른쪽 클릭 → **New File...** → `copilot-instructions.md`
     - 명령 팔레트에서 **Chat: New Instructions File**
-    - Session Target **Local** 채팅에서는 `/create-instructions` 명령으로 Copilot이 지침 파일 만들기를 도와줍니다.
+    - 명령 팔레트에서 **Chat: Open Customizations**를 열면 지침, 스킬, 에이전트를 한곳에서 보고 만들 수 있습니다.
 
 ## STEP 4. 새 채팅에서 같은 질문하기 (후)
 

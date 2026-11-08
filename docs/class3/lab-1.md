@@ -34,7 +34,7 @@
 
 ## 준비
 
-- `room-practice`가 열려 있고, Chat은 Session Target **Copilot**, 역할 **Ask**, 모델 **Auto**입니다.
+- `room-practice`가 열려 있고, Chat은 Session Target **Copilot**, 역할 **Ask**, 모델 **Copilot Fusion**입니다.
 - `docs/01_킥오프_회의록.md`를 한 번 훑어봅니다. 특히 **결정한 것** 4개와 **결정하지 못한 것** 3개를 봐 둡니다.
 
 ## STEP 1. zero-shot: 예시 없이 요청하기
