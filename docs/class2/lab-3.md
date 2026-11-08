@@ -174,6 +174,9 @@ STEP 4의 예약 완료로 `data/reservations.json`에 #6이 추가되었습니�
 4. "스테이징된 변경이 없습니다. 모든 변경을 스테이징하고 바로 커밋할까요?" 같은 창이 뜨면 **Yes**를 누릅니다.
 5. 버튼이 **Sync Changes**(변경 동기화)로 바뀌면 클릭합니다. 확인 창이 뜨면 **OK**를 누릅니다.
     **Sync Changes**는 GitHub의 새 커밋을 받고(pull) 내 커밋을 올리는(push) 일을 한 번에 합니다. 지금은 받을 것이 없어 push만 일어납니다. 버튼 옆 `↑1`은 올릴 커밋 수, `↓1`은 받을 커밋 수입니다.
+
+!!! info "VS Code 버튼은 Git 명령과 같습니다"
+    **Commit**은 `git commit`, **Sync Changes**는 `git pull` + `git push`, **Discard Changes**는 `git restore`와 같은 일을 합니다. 전체 표는 [VS Code 버튼과 Git 명령](../appendix/vscode-copilot.md#git-buttons)에 있습니다.
 6. GitHub 로그인을 묻는 창이 뜨면 허락하고 브라우저에서 내 계정으로 로그인합니다.
 7. 오른쪽 아래에 **"git fetch"를 정기적으로 실행**할지 묻는 창이 뜨면 **예**를 누릅니다. GitHub에 새 커밋이 있는지 가끔 확인만 하는 기능이라 내 파일은 바뀌지 않습니다. 오후 팀 실습에서 팀원의 변경을 바로 알아챌 수 있습니다.
 

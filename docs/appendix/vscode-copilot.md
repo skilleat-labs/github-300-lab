@@ -37,6 +37,22 @@
     - 다른 확장이 같은 키를 쓰는 경우입니다. 명령 팔레트에서 **Preferences: Open Keyboard Shortcuts**를 열고, 검색 칸의 키보드 아이콘(**Record Keys**)을 누른 뒤 그 키를 눌러 연결된 명령을 봅니다.
     - 급하면 단축키 대신 왼쪽 활동 막대의 아이콘을 누릅니다.
 
+## VS Code 버튼과 Git 명령 { #git-buttons }
+
+오늘은 Git 명령을 직접 치지 않고 VS Code 버튼으로 합니다. 버튼마다 같은 일을 하는 Git 명령이 있습니다. 1교시에 배운 clone, push, pull이 어느 버튼인지 연결해 봅니다.
+
+| VS Code에서 누르는 것 | 같은 Git 명령 | 하는 일 | 오늘 처음 쓰는 곳 |
+|---|---|---|---|
+| 명령 팔레트 **Git: Clone** | `git clone` | GitHub 리포지토리를 내 PC로 처음 가져오기 | 1-2 |
+| **Changes** 목록에서 파일 클릭 | `git diff` | 바뀌기 전과 후 비교 | 1-3, 2-3 |
+| **Discard Changes** | `git restore` | 커밋하지 않은 변경을 마지막 커밋 상태로 되돌리기 | 1-3 |
+| 메시지 입력 후 **Commit** | `git add` + `git commit` | 바뀐 것을 기록으로 남기기 | 2-3 |
+| **Sync Changes** | `git pull` + `git push` | GitHub의 새 커밋 받고, 내 커밋 올리기 | 2-3 |
+| 자동 확인 (**git fetch** 정기 실행) | `git fetch` | GitHub에 새 커밋이 있는지 확인만 하기 | 2-3 |
+| 상태 표시줄 브랜치 이름 → **Create new branch...** | `git switch -c` | 새 브랜치 만들고 옮겨 가기 | 4-1 |
+| **Publish Branch** | `git push -u origin 브랜치` | 새 브랜치를 GitHub에 처음 올리기 | 4-3 |
+| 상태 표시줄 브랜치 이름 → 다른 브랜치 고르기 | `git switch` | 다른 브랜치로 옮겨 가기 | 4-3 |
+
 ## VS Code 곳곳에서 Copilot 부르기
 
 | 어디서 | 어떻게 | 무엇을 |
