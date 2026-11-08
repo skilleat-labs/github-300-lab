@@ -137,3 +137,6 @@ Chat 입력 칸에 붙여 넣고 Enter를 누릅니다.
 
 ??? failure "OO MCP을(를) 인증하는 중... 뒤에 No response was returned 오류가 나요"
     설치한 확장이 추가한 MCP 서버(외부 도구 연결)가 로그인을 기다리다 실패한 것입니다. 오늘 실습에는 MCP 서버가 필요 없습니다. 명령 팔레트에서 **Chat: Open Customizations** → **MCP Servers** → 그 서버의 **...** → **Disable**로 끄고, 새 채팅에서 다시 보냅니다.
+
+??? failure "모델 칸에 Auto가 아니라 다른 확장 이름(예: Select a Foundry project...)이 보이고 답이 오지 않아요"
+    설치한 다른 확장의 모델이 선택된 것입니다. 모델 선택기를 클릭하고 **Auto**를 고른 뒤 새 채팅에서 다시 보냅니다. 새 창을 열 때마다 바뀌면 확장 보기에서 그 확장을 **Disable**합니다.
