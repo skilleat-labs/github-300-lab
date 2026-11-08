@@ -915,10 +915,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7" class="md-nav__link">
+  <a href="#step-7-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 7. 프로그램 실행해 보기
+        STEP 7. 모르는 명령은 Copilot에게 묻기
       
     </span>
   </a>
@@ -926,10 +926,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-8-vs-code" class="md-nav__link">
+  <a href="#step-8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 8. VS Code 화면 익히기
+        STEP 8. 프로그램 실행해 보기
       
     </span>
   </a>
@@ -937,10 +937,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-9" class="md-nav__link">
+  <a href="#step-9-vs-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 9. 프로젝트 구조 둘러보기
+        STEP 9. VS Code 화면 익히기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 10. 프로젝트 구조 둘러보기
       
     </span>
   </a>
@@ -2356,10 +2367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7" class="md-nav__link">
+  <a href="#step-7-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 7. 프로그램 실행해 보기
+        STEP 7. 모르는 명령은 Copilot에게 묻기
       
     </span>
   </a>
@@ -2367,10 +2378,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-8-vs-code" class="md-nav__link">
+  <a href="#step-8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 8. VS Code 화면 익히기
+        STEP 8. 프로그램 실행해 보기
       
     </span>
   </a>
@@ -2378,10 +2389,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-9" class="md-nav__link">
+  <a href="#step-9-vs-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 9. 프로젝트 구조 둘러보기
+        STEP 9. VS Code 화면 익히기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 10. 프로젝트 구조 둘러보기
       
     </span>
   </a>
@@ -2435,7 +2457,7 @@
 <li>VS Code의 <strong>Git: Clone</strong>으로 내 PC에 가져오고, 테스트와 프로그램을 한 번씩 실행합니다.</li>
 <li>파일 탐색기로 프로젝트 구조를 둘러봅니다.</li>
 </ul>
-<p><strong>예상 시간</strong> 약 11분</p>
+<p><strong>예상 시간</strong> 약 12분</p>
 </div>
 <h2 id="_1">준비<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2565,26 +2587,51 @@
 <p class="admonition-title">테스트가 뭔가요?</p>
 <p><code>tests/test_rules.py</code>에 "이런 예약은 통과, 이런 예약은 막기" 같은 확인 4개가 들어 있습니다. 코드를 바꾼 뒤 이 명령을 다시 돌려 기존 기능이 깨지지 않았는지 봅니다. GitHub에서도 커밋할 때마다 같은 테스트가 자동으로 돕니다(워크플로 이름 "테스트").</p>
 </div>
-<h2 id="step-7">STEP 7. 프로그램 실행해 보기<a class="headerlink" href="#step-7" title="Permanent link">&para;</a></h2>
+<h2 id="step-7-copilot">STEP 7. 모르는 명령은 Copilot에게 묻기<a class="headerlink" href="#step-7-copilot" title="Permanent link">&para;</a></h2>
+<p>방금 실행한 명령이 무슨 뜻인지 몰라도 괜찮습니다. 모르는 명령이나 결과가 나오면 그 자리에서 Copilot에게 묻습니다. 오늘 하루 계속 쓰는 습관입니다.</p>
+<ol>
+<li>아래쪽 터미널 안을 클릭합니다.</li>
+<li>Windows는 <code>Ctrl+I</code>, Mac은 <code>⌘I</code>를 누릅니다. 터미널 위에 작은 입력 칸(터미널 인라인 채팅)이 열립니다.</li>
+<li>
+<p>입력하고 Enter를 누릅니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>방금 실행한 python -m pytest가 무슨 뜻인지 단어마다 나눠서 개발을 모르는 사람에게 설명해 주세요. 결과로 나온 점 4개(....)와 4 passed는 무엇을 뜻하나요?
+</span></code></pre></div>
+</li>
+<li>
+<p>답을 읽습니다. 이런 내용이 들어 있으면 됩니다.</p>
+<ul>
+<li><code>python</code>: 파이썬 프로그램을 실행합니다(Mac은 <code>python3</code>).</li>
+<li><code>-m pytest</code>: 설치한 테스트 도구 pytest를 실행합니다.</li>
+<li>점 하나는 통과한 테스트 하나, <code>4 passed</code>는 테스트 4개가 모두 통과했다는 뜻입니다.</li>
+</ul>
+</li>
+<li>답에 명령을 실행하는 버튼이 함께 보여도 누르지 않습니다. <strong>Esc</strong>로 닫습니다.</li>
+</ol>
+<p>확인: <code>python -m pytest</code>가 무엇을 하는 명령인지 한 문장으로 말할 수 있습니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">언제든 이렇게 묻습니다</p>
+<p>오늘 가이드에는 <code>python -m booking ...</code>, <code>git ...</code> 같은 명령이 계속 나옵니다. 뜻이 궁금하면 터미널에서 <code>Ctrl+I</code> / <code>⌘I</code>로 묻거나, Chat 보기(<code>Ctrl+Alt+I</code> / <code>⌃⌘I</code>)에 명령을 붙여 넣고 "이 명령이 무엇을 하는지 설명해 주세요"라고 묻습니다. 묻기는 크레딧을 조금 씁니다. 실행할지는 내가 정합니다.</p>
+</div>
+<h2 id="step-8">STEP 8. 프로그램 실행해 보기<a class="headerlink" href="#step-8" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>회의실 목록을 봅니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">Mac</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
 </span></code></pre></div>
 </div>
 </div>
 </div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>R1 소회의실 A (4명, 3층)
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>R2 소회의실 B (4명, 3층)
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>R3 중회의실 (8명, 5층)
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>R4 대회의실 (16명, 7층)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>R1 소회의실 A (4명, 3층)
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>R2 소회의실 B (4명, 3층)
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>R3 중회의실 (8명, 5층)
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>R4 대회의실 (16명, 7층)
 </span></code></pre></div>
 </li>
 <li>
@@ -2592,22 +2639,22 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">Mac</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
 </span></code></pre></div>
 </div>
 </div>
 </div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>#1 2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>#2 2026-11-10 13:00~15:00 R3 신규 서비스 킥오프 (이지은, 7명)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>#1 2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>#2 2026-11-10 13:00~15:00 R3 신규 서비스 킥오프 (이지은, 7명)
 </span></code></pre></div>
 </li>
 </ol>
 <p>확인: 두 명령의 결과가 위와 같습니다.</p>
-<h2 id="step-8-vs-code">STEP 8. VS Code 화면 익히기<a class="headerlink" href="#step-8-vs-code" title="Permanent link">&para;</a></h2>
+<h2 id="step-9-vs-code">STEP 9. VS Code 화면 익히기<a class="headerlink" href="#step-9-vs-code" title="Permanent link">&para;</a></h2>
 <p>처음 쓰는 분은 천천히 해 봅니다. 이미 익숙하면 건너뜁니다.</p>
 <table>
 <thead>
@@ -2658,7 +2705,7 @@
 <li>Windows <code>Ctrl+Alt+I</code>, Mac <code>⌃⌘I</code>로 Chat 보기를 엽니다.</li>
 </ol>
 <p>확인: 파일 열기, 터미널, Chat 보기를 단축키로 열 수 있습니다. 전체 목록은 <a href="../../appendix/vscode-copilot/">VS Code와 Copilot 한 장 정리</a>에 있습니다.</p>
-<h2 id="step-9">STEP 9. 프로젝트 구조 둘러보기<a class="headerlink" href="#step-9" title="Permanent link">&para;</a></h2>
+<h2 id="step-10">STEP 10. 프로젝트 구조 둘러보기<a class="headerlink" href="#step-10" title="Permanent link">&para;</a></h2>
 <p>왼쪽 활동 막대의 <strong>Explorer</strong>(탐색기, 종이 두 장 모양) 아이콘을 누르고, 폴더를 하나씩 펼쳐 봅니다.</p>
 <table>
 <thead>
@@ -2711,6 +2758,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> github.com에 <code>내아이디/room-practice</code>(Public)가 있습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> VS Code에서 <code>room-practice</code> 폴더가 열려 있고 신뢰했습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>python -m pytest</code>가 <strong>4 passed</strong>입니다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 터미널 인라인 채팅으로 <code>python -m pytest</code>의 뜻을 물어봤습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>python -m booking rooms</code>와 <code>python -m booking list --date 2026-11-10</code>이 위 결과와 같습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 왼쪽 사이드바, 파일 열기(<code>Ctrl+P</code> / <code>⌘P</code>), 명령 팔레트, Chat 보기를 열어 봤습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>docs/</code>, <code>booking/</code>, <code>data/</code>, <code>tests/</code>가 각각 무엇인지 말할 수 있습니다.</li>
