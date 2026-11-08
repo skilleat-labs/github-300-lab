@@ -121,7 +121,7 @@ Copilot의 답은 **틀릴 수 있습니다.** 표에 "안 됨"이라고 나온 
 
 ## 막히면
 
-??? failure "#를 입력해도 codebase가 목록에 없습니다"
+??? failure "`#`를 입력해도 `codebase`가 목록에 없습니다"
     `#` 다음에 `codebase`를 이어서 입력해 목록을 좁혀 봅니다. 그래도 없으면 Session Target이 **Copilot**인지 확인하고 새 채팅을 엽니다.
 
 ??? failure "파일을 끌어다 놓았는데 첨부되지 않습니다"
