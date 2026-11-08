@@ -122,7 +122,7 @@ Copilot을 보기 전에 VS Code 화면부터 익혀요.
 
 ### VS Code에서 Copilot은 여기에 있습니다
 
-VS Code에서 Copilot은 여기에 있어요. 아래쪽 상태 표시줄의 Copilot 아이콘으로 로그인하고 사용량을 봐요. Chat 보기는 Mac은 Control Command I, Windows는 Ctrl Alt I로 열어요. 채팅 입력 칸 주변에 선택할 게 몇 개 있어요. Session Target은 하네스라고 하는데, Copilot이 일하는 엔진 같은 거예요. 입력 칸 아래 줄에 Copilot이라고 적힌 곳이에요. 오늘은 모두 기본인 Copilot을 써요. 예전 자료에 나오는 Local 하네스는 지금은 기본으로 숨겨져 있어요. Agent 선택기에서 역할을 고르는데, Ask는 묻기만, Agent는 직접 고치기예요. 계획 세우기는 선택기에 없고 /plan 명령으로 불러요. 선택기 목록에 다른 이름이 더 보이면 설치한 확장이 추가한 사용자 지정 에이전트예요. 오늘은 쓰지 않아요. 모델은 Copilot Fusion, 권한은 Manual로 둬요. Manual이면 자동 승인되지 않은 작업은 나에게 확인을 요청해요. 읽기만 하는 명령처럼 자동으로 넘어가는 것도 있으니, 승인창이 안 떠도 설정 오류가 아니에요. 승인창이 뜨면 범위와 명령을 읽어요.
+VS Code에서 Copilot은 여기에 있어요. 아래쪽 상태 표시줄의 Copilot 아이콘으로 로그인하고 사용량을 봐요. Chat 보기는 Mac은 Control Command I, Windows는 Ctrl Alt I로 열어요. 채팅 입력 칸 주변에 선택할 게 몇 개 있어요. Session Target은 하네스라고 하는데, Copilot이 일하는 엔진 같은 거예요. 입력 칸 아래 줄에 Copilot이라고 적힌 곳이에요. 오늘은 모두 기본인 Copilot을 써요. Agent 선택기에서 역할을 고르는데, Ask는 묻기만, Agent는 직접 고치기예요. 계획 세우기는 선택기에 없고 /plan 명령으로 불러요. 선택기 목록에 다른 이름이 더 보이면 설치한 확장이 추가한 사용자 지정 에이전트예요. 오늘은 쓰지 않아요. 모델은 Copilot Fusion, 권한은 Manual로 둬요. Manual이면 자동 승인되지 않은 작업은 나에게 확인을 요청해요. 읽기만 하는 명령처럼 자동으로 넘어가는 것도 있으니, 승인창이 안 떠도 설정 오류가 아니에요. 승인창이 뜨면 범위와 명령을 읽어요.
 
 ## 실습
 
