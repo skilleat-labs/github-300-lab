@@ -101,6 +101,21 @@ GitHub 문서 'Prompt engineering for GitHub Copilot Chat'에 나오는 전략�
     - 리포지토리 안에 있으니 커밋하면 팀원 모두가 같은 지침을 받습니다. 바뀐 이력도 커밋으로 남습니다.
     - 이름 앞의 점(`.`)은 "설정용 폴더"라는 표시입니다. Mac의 Finder에서는 기본으로 숨겨져 보이지 않지만, VS Code 탐색기에는 보입니다.
 
+    `.github` 폴더에 두는 대표 파일 (GitHub 공식 문서 기준)
+
+    | 파일 | 하는 일 | 위치 규칙 |
+    |---|---|---|
+    | `.github/workflows/*.yml` | GitHub Actions 워크플로 (오늘 `ci.yml`, `pages.yml`) | 이 폴더에만 둡니다 |
+    | `.github/copilot-instructions.md` | Copilot 리포지토리 지침 (3-2) | 이 위치에만 둡니다 |
+    | `.github/instructions/*.instructions.md` | 특정 파일에만 적용하는 Copilot 지침 | 이 폴더 아래 |
+    | `.github/dependabot.yml` | 의존성 자동 업데이트 설정 | 이 폴더에만 둡니다 |
+    | `.github/ISSUE_TEMPLATE/` | 이슈를 만들 때 나오는 양식 | 이 폴더 |
+    | `pull_request_template.md` | PR을 만들 때 나오는 양식 | `.github`, 루트, `docs` 중 하나 |
+    | `CODEOWNERS` | 파일별 리뷰 담당자 | `.github`, 루트, `docs` 중 하나. 여러 곳에 있으면 `.github`가 먼저 |
+    | `CONTRIBUTING.md`, `SECURITY.md` 등 | 기여 방법, 보안 신고 안내 | `.github`, 루트, `docs` 중 하나. `.github`가 먼저 |
+
+    정리하면, 어떤 파일은 `.github`에만 두어야 하고, 어떤 파일은 여러 곳 중 하나를 고를 수 있지만 겹치면 `.github`가 먼저 쓰입니다. 그래서 GitHub와 도구를 위한 설정은 `.github`에 모아 두는 것이 일반적입니다. 문서에서는 이 폴더를 "숨김 폴더(hidden directory)"라고도 부릅니다.
+
     **`.md`(Markdown) 파일**
 
     - Markdown은 `#` 제목, `-` 목록 같은 간단한 기호로 구조를 표시하는 글 형식입니다. 메모장으로 열어도 그대로 읽힙니다.
