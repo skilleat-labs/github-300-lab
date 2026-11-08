@@ -75,9 +75,17 @@
 1. 터미널을 엽니다(Windows ``Ctrl+` ``, Mac ``⌃` ``).
 2. 아래 명령을 실행합니다.
 
-    ```bash
-    python -m booking report
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking report
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking report
+        ```
 
     ```text
     소회의실 A {'건수': 2, '시간': 2.5, '이용률': '보통'}

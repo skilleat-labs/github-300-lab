@@ -20,9 +20,17 @@
 
 1. 터미널에서 회의 제목에 스크립트를 넣어 예약합니다. 따옴표를 그대로 복사합니다.
 
-    ```text
-    python -m booking add --room R1 --title "<script>alert('예약')</script>" --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 2
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R1 --title "<script>alert('예약')</script>" --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 2
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R1 --title "<script>alert('예약')</script>" --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 2
+        ```
 
     ```text
     [예약 완료] #6 2026-11-13 10:00~11:00 R1 <script>alert('예약')</script>
@@ -30,9 +38,17 @@
 
 2. 현황판을 만듭니다.
 
-    ```text
-    python build_site.py
-    ```
+    === "Windows"
+
+        ```bash
+        python build_site.py
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 build_site.py
+        ```
 
 3. 탐색기에서 `site/index.html` 오른쪽 클릭 → **Reveal in File Explorer**(Mac은 **Reveal in Finder**) → `index.html`을 더블클릭해 브라우저로 엽니다.
 
@@ -101,9 +117,17 @@ Copilot의 보안 검토도 **검토 대상**입니다. 제안이 회의 제목(
 
 1. 현황판을 다시 만듭니다.
 
-    ```text
-    python build_site.py
-    ```
+    === "Windows"
+
+        ```bash
+        python build_site.py
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 build_site.py
+        ```
 
 2. 브라우저의 현황판 탭에서 새로 고침합니다. Windows ++f5++, Mac ++cmd+r++
 

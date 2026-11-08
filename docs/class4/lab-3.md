@@ -96,9 +96,17 @@
 4. `booking/rules.py`를 열어 겹침 검사 코드가 있는지 봅니다.
 5. 터미널에서 테스트를 돌려 봅니다.
 
-    ```text
-    python -m pytest
-    ```
+    === "Windows"
+
+        ```bash
+        python -m pytest
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pytest
+        ```
 
 확인: 브랜치가 `main`이고, `rules.py`에 겹침 검사가 있고, 테스트가 모두 통과합니다.
 

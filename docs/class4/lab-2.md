@@ -101,17 +101,33 @@ Copilot이 "통과했습니다"라고 말해도 내 눈으로 한 번 더 봅니
 1. 위쪽 메뉴 **Terminal** → **New Terminal**로 터미널을 엽니다.
 2. 테스트를 실행합니다.
 
-    ```text
-    python -m pytest
-    ```
+    === "Windows"
+
+        ```bash
+        python -m pytest
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pytest
+        ```
 
     `failed`가 없으면 됩니다. 필요한 경우가 모두 테스트에 있는지는 STEP 3에서 봤습니다.
 
 3. 겹치는 예약을 직접 넣어 봅니다.
 
-    ```text
-    python -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
+        ```
 
     이런 결과가 나오면 됩니다. 메시지 문장은 조금 다를 수 있습니다.
 
@@ -122,9 +138,17 @@ Copilot이 "통과했습니다"라고 말해도 내 눈으로 한 번 더 봅니
 
 4. 맞닿은 시간을 넣어 봅니다.
 
-    ```text
-    python -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
+        ```
 
     ```text
     [예약 완료] #6 2026-11-10 11:00~12:00 R1 이어서
@@ -157,9 +181,17 @@ Copilot이 "통과했습니다"라고 말해도 내 눈으로 한 번 더 봅니
 3. 승인 요청이 뜨면 STEP 2처럼 읽고 승인합니다.
 4. 터미널에서 다시 실행합니다.
 
-    ```text
-    python -m pytest
-    ```
+    === "Windows"
+
+        ```bash
+        python -m pytest
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pytest
+        ```
 
 확인: 세 경우의 테스트가 있고 `failed`가 없습니다. 이미 있던 경우라면 수가 늘지 않아도 정상입니다.
 

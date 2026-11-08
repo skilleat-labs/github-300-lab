@@ -48,9 +48,17 @@
 
 1. 터미널에서 실행합니다.
 
-    ```text
-    python tools/monthly_report.py
-    ```
+    === "Windows"
+
+        ```bash
+        python tools/monthly_report.py
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 tools/monthly_report.py
+        ```
 
 2. 아래 값과 비교합니다. 표 모양은 달라도 숫자가 같으면 됩니다.
 
@@ -72,9 +80,17 @@
 1. `tests/test_monthly_report.py`를 열어 `assert`가 STEP 2의 규칙과 같은지 읽습니다.
 2. 터미널에서 실행합니다.
 
-    ```text
-    python -m pytest
-    ```
+    === "Windows"
+
+        ```bash
+        python -m pytest
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pytest
+        ```
 
 확인: `failed`가 없습니다. 테스트를 지워서 통과시킨 것은 아닌지 봅니다.
 

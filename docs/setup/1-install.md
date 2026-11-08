@@ -122,11 +122,19 @@
 
 확인: 새 터미널을 열고 아래 명령을 실행합니다.
 
-```bash
-python --version
-```
+=== "Windows"
 
-`Python 3.12.x` 이상이 나오면 됩니다. Mac에서 `command not found`가 나오거나 3.12보다 낮은 버전이 나오면 `python3 --version`으로 다시 확인합니다. Mac에서는 오늘 실습 내내 `python` 대신 `python3`을 쓰면 됩니다.
+    ```bash
+    python --version
+    ```
+
+=== "Mac"
+
+    ```bash
+    python3 --version
+    ```
+
+`Python 3.12.x` 이상이 나오면 됩니다. Mac은 오늘 실습 내내 `python` 대신 `python3`을 씁니다. 가이드의 명령은 **Windows**, **Mac** 탭으로 나뉘어 있고, 한 번 고르면 모든 페이지에서 같은 탭이 선택됩니다.
 
 ## STEP 5. VS Code에 Python 확장 설치
 

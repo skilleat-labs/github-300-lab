@@ -77,20 +77,36 @@
 2. 아래쪽에 터미널이 열리고, 현재 폴더가 `room-practice`인지 봅니다.
 3. 아래 명령을 붙여 넣고 Enter를 누릅니다.
 
-    ```bash
-    python -m pip install -r requirements-dev.txt
-    ```
+    === "Windows"
+
+        ```bash
+        python -m pip install -r requirements-dev.txt
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pip install -r requirements-dev.txt
+        ```
 
 확인: 마지막 줄에 `Successfully installed ... pytest ...` 또는 `Requirement already satisfied`가 나옵니다.
 
-!!! tip "Mac에서 python이 안 되면 python3"
-    Mac에서 `python: command not found`가 나오면 `python` 대신 `python3`을 씁니다. 예: `python3 -m pip install -r requirements-dev.txt`. 오늘 가이드의 `python`은 모두 `python3`으로 바꿔 읽으면 됩니다.
+!!! tip "명령은 Windows, Mac 탭에서 고릅니다"
+    Mac은 `python` 대신 `python3`을 씁니다. 명령 위의 **Windows**, **Mac** 탭에서 내 OS를 한 번 고르면, 가이드의 모든 페이지에서 같은 탭이 선택됩니다. 글 속에 `python`이라고만 쓴 곳도 Mac은 `python3`으로 읽습니다. 예: `python3 -m pip install -r requirements-dev.txt`. 오늘 가이드의 `python`은 모두 `python3`으로 바꿔 읽으면 됩니다.
 
 ## STEP 6. 테스트 실행
 
-```bash
-python -m pytest
-```
+=== "Windows"
+
+    ```bash
+    python -m pytest
+    ```
+
+=== "Mac"
+
+    ```bash
+    python3 -m pytest
+    ```
 
 확인: 아래처럼 **4 passed**가 나옵니다.
 
@@ -106,9 +122,17 @@ python -m pytest
 
 1. 회의실 목록을 봅니다.
 
-    ```bash
-    python -m booking rooms
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking rooms
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking rooms
+        ```
 
     ```text
     R1 소회의실 A (4명, 3층)
@@ -119,9 +143,17 @@ python -m pytest
 
 2. 11월 10일 예약을 봅니다.
 
-    ```bash
-    python -m booking list --date 2026-11-10
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking list --date 2026-11-10
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking list --date 2026-11-10
+        ```
 
     ```text
     #1 2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)

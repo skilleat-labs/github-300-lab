@@ -76,9 +76,17 @@
 1. 터미널을 엽니다(Windows ``Ctrl+` ``, Mac ``⌃` ``).
 2. 아래 명령을 한 줄로 붙여 넣고 Enter를 누릅니다.
 
-    ```bash
-    python -c "from booking.store import load_reservations; from booking.format import format_reservation; print(format_reservation(load_reservations()[0]))"
-    ```
+    === "Windows"
+
+        ```bash
+        python -c "from booking.store import load_reservations; from booking.format import format_reservation; print(format_reservation(load_reservations()[0]))"
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -c "from booking.store import load_reservations; from booking.format import format_reservation; print(format_reservation(load_reservations()[0]))"
+        ```
 
 확인: `2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)`과 비슷한 한 줄이 나옵니다. 오류가 나면 Copilot이 만든 코드에 문제가 있는 것입니다. 오류 줄을 읽고 강사와 같이 봅니다.
 

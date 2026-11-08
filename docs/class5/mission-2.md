@@ -66,9 +66,17 @@
 4. 채팅의 바뀐 파일 목록이나 소스 제어 보기(Windows ++ctrl+shift+g++, Mac ⌃⇧G)의 **Changes** 목록에서 diff를 읽습니다.
 5. 터미널에서 직접 테스트를 실행합니다.
 
-    ```text
-    python -m pytest
-    ```
+    === "Windows"
+
+        ```bash
+        python -m pytest
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pytest
+        ```
 
 확인: `failed`가 없고, 내 스토리의 인수 조건마다 테스트가 있습니다. 바뀐 파일이 [팀 백로그](index.md#backlog)의 "바꿀 곳"과 테스트 파일뿐입니다.
 
@@ -78,18 +86,34 @@
 
 === "S1 겹침"
 
-    ```text
-    python -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
+        ```
 
     ```text
     [예약 실패]
      - 이미 예약된 시간입니다: #1 10:00~11:00 주간 업무 회의
     ```
 
-    ```text
-    python -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
+        ```
 
     ```text
     [예약 완료] #6 2026-11-10 11:00~12:00 R1 이어서
@@ -97,9 +121,17 @@
 
 === "S2 정원"
 
-    ```text
-    python -m booking add --room R1 --title 정원초과 --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 5
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R1 --title 정원초과 --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 5
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R1 --title 정원초과 --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 5
+        ```
 
     ```text
     [예약 실패]
@@ -108,9 +140,17 @@
 
     정원과 같은 인원은 성공해야 합니다.
 
-    ```text
-    python -m booking add --room R1 --title 정원딱맞음 --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 4
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R1 --title 정원딱맞음 --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 4
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R1 --title 정원딱맞음 --date 2026-11-13 --start 10:00 --end 11:00 --booker 홍길동 --attendees 4
+        ```
 
     ```text
     [예약 완료] #6 2026-11-13 10:00~11:00 R1 정원딱맞음
@@ -118,23 +158,47 @@
 
 === "S3 취소"
 
-    ```text
-    python -m booking cancel --id 3
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking cancel --id 3
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking cancel --id 3
+        ```
 
     ```text
     [취소 완료] #3
     ```
 
-    ```text
-    python -m booking list --date 2026-11-11
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking list --date 2026-11-11
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking list --date 2026-11-11
+        ```
 
     `#3 분기 실적 공유`가 목록에 없으면 됩니다. 없는 번호도 확인합니다.
 
-    ```text
-    python -m booking cancel --id 99
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking cancel --id 99
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking cancel --id 99
+        ```
 
     ```text
     [취소 실패] 없는 예약 번호입니다
@@ -142,17 +206,33 @@
 
 === "S4 18시"
 
-    ```text
-    python -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
+        ```
 
     ```text
     [예약 완료] #6 2026-11-10 17:00~18:00 R2 마감회의
     ```
 
-    ```text
-    python -m booking add --room R2 --title 늦은회의 --date 2026-11-12 --start 17:30 --end 18:30 --booker 홍길동 --attendees 2
-    ```
+    === "Windows"
+
+        ```bash
+        python -m booking add --room R2 --title 늦은회의 --date 2026-11-12 --start 17:30 --end 18:30 --booker 홍길동 --attendees 2
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m booking add --room R2 --title 늦은회의 --date 2026-11-12 --start 17:30 --end 18:30 --booker 홍길동 --attendees 2
+        ```
 
     ```text
     [예약 실패]

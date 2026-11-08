@@ -111,9 +111,17 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
 6. 오른쪽 아래 **Open**(열기)을 클릭합니다. "작성자를 신뢰하느냐"는 창이 뜨면 **Yes, I trust the authors**를 누릅니다.
 7. 터미널을 열고 테스트를 실행합니다.
 
-    ```text
-    python -m pytest
-    ```
+    === "Windows"
+
+        ```bash
+        python -m pytest
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pytest
+        ```
 
 확인: VS Code 탐색기 맨 위에 `ROOM-BOOKING-TEAM<번호>`가 보이고, `4 passed`가 나옵니다.
 

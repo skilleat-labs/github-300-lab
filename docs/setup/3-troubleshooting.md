@@ -45,7 +45,7 @@
 ## Python과 테스트
 
 ??? failure "python 명령을 찾을 수 없다고 나옵니다"
-    - **Mac**: `python` 대신 `python3`으로 실행합니다. 예: `python3 -m pytest`. 오늘 가이드의 `python`은 모두 `python3`으로 바꿔 읽습니다.
+    - **Mac**: `python` 대신 `python3`으로 실행합니다. 명령 위의 **Mac** 탭을 고르면 `python3`으로 보입니다. 글 속의 `python`도 `python3`으로 읽습니다.
     - **Windows**: Python을 설치할 때 **Add python.exe to PATH**를 체크하지 않은 경우가 많습니다. Windows **설정** → **앱**에서 Python을 제거하고, 다시 설치하면서 체크합니다. 설치 뒤에는 VS Code를 완전히 닫았다가 다시 엽니다.
     - 확인: VS Code 터미널에서 `python --version`(Mac은 `python3 --version`)이 3.12 이상을 보여 줍니다.
 
@@ -55,9 +55,17 @@
 ??? failure "No module named pytest 라고 나옵니다"
     테스트 도구(pytest)가 아직 설치되지 않았습니다. 리포지토리 폴더(`room-practice`)가 열린 VS Code 터미널에서 실행합니다.
 
-    ```bash
-    python -m pip install -r requirements-dev.txt
-    ```
+    === "Windows"
+
+        ```bash
+        python -m pip install -r requirements-dev.txt
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pip install -r requirements-dev.txt
+        ```
 
     설치가 끝나면 `python -m pytest`를 다시 실행합니다.
 
