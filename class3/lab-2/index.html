@@ -1192,10 +1192,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
+  <a href="#step-2-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 2. 지침 파일 만들기
+        STEP 2. Copilot과 대화하며 지침 만들기
       
     </span>
   </a>
@@ -1206,7 +1206,7 @@
   <a href="#step-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 3. 지침 내용 쓰기
+        STEP 3. 지침 파일로 저장하고 검토하기
       
     </span>
   </a>
@@ -2268,10 +2268,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
+  <a href="#step-2-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 2. 지침 파일 만들기
+        STEP 2. Copilot과 대화하며 지침 만들기
       
     </span>
   </a>
@@ -2282,7 +2282,7 @@
   <a href="#step-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 3. 지침 내용 쓰기
+        STEP 3. 지침 파일로 저장하고 검토하기
       
     </span>
   </a>
@@ -2365,7 +2365,7 @@
 <div class="admonition abstract">
 <p class="admonition-title">이 실습에서 할 일</p>
 <ul>
-<li>리포지토리에 <strong>지침 파일</strong> <code>.github/copilot-instructions.md</code>를 만듭니다.</li>
+<li>내가 원하는 규칙을 말하고 Copilot과 대화하며 <strong>지침 파일</strong> <code>.github/copilot-instructions.md</code>를 만듭니다. 결과는 사람이 검토합니다.</li>
 <li>지침 파일이 없을 때와 있을 때, 같은 질문에 대한 Copilot 답을 비교합니다.</li>
 <li>응답의 <strong>References</strong>에서 지침 파일이 실제로 쓰였는지 확인하고 커밋합니다.</li>
 </ul>
@@ -2487,71 +2487,109 @@
 </li>
 </ol>
 <p>확인: 메모를 했습니다. 대부분 최대 시간을 <strong>스스로 정해서</strong> 코드를 보여 줍니다. 회의록에서는 아직 정하지 못한 정책인데도요.</p>
-<h2 id="step-2">STEP 2. 지침 파일 만들기<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h2>
+<h2 id="step-2-copilot">STEP 2. Copilot과 대화하며 지침 만들기<a class="headerlink" href="#step-2-copilot" title="Permanent link">&para;</a></h2>
+<p>지침 파일은 내용을 복사해 오는 것이 아니라, <strong>내가 원하는 규칙을 말하고 Copilot과 다듬어 만드는 것</strong>입니다. 실무에서 내 리포지토리의 지침을 만들 때도 같은 방법을 씁니다.</p>
 <ol>
-<li>왼쪽 탐색기에서 <code>.github</code> 폴더를 마우스 오른쪽 버튼으로 클릭합니다. (<code>workflows</code> 폴더가 들어 있는 그 폴더입니다.)</li>
-<li><strong>New File...</strong>을 고릅니다.</li>
+<li><strong>+</strong>(<strong>New Chat</strong>)로 새 채팅을 엽니다. Session Target <strong>Copilot</strong>, 역할 <strong>Ask</strong>.</li>
 <li>
-<p>파일 이름에 아래를 입력하고 Enter를 누릅니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>copilot-instructions.md
+<p>입력 칸에 <code>#codebase</code>를 고르고, 이어서 붙여 넣고 Enter를 누릅니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>이 리포지토리에서 Copilot이 항상 따를 지침 파일 .github/copilot-instructions.md를 만들려고 합니다.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docs/ 문서와 코드를 읽고, 지침에 넣으면 좋을 규칙을 목록으로 제안해 주세요. 아직 파일은 만들지 마세요.
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>제가 꼭 넣고 싶은 것:
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>- 답변은 한국어로, 전문 용어는 처음 나올 때 쉬운 말로 풀어서
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>- 회의록이나 docs/ 문서에 없는 정책은 지어내지 말고, 누구에게 확인해야 하는지 질문
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>- 기능을 바꾸면 tests/ 폴더에 pytest 테스트를 함께 추가
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>- data/ 폴더의 파일은 내가 요청할 때만 바꾸기
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>제가 놓친 규칙이 있으면 질문 2~3개로 물어봐 주세요.
 </span></code></pre></div>
 </li>
+<li>
+<p>제안과 질문을 읽고 답합니다. 예를 들어 이렇게 답할 수 있습니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>오류 메시지는 한국어 문장으로 마침표로 끝내 주세요. 운영 시간 규칙은 docs/02_현행_업무.md에 있는 그대로 넣어 주세요. 나머지는 제안대로 좋습니다.
+</span></code></pre></div>
+</li>
+<li>
+<p>제안 중에 <strong>문서에 없는 정책</strong>(예: "최대 예약은 2시간")이 들어 있으면 빼 달라고 말합니다. 지침에 잘못 들어간 정책은 이후 모든 답에 따라다닙니다.</p>
+</li>
 </ol>
-<p>확인: 탐색기에 <code>.github/copilot-instructions.md</code>가 생기고 빈 편집기가 열렸습니다. <code>.github</code> 폴더 바로 아래에 있어야 하고, <code>workflows</code> 폴더 안에 들어가면 안 됩니다.</p>
+<p>확인: 내가 원한 규칙 4개와 내가 고른 규칙만 남은 목록을 받았습니다.</p>
 <div class="admonition tip">
-<p class="admonition-title">명령으로 만드는 방법</p>
-<p>명령 팔레트(Windows <code>Ctrl+Shift+P</code>, Mac <code>⇧⌘P</code>)에서 <strong>Chat: New Instructions File</strong>을 실행해도 됩니다. 위치를 묻는 화면이 나오면 이 리포지토리의 <code>.github</code> 폴더를 고릅니다.</p>
-<div class="admonition note">
-<p class="admonition-title">화면이 조금 다를 수 있어요</p>
-<p>명령이 묻는 순서와 선택지는 VS Code 버전에 따라 다릅니다. 헷갈리면 위 STEP 2의 탐색기 방법으로 만듭니다.</p>
+<p class="admonition-title">왜 Ask로 먼저 하나요?</p>
+<p>바로 파일을 만들게 하면 Copilot이 정한 규칙이 그대로 들어갑니다. Ask로 목록을 받아 사람이 고른 뒤에 파일을 만듭니다. 3교시에 배운 "목표, 맥락, 형식, 제약"과 "모르면 질문하게 하기"를 지침 만들기에 그대로 쓰는 것입니다.</p>
 </div>
-</div>
-<h2 id="step-3">STEP 3. 지침 내용 쓰기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
+<h2 id="step-3">STEP 3. 지침 파일로 저장하고 검토하기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
 <ol>
+<li>역할을 <strong>Agent</strong>로 바꿉니다.</li>
 <li>
-<p>아래 내용을 통째로 복사해 <code>copilot-instructions.md</code>에 붙여 넣습니다.</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gh"># 회의실 예약 서비스 Copilot 지침</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="gu">## 프로젝트</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">-</span><span class="w"> </span>사내 회의실 예약 서비스다. 공유 엑셀 예약을 대신한다.
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">-</span><span class="w"> </span>요구사항의 근거는 docs/ 폴더의 문서다. 현업 요청(00), 킥오프 회의록(01), 현행 업무(02), 사용자 스토리(03).
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">-</span><span class="w"> </span>예약 규칙 검사는 booking/rules.py의 validate()에 모은다.
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="gu">## 답변</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">-</span><span class="w"> </span>답변은 한국어로 한다.
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="k">-</span><span class="w"> </span>이 리포지토리를 읽는 사람은 기획자와 운영 담당자가 많다. 전문 용어는 처음 나올 때 쉬운 말로 풀어 쓴다.
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="gu">## 정책</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="k">-</span><span class="w"> </span>회의록이나 docs/ 문서에 없는 정책(최대 예약 시간, 노쇼 기준, 연락처 공개 등)은 지어내지 않는다. 정해지지 않았다고 알리고, 누구에게 확인해야 하는지 질문한다.
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="k">-</span><span class="w"> </span>운영 시간은 09:00~18:00이고 18:00에 끝나는 예약은 가능하다. 예약은 30분 단위다.
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="gu">## 코드</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">-</span><span class="w"> </span>Python 3.12 기준으로 작성한다.
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="k">-</span><span class="w"> </span>사용자에게 보이는 오류 메시지는 한국어 문장으로, 마침표로 끝낸다. 예: "정원을 넘었습니다."
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="k">-</span><span class="w"> </span>기능을 바꾸면 pytest 테스트를 tests/ 폴더에 함께 추가한다. 테스트 함수 이름은 한국어로 동작을 설명한다. 예: test_정원을_넘으면_막는다
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="k">-</span><span class="w"> </span>바꾼 뒤에는 python -m pytest로 확인한다.
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="gu">## 하지 말 것</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="k">-</span><span class="w"> </span>data/reservations.json, data/rooms.json은 사용자가 요청할 때만 바꾼다.
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="k">-</span><span class="w"> </span>요청받지 않은 파일은 고치지 않는다.
+<p>같은 채팅에 붙여 넣고 Enter를 누릅니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>지금까지 정한 규칙으로 .github/copilot-instructions.md를 만들어 주세요.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>제목과 짧은 목록으로, 30줄 이내로 써 주세요. 확인할 수 있는 문장으로 써 주세요. 다른 파일은 바꾸지 마세요.
 </span></code></pre></div>
 </li>
 <li>
-<p>저장합니다(Windows <code>Ctrl+S</code>, Mac <code>⌘S</code>).</p>
+<p>승인 요청을 읽고 <strong>Allow Once</strong>를 누릅니다.</p>
 </li>
+<li>탐색기에서 <code>.github/copilot-instructions.md</code>를 열어 읽습니다. 아래가 모두 들어 있는지 확인합니다.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 답변은 한국어</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 문서에 없는 정책은 지어내지 않고 질문</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 기능을 바꾸면 pytest 테스트 추가</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> data/ 파일은 요청할 때만 변경</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 정하지 않은 정책(최대 예약 시간 같은 것)이 <strong>규칙으로 들어가 있지 않음</strong></li>
+</ul>
+</li>
+<li>고칠 곳이 있으면 편집기에서 직접 고치거나, Chat에 고칠 점을 말합니다. 저장합니다(Windows <code>Ctrl+S</code>, Mac <code>⌘S</code>).</li>
 </ol>
-<p>확인: 편집기 탭의 파일 이름 옆 동그라미(저장 안 됨 표시)가 사라졌습니다.</p>
+<p>확인: <code>.github</code> 폴더 바로 아래에 <code>copilot-instructions.md</code>가 있고(<code>workflows</code> 폴더 안이 아님), 위 체크가 모두 됩니다.</p>
 <div class="admonition tip">
 <p class="admonition-title">지침은 짧고 구체적으로</p>
 <p>지침 파일은 모든 채팅에 함께 들어갑니다. 길게 쓰면 맥락을 차지하고, 애매하게 쓰면 지켜지지 않습니다. "좋은 코드를 써라"보다 "오류 메시지는 한국어 문장으로, 마침표로 끝낸다"처럼 확인할 수 있게 씁니다.</p>
 </div>
+<details class="example">
+<summary>참고 예시: 다 만든 지침 파일은 이런 모습입니다</summary>
+<p>내 결과와 비교해 봅니다. 시간이 모자라면 이 내용을 <code>.github/copilot-instructions.md</code>에 붙여 넣고 다음 STEP으로 가도 됩니다.</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    # 회의실 예약 서비스 Copilot 지침
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    ## 프로젝트
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>사내 회의실 예약 서비스다. 공유 엑셀 예약을 대신한다.
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>요구사항의 근거는 docs/ 폴더의 문서다. 현업 요청(00), 킥오프 회의록(01), 현행 업무(02), 사용자 스토리(03).
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>예약 규칙 검사는 booking/rules.py의 validate()에 모은다.
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    ## 답변
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>답변은 한국어로 한다.
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>이 리포지토리를 읽는 사람은 기획자와 운영 담당자가 많다. 전문 용어는 처음 나올 때 쉬운 말로 풀어 쓴다.
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    ## 정책
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>회의록이나 docs/ 문서에 없는 정책(최대 예약 시간, 노쇼 기준, 연락처 공개 등)은 지어내지 않는다. 정해지지 않았다고 알리고, 누구에게 확인해야 하는지 질문한다.
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>운영 시간은 09:00~18:00이고 18:00에 끝나는 예약은 가능하다. 예약은 30분 단위다.
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    ## 코드
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Python 3.12 기준으로 작성한다.
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>사용자에게 보이는 오류 메시지는 한국어 문장으로, 마침표로 끝낸다. 예: "정원을 넘었습니다."
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>기능을 바꾸면 pytest 테스트를 tests/ 폴더에 함께 추가한다. 테스트 함수 이름은 한국어로 동작을 설명한다. 예: test_정원을_넘으면_막는다
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>바꾼 뒤에는 python -m pytest로 확인한다.
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    ## 하지 말 것
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>data/reservations.json, data/rooms.json은 사용자가 요청할 때만 바꾼다.
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>요청받지 않은 파일은 고치지 않는다.
+</span></code></pre></div>
+</details>
+<details class="tip">
+<summary>파일을 직접 만들거나 명령으로 만들려면</summary>
+<ul>
+<li>탐색기에서 <code>.github</code> 폴더를 오른쪽 클릭 → <strong>New File...</strong> → <code>copilot-instructions.md</code></li>
+<li>명령 팔레트에서 <strong>Chat: New Instructions File</strong></li>
+<li>Session Target <strong>Local</strong> 채팅에서는 <code>/create-instructions</code> 명령으로 Copilot이 지침 파일 만들기를 도와줍니다.</li>
+</ul>
+</details>
 <h2 id="step-4">STEP 4. 새 채팅에서 같은 질문하기 (후)<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h2>
 <p>지침은 <strong>새 채팅</strong>부터 적용됩니다.</p>
 <ol>
 <li><strong>+</strong>(<strong>New Chat</strong>)로 새 채팅을 엽니다. 역할 <strong>Ask</strong>.</li>
 <li>
 <p>STEP 1과 <strong>똑같은</strong> 질문을 붙여 넣고 Enter를 누릅니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>한 번에 너무 오래 예약하지 못하게 최대 예약 시간 검사를 booking/rules.py에 넣으려고 합니다. 어떻게 바꾸면 되는지 알려 주세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>한 번에 너무 오래 예약하지 못하게 최대 예약 시간 검사를 booking/rules.py에 넣으려고 합니다. 어떻게 바꾸면 되는지 알려 주세요.
 </span></code></pre></div>
 </li>
 <li>
@@ -2598,13 +2636,15 @@
 <li><strong>Changes</strong>에 <code>copilot-instructions.md</code>만 있는지 확인합니다.</li>
 <li>
 <p>메시지 칸에 아래를 입력하고 <strong>Commit</strong>, 이어서 <strong>Sync Changes</strong>를 누릅니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Copilot 지침 파일 추가
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Copilot 지침 파일 추가
 </span></code></pre></div>
 </li>
 </ol>
 <p>확인: github.com의 <code>room-practice</code>에서 <code>.github/copilot-instructions.md</code>가 보입니다.</p>
 <h2 id="_2">다 됐는지 확인<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Copilot에게 규칙을 제안받고, 내가 고른 규칙으로 지침 파일을 만들었습니다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 문서에 없는 정책이 지침에 들어가지 않았는지 검토했습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>.github/copilot-instructions.md</code>가 <code>.github</code> 바로 아래에 있습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 새 채팅의 <strong>References</strong>에서 지침 파일을 확인했습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 같은 질문에 대해 지침 전과 후의 답을 비교했습니다.</li>
