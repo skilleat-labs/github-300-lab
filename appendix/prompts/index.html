@@ -1142,7 +1142,7 @@
   <span class="md-ellipsis">
     
   
-    실습 3-3 프롬프트 파일로 아이디어 검토
+    실습 3-3 스킬로 아이디어 검토
   
 
     
@@ -2424,178 +2424,180 @@
 <p><strong>3-2 지침 파일 전후 비교 질문</strong> <a href="../../class3/lab-2/">실습 3-2</a></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>한 번에 너무 오래 예약하지 못하게 최대 예약 시간 검사를 booking/rules.py에 넣으려고 합니다. 어떻게 바꾸면 되는지 알려 주세요.
 </span></code></pre></div>
-<p><strong>3-3 프롬프트 파일 <code>/idea</code></strong> (Local 하네스, 업무 설명 선택 후) <a href="../../class3/lab-3/">실습 3-3</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>/idea
+<p><strong>3-3 스킬 <code>/idea</code></strong> (Copilot 하네스, Ask, <code>#04_월간집계_업무.md</code> 첨부) <a href="../../class3/lab-3/">실습 3-3</a></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>/idea #04_월간집계_업무.md
 </span></code></pre></div>
-<p>지침 파일과 프롬프트 파일의 전체 내용은 <a href="../../class3/lab-2/">실습 3-2</a>, <a href="../../class3/lab-3/">실습 3-3</a>에 있습니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>이 업무를 자동화할 아이디어를 검토해 주세요.
+</span></code></pre></div>
+<p>지침 파일과 스킬의 전체 내용은 <a href="../../class3/lab-2/">실습 3-2</a>, <a href="../../class3/lab-3/">실습 3-3</a>에 있습니다.</p>
 <h2 id="_2">막혔을 때<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>오류를 Copilot에게 묻기</strong> (Ask) <a href="../../setup/3-troubleshooting/#copilot">막혔을 때</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>실습 중에 아래 오류가 났습니다. 원인을 쉬운 말로 설명하고, 확인할 것과 해결 순서를 하나씩 알려 주세요. 명령을 실행해야 하면 그 명령이 무엇을 하는지도 알려 주세요.
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>(오류 메시지 붙여 넣기)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>실습 중에 아래 오류가 났습니다. 원인을 쉬운 말로 설명하고, 확인할 것과 해결 순서를 하나씩 알려 주세요. 명령을 실행해야 하면 그 명령이 무엇을 하는지도 알려 주세요.
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>(오류 메시지 붙여 넣기)
 </span></code></pre></div>
 <h2 id="4">4교시 에이전트<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p><strong>4-1 <code>/plan</code>으로 계획</strong> (Copilot 하네스, <code>rules.py</code>, 현업 요청, 회의록, 테스트 첨부) <a href="../../class4/lab-1/">실습 4-1</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>/plan 현업 요청 1번 "겹치는 예약 막기"를 구현하는 계획을 세워 주세요.
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>배경: booking/rules.py의 validate()에 "# TODO: 같은 회의실, 같은 날짜에 시간이 겹치는 예약은 막아야 한다 (현업 요청 1번)"이 있습니다.
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>근거 문서: docs/00_현업요청.md, docs/01_킥오프_회의록.md (결정한 것 1번)
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>계획에 넣어 주세요.
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>1. 어떤 파일의 어디를 바꾸는지
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2. "겹친다"의 정확한 판단 기준
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>3. 실패할 때 보여 줄 오류 메시지 (예: "이미 예약된 시간입니다")
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>4. tests/test_rules.py에 추가할 테스트 목록
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>5. 문서에 없어서 확인이 필요한 것
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>아직 코드는 바꾸지 마세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>/plan 현업 요청 1번 "겹치는 예약 막기"를 구현하는 계획을 세워 주세요.
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>배경: booking/rules.py의 validate()에 "# TODO: 같은 회의실, 같은 날짜에 시간이 겹치는 예약은 막아야 한다 (현업 요청 1번)"이 있습니다.
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>근거 문서: docs/00_현업요청.md, docs/01_킥오프_회의록.md (결정한 것 1번)
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>계획에 넣어 주세요.
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>1. 어떤 파일의 어디를 바꾸는지
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2. "겹친다"의 정확한 판단 기준
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>3. 실패할 때 보여 줄 오류 메시지 (예: "이미 예약된 시간입니다")
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>4. tests/test_rules.py에 추가할 테스트 목록
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>5. 문서에 없어서 확인이 필요한 것
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>아직 코드는 바꾸지 마세요.
 </span></code></pre></div>
 <p><strong>4-1 계획 고치기</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>계획을 아래대로 고쳐 주세요.
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>- 끝과 시작이 맞닿으면(예: 10:00~11:00과 11:00~12:00) 겹침이 아닙니다. 테스트에 넣어 주세요.
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>- 다른 회의실이나 다른 날짜는 같은 시간이어도 예약할 수 있어야 합니다. 테스트에 넣어 주세요.
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>- 비교할 때 같은 id의 예약(자기 자신)은 빼 주세요.
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>- 오류 메시지는 "이미 예약된 시간입니다"로 시작하고, 겹치는 예약 번호와 시간을 함께 보여 주세요.
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>- 최대 예약 시간과 정원 검사는 이번 범위가 아니니 빼 주세요.
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>아직 코드는 바꾸지 마세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>계획을 아래대로 고쳐 주세요.
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>- 끝과 시작이 맞닿으면(예: 10:00~11:00과 11:00~12:00) 겹침이 아닙니다. 테스트에 넣어 주세요.
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>- 다른 회의실이나 다른 날짜는 같은 시간이어도 예약할 수 있어야 합니다. 테스트에 넣어 주세요.
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>- 비교할 때 같은 id의 예약(자기 자신)은 빼 주세요.
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>- 오류 메시지는 "이미 예약된 시간입니다"로 시작하고, 겹치는 예약 번호와 시간을 함께 보여 주세요.
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>- 최대 예약 시간과 정원 검사는 이번 범위가 아니니 빼 주세요.
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>아직 코드는 바꾸지 마세요.
 </span></code></pre></div>
 <p><strong>4-2 구현</strong> (Agent) <a href="../../class4/lab-2/">실습 4-2</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>위에서 고친 계획대로 구현해 주세요.
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>- booking/rules.py의 validate()에서 TODO 자리에 겹침 검사를 넣어 주세요.
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>- tests/test_rules.py에 계획의 테스트를 추가해 주세요. 기존 테스트 4개는 그대로 두세요.
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>- 다 되면 python -m pytest를 실행해서 결과를 보여 주세요.
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>- 계획에 없는 파일은 바꾸지 마세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>위에서 고친 계획대로 구현해 주세요.
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>- booking/rules.py의 validate()에서 TODO 자리에 겹침 검사를 넣어 주세요.
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>- tests/test_rules.py에 계획의 테스트를 추가해 주세요. 기존 테스트 4개는 그대로 두세요.
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>- 다 되면 python -m pytest를 실행해서 결과를 보여 주세요.
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>- 계획에 없는 파일은 바꾸지 마세요.
 </span></code></pre></div>
 <p><strong>4-2 경계값 테스트 더 받기</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>/tests booking/rules.py의 겹침 검사에 대한 경계값 테스트를 tests/test_rules.py에 더 추가해 주세요.
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>- 같은 시간이지만 다른 회의실(R2)이면 통과
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>- 같은 시간이지만 다른 날짜(2026-11-11)이면 통과
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>- 기존 예약을 완전히 감싸는 예약(09:30~11:30)은 실패
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>- 이미 있는 테스트와 겹치는 것은 추가하지 마세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>/tests booking/rules.py의 겹침 검사에 대한 경계값 테스트를 tests/test_rules.py에 더 추가해 주세요.
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>- 같은 시간이지만 다른 회의실(R2)이면 통과
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>- 같은 시간이지만 다른 날짜(2026-11-11)이면 통과
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>- 기존 예약을 완전히 감싸는 예약(09:30~11:30)은 실패
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>- 이미 있는 테스트와 겹치는 것은 추가하지 마세요.
 </span></code></pre></div>
 <h2 id="5-1">5교시 팀 실습 ①<a class="headerlink" href="#5-1" title="Permanent link">&para;</a></h2>
 <p><strong>5-1 PO: 우선순위와 결정안</strong> (Ask, <code>docs/</code> 3개 첨부) <a href="../../class5/mission-1/">미션 5-1</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>나는 회의실 예약 서비스의 PO입니다. 첨부한 문서만 근거로 아래를 정리해 주세요.
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>1. 회의록 "결정한 것" 4개의 MVP 우선순위(1~4위)와 이유 한 줄씩. 근거 문장을 문서에서 인용해 주세요.
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>2. "결정하지 못한 것" 3개 각각에 대해
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>   - 선택지와 각 선택지의 장단점
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>   - PO 결정안(추천) 한 줄
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>   - 현업(총무팀)에게 확인할 질문 한 줄
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>3. 문서에 근거가 없는 내용은 쓰지 말고 "근거 없음"이라고 표시해 주세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>나는 회의실 예약 서비스의 PO입니다. 첨부한 문서만 근거로 아래를 정리해 주세요.
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>1. 회의록 "결정한 것" 4개의 MVP 우선순위(1~4위)와 이유 한 줄씩. 근거 문장을 문서에서 인용해 주세요.
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>2. "결정하지 못한 것" 3개 각각에 대해
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>   - 선택지와 각 선택지의 장단점
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>   - PO 결정안(추천) 한 줄
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>   - 현업(총무팀)에게 확인할 질문 한 줄
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>3. 문서에 근거가 없는 내용은 쓰지 말고 "근거 없음"이라고 표시해 주세요.
 </span></code></pre></div>
 <p><strong>5-1 BA: 인수 조건 초안</strong> (Ask)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>아래 스토리의 인수 조건을 Given-When-Then 형식으로 3개 써 주세요.
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>- 정상 동작 1개, 실패 동작 1개, 경계값 1개를 넣어 주세요.
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>- 실제로 실행해 볼 수 있게 회의실 ID, 날짜, 시간, 인원을 구체적으로 써 주세요.
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>- 첨부 문서에 없는 정책은 만들지 말고 "확인 필요"로 표시해 주세요.
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>스토리: [S1] 같은 회의실, 같은 날짜에 시간이 겹치는 예약을 막는다
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>완료 기준: 10:00~11:00이 있으면 10:30~11:30은 "이미 예약된 시간"으로 실패. 11:00~12:00은 성공(맞닿음은 겹침 아님)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>아래 스토리의 인수 조건을 Given-When-Then 형식으로 3개 써 주세요.
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>- 정상 동작 1개, 실패 동작 1개, 경계값 1개를 넣어 주세요.
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>- 실제로 실행해 볼 수 있게 회의실 ID, 날짜, 시간, 인원을 구체적으로 써 주세요.
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>- 첨부 문서에 없는 정책은 만들지 말고 "확인 필요"로 표시해 주세요.
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>스토리: [S1] 같은 회의실, 같은 날짜에 시간이 겹치는 예약을 막는다
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>완료 기준: 10:00~11:00이 있으면 10:30~11:30은 "이미 예약된 시간"으로 실패. 11:00~12:00은 성공(맞닿음은 겹침 아님)
 </span></code></pre></div>
 <p><strong>5-1 개발자: 바꿀 파일과 충돌 위험</strong> (Ask)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>#codebase 이 리포지토리에서 아래 스토리 4개를 각각 다른 사람이 동시에 구현합니다.
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>S1 겹치는 예약 막기 / S2 정원 초과 막기 / S3 예약 취소(python -m booking cancel --id) / S4 18:00에 끝나는 예약 허용
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>1. 스토리마다 바뀔 파일과 함수를 표로 정리해 주세요. 테스트 파일도 포함해 주세요.
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>2. 같은 파일, 같은 함수를 동시에 고쳐 병합 충돌이 날 수 있는 조합을 알려 주세요.
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>3. 충돌을 줄이는 병합 순서를 추천해 주세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>#codebase 이 리포지토리에서 아래 스토리 4개를 각각 다른 사람이 동시에 구현합니다.
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>S1 겹치는 예약 막기 / S2 정원 초과 막기 / S3 예약 취소(python -m booking cancel --id) / S4 18:00에 끝나는 예약 허용
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>1. 스토리마다 바뀔 파일과 함수를 표로 정리해 주세요. 테스트 파일도 포함해 주세요.
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>2. 같은 파일, 같은 함수를 동시에 고쳐 병합 충돌이 날 수 있는 조합을 알려 주세요.
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>3. 충돌을 줄이는 병합 순서를 추천해 주세요.
 </span></code></pre></div>
 <p><strong>5-2 모두: 이슈로 계획 받기</strong> <a href="../../class5/mission-2/">미션 5-2</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>/plan 아래 GitHub 이슈 #3을 구현하는 계획을 세워 주세요.
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>- 바꿀 파일과 함수
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>- 인수 조건마다 추가할 테스트 (tests/test_rules.py 또는 새 테스트 파일)
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>- 직접 확인할 python -m booking 명령
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>- 이슈에 없는 기능은 넣지 마세요.
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>(여기에 이슈 본문)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>/plan 아래 GitHub 이슈 #3을 구현하는 계획을 세워 주세요.
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>- 바꿀 파일과 함수
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>- 인수 조건마다 추가할 테스트 (tests/test_rules.py 또는 새 테스트 파일)
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>- 직접 확인할 python -m booking 명령
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>- 이슈에 없는 기능은 넣지 마세요.
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>(여기에 이슈 본문)
 </span></code></pre></div>
 <p><strong>5-2 모두: 구현</strong> (Agent)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>위 계획대로 구현하고 테스트를 추가해 주세요.
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>- 기존 테스트는 지우거나 바꾸지 마세요.
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>- 다 되면 python -m pytest를 실행해 결과를 보여 주세요.
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>- 계획에 없는 파일은 바꾸지 마세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>위 계획대로 구현하고 테스트를 추가해 주세요.
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>- 기존 테스트는 지우거나 바꾸지 마세요.
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>- 다 되면 python -m pytest를 실행해 결과를 보여 주세요.
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>- 계획에 없는 파일은 바꾸지 마세요.
 </span></code></pre></div>
 <h2 id="6-2">6교시 팀 실습 ②<a class="headerlink" href="#6-2" title="Permanent link">&para;</a></h2>
 <p><strong>6-1 리뷰 의견 반영</strong> (Agent) <a href="../../class6/mission-1/">미션 6-1</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>PR 리뷰에서 아래 의견을 받았습니다. 반영해 주세요. 다른 곳은 바꾸지 마세요. 다 되면 python -m pytest를 실행해 주세요.
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>(여기에 리뷰 댓글)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>PR 리뷰에서 아래 의견을 받았습니다. 반영해 주세요. 다른 곳은 바꾸지 마세요. 다 되면 python -m pytest를 실행해 주세요.
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>(여기에 리뷰 댓글)
 </span></code></pre></div>
 <p><strong>6-1 충돌 설명 받기</strong> (Ask)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>병합 충돌입니다. 위쪽은 내 브랜치(겹침 검사), 아래쪽은 main에 먼저 들어간 변경입니다.
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>각각 무엇을 하는 코드인지 설명하고, 두 검사가 모두 남도록 합친 코드를 보여 주세요. 충돌 표시 줄(&lt;&lt;&lt;, ===, &gt;&gt;&gt;)은 빼 주세요.
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>(여기에 충돌 부분)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>병합 충돌입니다. 위쪽은 내 브랜치(겹침 검사), 아래쪽은 main에 먼저 들어간 변경입니다.
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>각각 무엇을 하는 코드인지 설명하고, 두 검사가 모두 남도록 합친 코드를 보여 주세요. 충돌 표시 줄(&lt;&lt;&lt;, ===, &gt;&gt;&gt;)은 빼 주세요.
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>(여기에 충돌 부분)
 </span></code></pre></div>
 <p><strong>6-2 배포 워크플로 만들기</strong> (Agent, <code>build_site.py</code>, <code>ci.yml</code> 첨부) <a href="../../class6/mission-2/">미션 6-2</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>GitHub Pages 배포 워크플로를 만들어 주세요.
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>- 파일: .github/workflows/pages.yml
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>- 워크플로 이름: 현황판 배포
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>- 실행 시점: main에 push될 때, 그리고 수동 실행(workflow_dispatch)
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>- 할 일: Python 3.12로 python build_site.py를 실행해 site/ 폴더를 만들고, site/ 폴더를 GitHub Pages에 배포
-</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>- GitHub 공식 Pages 액션(configure-pages, upload-pages-artifact, deploy-pages)을 써 주세요.
-</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>- 필요한 권한(permissions)만 최소로 주세요.
-</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>- 다른 파일은 바꾸지 마세요.
-</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>- 다 만든 뒤 각 단계가 무엇을 하는지 한 줄씩 설명해 주세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>GitHub Pages 배포 워크플로를 만들어 주세요.
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>- 파일: .github/workflows/pages.yml
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>- 워크플로 이름: 현황판 배포
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>- 실행 시점: main에 push될 때, 그리고 수동 실행(workflow_dispatch)
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>- 할 일: Python 3.12로 python build_site.py를 실행해 site/ 폴더를 만들고, site/ 폴더를 GitHub Pages에 배포
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>- GitHub 공식 Pages 액션(configure-pages, upload-pages-artifact, deploy-pages)을 써 주세요.
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>- 필요한 권한(permissions)만 최소로 주세요.
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>- 다른 파일은 바꾸지 마세요.
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>- 다 만든 뒤 각 단계가 무엇을 하는지 한 줄씩 설명해 주세요.
 </span></code></pre></div>
 <p><strong>6-3 BA: CR-001 영향 분석</strong> (Ask) <a href="../../class6/mission-3/">미션 6-3</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>#codebase 아래 변경 요청을 반영하면 어떤 파일이 바뀌어야 하는지 영향 분석을 해 주세요.
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>CR-001: 현황판이 회의실 앞 태블릿과 사외에서도 보입니다. 연락처는 빼고, 예약자는 성과 '○○'로만 보여 주세요. 예: 김○○
-</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
-</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>1. 바뀌어야 하는 파일과 이유
-</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>2. 바뀌지 않아야 하는 것 (데이터, 명령행 출력 등)
-</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>3. 추가하면 좋은 테스트
-</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>4. 확인이 필요한 것 (예: 이름이 한 글자이거나 비어 있을 때)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>#codebase 아래 변경 요청을 반영하면 어떤 파일이 바뀌어야 하는지 영향 분석을 해 주세요.
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>CR-001: 현황판이 회의실 앞 태블릿과 사외에서도 보입니다. 연락처는 빼고, 예약자는 성과 '○○'로만 보여 주세요. 예: 김○○
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>1. 바뀌어야 하는 파일과 이유
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>2. 바뀌지 않아야 하는 것 (데이터, 명령행 출력 등)
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>3. 추가하면 좋은 테스트
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>4. 확인이 필요한 것 (예: 이름이 한 글자이거나 비어 있을 때)
 </span></code></pre></div>
 <p><strong>6-3 개발자: CR-001 구현</strong> (Agent)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>변경 요청 CR-001을 구현해 주세요.
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>- build_site.py가 만드는 현황판에서 연락처 열(머리글과 칸)을 없애 주세요.
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>- 예약자는 성(첫 글자)과 "○○"로만 보여 주세요. 예: 김민수 → 김○○. 팀 이름은 괄호로 그대로 둡니다. 예: 김○○ (기획팀)
-</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>- data/reservations.json과 booking 폴더의 코드는 바꾸지 마세요.
-</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>- 예약자 표시를 확인하는 테스트를 tests/ 폴더에 추가하고 python -m pytest를 실행해 주세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>변경 요청 CR-001을 구현해 주세요.
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>- build_site.py가 만드는 현황판에서 연락처 열(머리글과 칸)을 없애 주세요.
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>- 예약자는 성(첫 글자)과 "○○"로만 보여 주세요. 예: 김민수 → 김○○. 팀 이름은 괄호로 그대로 둡니다. 예: 김○○ (기획팀)
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>- data/reservations.json과 booking 폴더의 코드는 바꾸지 마세요.
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>- 예약자 표시를 확인하는 테스트를 tests/ 폴더에 추가하고 python -m pytest를 실행해 주세요.
 </span></code></pre></div>
 <h2 id="5">5교시 클라우드 에이전트<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p><strong>5-3 클라우드 에이전트에게 맡길 이슈</strong> (github.com 이슈 본문, Assignees에 Copilot) <a href="../../class5/mission-3/">미션 5-3</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>## 배경
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>booking/report.py의 이용률 보고서는 테스트와 사용 설명이 없어 담당자가 바뀌면 이해하기 어렵습니다.
-</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>
-</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>## 할 일
-</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>- tests/test_report.py에 usage_report() 테스트를 추가해 주세요. 건수, 시간, 이용률(없음, 낮음, 보통, 높음)과 경계값(정확히 2시간, 정확히 6시간)을 확인해 주세요.
-</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>- README.md에 python -m booking report 사용법과 이용률 기준 표를 추가해 주세요.
-</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>
-</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>## 지켜야 할 것
-</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>- booking/ 폴더의 코드는 바꾸지 않습니다.
-</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>- 기준은 코드에 있는 그대로 씁니다. 코드에 없는 기준을 만들지 않습니다.
-</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>- 기존 테스트는 모두 통과해야 합니다.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>## 배경
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>booking/report.py의 이용률 보고서는 테스트와 사용 설명이 없어 담당자가 바뀌면 이해하기 어렵습니다.
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>## 할 일
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>- tests/test_report.py에 usage_report() 테스트를 추가해 주세요. 건수, 시간, 이용률(없음, 낮음, 보통, 높음)과 경계값(정확히 2시간, 정확히 6시간)을 확인해 주세요.
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>- README.md에 python -m booking report 사용법과 이용률 기준 표를 추가해 주세요.
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>## 지켜야 할 것
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>- booking/ 폴더의 코드는 바꾸지 않습니다.
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>- 기준은 코드에 있는 그대로 씁니다. 코드에 없는 기준을 만들지 않습니다.
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>- 기존 테스트는 모두 통과해야 합니다.
 </span></code></pre></div>
 <h2 id="7">7교시 책임과 내 업무 적용<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <p><strong>7-1 보안 검토</strong> (Ask, <code>build_site.py</code> 첨부) <a href="../../class7/lab-1/">실습 7-1</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>build_site.py를 보안 관점에서 검토해 주세요.
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>이 현황판은 회의실 앞 태블릿과 사외에서도 열리는 웹페이지입니다.
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>- 보안 위험을 위험도 순서로 알려 주세요.
-</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>- 각 위험마다 근거가 되는 코드 줄과, 어떻게 악용될 수 있는지 한 줄씩 써 주세요.
-</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>- 고치는 방법을 제안해 주세요. 아직 코드는 바꾸지 마세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>build_site.py를 보안 관점에서 검토해 주세요.
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>이 현황판은 회의실 앞 태블릿과 사외에서도 열리는 웹페이지입니다.
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>- 보안 위험을 위험도 순서로 알려 주세요.
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>- 각 위험마다 근거가 되는 코드 줄과, 어떻게 악용될 수 있는지 한 줄씩 써 주세요.
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>- 고치는 방법을 제안해 주세요. 아직 코드는 바꾸지 마세요.
 </span></code></pre></div>
 <p><strong>7-1 XSS 고치기</strong> (Agent)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>build_site.py의 XSS를 고쳐 주세요.
-</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>- Python 표준 라이브러리 html.escape()를 써 주세요.
-</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>- 사용자가 입력하는 값 title, booker, team, phone을 모두 escape해 주세요.
-</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>- 화면 모양과 다른 동작은 바꾸지 마세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>build_site.py의 XSS를 고쳐 주세요.
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>- Python 표준 라이브러리 html.escape()를 써 주세요.
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>- 사용자가 입력하는 값 title, booker, team, phone을 모두 escape해 주세요.
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>- 화면 모양과 다른 동작은 바꾸지 마세요.
 </span></code></pre></div>
 <p><strong>7-1 XSS 테스트</strong> (선택)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>/tests build_site.py의 XSS 방지를 확인하는 테스트를 tests/ 폴더에 추가해 주세요.
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>- 제목과 예약자에 &lt;script&gt;가 들어간 예약으로 HTML을 만들었을 때 결과에 &lt;script&gt;가 없고 &amp;lt;script&amp;gt;가 있어야 합니다.
-</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>- 실제 data/reservations.json과 site/ 폴더는 건드리지 않게 해 주세요.
-</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>- 테스트를 쉽게 하려고 build_site.py를 바꿔야 하면 무엇을 왜 바꾸는지 먼저 설명해 주세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>/tests build_site.py의 XSS 방지를 확인하는 테스트를 tests/ 폴더에 추가해 주세요.
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>- 제목과 예약자에 &lt;script&gt;가 들어간 예약으로 HTML을 만들었을 때 결과에 &lt;script&gt;가 없고 &amp;lt;script&amp;gt;가 있어야 합니다.
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>- 실제 data/reservations.json과 site/ 폴더는 건드리지 않게 해 주세요.
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>- 테스트를 쉽게 하려고 build_site.py를 바꿔야 하면 무엇을 왜 바꾸는지 먼저 설명해 주세요.
 </span></code></pre></div>
 <p><strong>7-2 내 업무 자동화 도구</strong> (Agent. 요청문 전체는 <a href="../../class7/lab-2/">실습 7-2</a>)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>[일] 내가 매번 손으로 하는 일:
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>[입력] 어떤 파일을 받는가 (열 이름, 예시 몇 줄. 실제 값 대신 가짜 값으로):
-</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>[처리] 어떤 규칙으로 계산하는가 (빼는 경우 포함):
-</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>[출력] 어떤 모양으로 받고 싶은가:
-</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>[검증] 손으로 계산해 맞춰 볼 숫자 하나:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>[일] 내가 매번 손으로 하는 일:
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>[입력] 어떤 파일을 받는가 (열 이름, 예시 몇 줄. 실제 값 대신 가짜 값으로):
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>[처리] 어떤 규칙으로 계산하는가 (빼는 경우 포함):
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>[출력] 어떤 모양으로 받고 싶은가:
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>[검증] 손으로 계산해 맞춰 볼 숫자 하나:
 </span></code></pre></div>
 <p><strong>7-3 지침 적용 확인</strong> (Ask, 새 채팅) <a href="../../class7/lab-3/">실습 7-3</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>현황판에 예약자 연락처를 다시 보여 주려면 build_site.py를 어떻게 고치면 되나요?
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>현황판에 예약자 연락처를 다시 보여 주려면 build_site.py를 어떻게 고치면 되나요?
 </span></code></pre></div>
 <p>팀 지침 파일을 만드는 프롬프트는 <a href="../../class7/lab-3/">실습 7-3 STEP 2</a>에 있습니다.</p>
 

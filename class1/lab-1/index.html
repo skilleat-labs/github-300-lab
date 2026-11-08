@@ -1313,7 +1313,7 @@
   <span class="md-ellipsis">
     
   
-    실습 3-3 프롬프트 파일로 아이디어 검토
+    실습 3-3 스킬로 아이디어 검토
   
 
     
@@ -2411,7 +2411,7 @@
 <ul>
 <li>VS Code에서 Copilot에 로그인되어 있는지, 플랜이 Pro인지 확인합니다.</li>
 <li>github.com의 Copilot 설정에서 <strong>공개 코드와 일치하는 제안 차단</strong>, <strong>내 데이터의 모델 학습 사용 끄기</strong>를 합니다.</li>
-<li>Chat을 열고 오늘 쓸 기본값(Session Target <strong>Copilot</strong>, 역할 <strong>Ask</strong>, 모델 <strong>Auto</strong>)을 맞춥니다.</li>
+<li>Chat을 열고 오늘 쓸 기본값(Session Target <strong>Copilot</strong>, 역할 <strong>Ask</strong>, 모델 <strong>Copilot Fusion</strong>)을 맞춥니다.</li>
 </ul>
 <p><strong>예상 시간</strong> 약 7분</p>
 </div>
@@ -2501,7 +2501,7 @@
 <tr>
 <td>모델</td>
 <td>어떤 언어 모델을 쓸지</td>
-<td><strong>Auto</strong></td>
+<td><strong>Copilot Fusion</strong> (Standard)</td>
 </tr>
 </tbody>
 </table>
@@ -2509,17 +2509,17 @@
 <li>Chat 보기 위쪽의 <strong>+</strong>(<strong>New Chat</strong>, 새 채팅)를 클릭합니다.</li>
 <li><strong>Session Target</strong> 컨트롤에서 <strong>Copilot</strong>을 고릅니다. 이미 Copilot이면 그대로 둡니다.</li>
 <li>입력 칸 근처의 <strong>Agent</strong> 선택기를 클릭하고 <strong>Ask</strong>를 고릅니다.</li>
-<li>모델 선택기를 클릭하고 <strong>Auto</strong>를 고릅니다.</li>
+<li>모델 선택기를 클릭하고 맨 위의 <strong>Copilot Fusion</strong>을 고릅니다. 옆의 수준은 <strong>Standard</strong>로 둡니다.</li>
 </ol>
-<p>확인: 새 채팅의 Session Target이 <strong>Copilot</strong>, 역할이 <strong>Ask</strong>, 모델이 <strong>Auto</strong>입니다.</p>
+<p>확인: 새 채팅의 Session Target이 <strong>Copilot</strong>, 역할이 <strong>Ask</strong>, 모델이 <strong>Copilot Fusion</strong>입니다.</p>
 <div class="admonition note">
 <p class="admonition-title">화면이 조금 다를 수 있어요</p>
 <p>Agent 선택기에 Ask, Agent 말고 다른 이름이 여러 개 보이면, 설치한 확장(예: Azure)이 추가한 사용자 지정 에이전트입니다. 오늘은 <strong>Ask</strong>와 <strong>Agent</strong>만 씁니다.</p>
-<p>VS Code는 매달 업데이트되어 선택기의 위치와 모양이 바뀔 수 있습니다. 이름(<strong>Session Target</strong>, <strong>Ask</strong>, <strong>Auto</strong>)으로 찾으면 됩니다. 활성 하네스 이름은 채팅 제목 앞에 표시됩니다.</p>
+<p>VS Code는 매달 업데이트되어 선택기의 위치와 모양이 바뀔 수 있습니다. 이름(<strong>Session Target</strong>, <strong>Ask</strong>, <strong>Copilot Fusion</strong>)으로 찾으면 됩니다. Session Target은 입력 칸 아래에 지금 하네스 이름(<strong>Copilot</strong>)으로 보입니다. 활성 하네스 이름은 채팅 제목 앞에 표시됩니다.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">왜 Auto인가요?</p>
-<p><strong>Auto</strong>는 작업에 맞는 모델을 자동으로 고르고, 모델 비용을 10% 할인받습니다. 오늘은 모델을 바꾸지 않고 Auto로 진행합니다.</p>
+<p class="admonition-title">왜 Copilot Fusion인가요?</p>
+<p><strong>Copilot Fusion</strong>은 특정 모델이 아니라, 작업마다 알맞은 모델을 고르거나 여러 모델을 함께 써서 답을 만듭니다. 예전 자료의 <strong>Auto</strong>(자동 모델 선택) 자리에 있습니다. 2026년 11월 30일까지 모델 비용이 30% 할인됩니다. Pro에서는 <strong>Standard</strong>만 쓸 수 있고, 오늘은 모델을 바꾸지 않고 진행합니다.</p>
 </div>
 <h2 id="step-8">STEP 8. 첫 인사 보내기<a class="headerlink" href="#step-8" title="Permanent link">&para;</a></h2>
 <p>Chat 입력 칸에 붙여 넣고 Enter를 누릅니다.</p>
@@ -2532,7 +2532,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Copilot settings에서 플랜이 <strong>Copilot Pro</strong>입니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Suggestions matching public code</strong>가 <strong>Block</strong>입니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Allow GitHub to use my data for AI model training</strong>이 <strong>Disabled</strong>입니다.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Chat이 열리고, Session Target <strong>Copilot</strong>, 역할 <strong>Ask</strong>, 모델 <strong>Auto</strong>입니다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Chat이 열리고, Session Target <strong>Copilot</strong>, 역할 <strong>Ask</strong>, 모델 <strong>Copilot Fusion</strong>입니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Chat에서 한국어 답을 받았습니다.</li>
 </ul>
 <h2 id="_3">막히면<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -2565,8 +2565,8 @@
 <p>설치한 확장이 추가한 MCP 서버(외부 도구 연결)가 로그인을 기다리다 실패한 것입니다. 오늘 실습에는 MCP 서버가 필요 없습니다. 명령 팔레트에서 <strong>Chat: Open Customizations</strong> → <strong>MCP Servers</strong> → 그 서버의 <strong>...</strong> → <strong>Disable</strong>로 끄고, 새 채팅에서 다시 보냅니다.</p>
 </details>
 <details class="failure">
-<summary>모델 칸에 Auto가 아니라 다른 확장 이름(예: Select a Foundry project...)이 보이고 답이 오지 않아요</summary>
-<p>설치한 다른 확장의 모델이 선택된 것입니다. 모델 선택기를 클릭하고 <strong>Auto</strong>를 고른 뒤 새 채팅에서 다시 보냅니다. 새 창을 열 때마다 바뀌면 확장 보기에서 그 확장을 <strong>Disable</strong>합니다.</p>
+<summary>모델 칸에 Copilot Fusion이 아니라 다른 확장 이름(예: Select a Foundry project...)이 보이고 답이 오지 않아요</summary>
+<p>설치한 다른 확장의 모델이 선택된 것입니다. 모델 선택기를 클릭하고 <strong>Copilot Fusion</strong>을 고른 뒤 새 채팅에서 다시 보냅니다. 새 창을 열 때마다 바뀌면 확장 보기에서 그 확장을 <strong>Disable</strong>합니다.</p>
 </details>
 
 
