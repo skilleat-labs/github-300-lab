@@ -2392,6 +2392,59 @@
 <li>리포지토리 안에 있으니 커밋하면 팀원 모두가 같은 지침을 받습니다. 바뀐 이력도 커밋으로 남습니다.</li>
 <li>이름 앞의 점(<code>.</code>)은 "설정용 폴더"라는 표시입니다. Mac의 Finder에서는 기본으로 숨겨져 보이지 않지만, VS Code 탐색기에는 보입니다.</li>
 </ul>
+<p><code>.github</code> 폴더에 두는 대표 파일 (GitHub 공식 문서 기준)</p>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>하는 일</th>
+<th>위치 규칙</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.github/workflows/*.yml</code></td>
+<td>GitHub Actions 워크플로 (오늘 <code>ci.yml</code>, <code>pages.yml</code>)</td>
+<td>이 폴더에만 둡니다</td>
+</tr>
+<tr>
+<td><code>.github/copilot-instructions.md</code></td>
+<td>Copilot 리포지토리 지침 (3-2)</td>
+<td>이 위치에만 둡니다</td>
+</tr>
+<tr>
+<td><code>.github/instructions/*.instructions.md</code></td>
+<td>특정 파일에만 적용하는 Copilot 지침</td>
+<td>이 폴더 아래</td>
+</tr>
+<tr>
+<td><code>.github/dependabot.yml</code></td>
+<td>의존성 자동 업데이트 설정</td>
+<td>이 폴더에만 둡니다</td>
+</tr>
+<tr>
+<td><code>.github/ISSUE_TEMPLATE/</code></td>
+<td>이슈를 만들 때 나오는 양식</td>
+<td>이 폴더</td>
+</tr>
+<tr>
+<td><code>pull_request_template.md</code></td>
+<td>PR을 만들 때 나오는 양식</td>
+<td><code>.github</code>, 루트, <code>docs</code> 중 하나</td>
+</tr>
+<tr>
+<td><code>CODEOWNERS</code></td>
+<td>파일별 리뷰 담당자</td>
+<td><code>.github</code>, 루트, <code>docs</code> 중 하나. 여러 곳에 있으면 <code>.github</code>가 먼저</td>
+</tr>
+<tr>
+<td><code>CONTRIBUTING.md</code>, <code>SECURITY.md</code> 등</td>
+<td>기여 방법, 보안 신고 안내</td>
+<td><code>.github</code>, 루트, <code>docs</code> 중 하나. <code>.github</code>가 먼저</td>
+</tr>
+</tbody>
+</table>
+<p>정리하면, 어떤 파일은 <code>.github</code>에만 두어야 하고, 어떤 파일은 여러 곳 중 하나를 고를 수 있지만 겹치면 <code>.github</code>가 먼저 쓰입니다. 그래서 GitHub와 도구를 위한 설정은 <code>.github</code>에 모아 두는 것이 일반적입니다. 문서에서는 이 폴더를 "숨김 폴더(hidden directory)"라고도 부릅니다.</p>
 <p><strong><code>.md</code>(Markdown) 파일</strong></p>
 <ul>
 <li>Markdown은 <code>#</code> 제목, <code>-</code> 목록 같은 간단한 기호로 구조를 표시하는 글 형식입니다. 메모장으로 열어도 그대로 읽힙니다.</li>
