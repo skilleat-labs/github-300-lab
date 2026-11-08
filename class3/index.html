@@ -2383,6 +2383,23 @@
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>- 회의록에 없는 정책은 정하지 말고 질문한다.
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>- data/reservations.json은 요청할 때만 바꾼다.
 </span></code></pre></div>
+<details class="info">
+<summary>왜 <code>.github</code> 폴더에, 왜 <code>.md</code> 파일로 쓰나요?</summary>
+<p><strong><code>.github</code> 폴더</strong></p>
+<ul>
+<li><code>.github</code>는 GitHub와 도구가 읽는 설정을 모아 두는 폴더입니다. 오늘 쓰는 자동 테스트 <code>.github/workflows/ci.yml</code>도 여기에 있습니다.</li>
+<li>Copilot은 정해진 자리에서 지침을 찾습니다. 리포지토리의 <code>.github/copilot-instructions.md</code>가 그 자리입니다. 이름이나 위치가 다르면 읽지 않습니다.</li>
+<li>리포지토리 안에 있으니 커밋하면 팀원 모두가 같은 지침을 받습니다. 바뀐 이력도 커밋으로 남습니다.</li>
+<li>이름 앞의 점(<code>.</code>)은 "설정용 폴더"라는 표시입니다. Mac의 Finder에서는 기본으로 숨겨져 보이지 않지만, VS Code 탐색기에는 보입니다.</li>
+</ul>
+<p><strong><code>.md</code>(Markdown) 파일</strong></p>
+<ul>
+<li>Markdown은 <code>#</code> 제목, <code>-</code> 목록 같은 간단한 기호로 구조를 표시하는 글 형식입니다. 메모장으로 열어도 그대로 읽힙니다.</li>
+<li>사람도 읽기 쉽고, Copilot 같은 언어 모델도 제목과 목록으로 나뉜 글을 잘 따릅니다.</li>
+<li>GitHub 웹 화면에서 열면 제목과 목록이 보기 좋게 표시됩니다. 오늘 쓰는 <code>docs/</code> 문서와 README도 모두 Markdown입니다.</li>
+<li>프로그램 문법이 아니라 글이라서, 개발을 몰라도 규칙을 쓰고 고칠 수 있습니다.</li>
+</ul>
+</details>
 <p>매번 '한국어로 답해 줘, 테스트도 추가해 줘'라고 반복하지 않으려면 지침 파일을 만들어요. 리포지토리의 .github 폴더에 copilot-instructions.md라는 파일을 두면, 이 리포지토리에서 하는 채팅에 자동으로 붙어요. 제대로 적용됐는지는 Copilot 답변의 References를 펼쳐서 이 파일이 들어 있는지 보면 돼요. 루트에 AGENTS.md를 두는 방법도 있어요. 3-2에서 직접 만들고, 7교시에는 팀 규칙으로 키워요.</p>
 <h3 id="_3">반복하는 일은 파일로 재사용합니다<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <table>
