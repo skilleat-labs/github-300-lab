@@ -2658,6 +2658,37 @@
 </ul>
 </li>
 </ol>
+<details class="info">
+<summary><code>f7 (HEAD -&gt; main, origin/main, origin/HEAD)</code> 같은 표시는 뭔가요?</summary>
+<p>터미널의 <code>git log</code>나 Copilot 답에서 보이는 표시로, 커밋 하나와 그 커밋을 가리키는 이름표입니다.</p>
+<table>
+<thead>
+<tr>
+<th>표시</th>
+<th>뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f7...</code></td>
+<td>커밋의 짧은 번호(해시). 커밋마다 붙는 고유 번호</td>
+</tr>
+<tr>
+<td><code>HEAD -&gt; main</code></td>
+<td>내가 지금 있는 곳이 <code>main</code> 브랜치이고, 그 끝이 이 커밋</td>
+</tr>
+<tr>
+<td><code>origin/main</code></td>
+<td>GitHub에 있는 <code>main</code>도 이 커밋을 가리킴. <code>origin</code>은 GitHub 리포지토리의 별명</td>
+</tr>
+<tr>
+<td><code>origin/HEAD</code></td>
+<td>GitHub 리포지토리의 기본 브랜치. 보통 <code>origin/main</code>과 같음</td>
+</tr>
+</tbody>
+</table>
+<p><code>HEAD -&gt; main</code>과 <code>origin/main</code>이 같은 줄에 있으면 내 PC와 GitHub가 같은 상태입니다. 그래프에서 <strong>main</strong>과 구름 표시가 같은 줄에 있는 것과 같은 뜻입니다. <code>origin/main</code>이 아래 커밋에 있으면 아직 push하지 않은 커밋이 있는 것입니다.</p>
+</details>
 <p>그다음 GitHub에서 봅니다.</p>
 <ol>
 <li>브라우저에서 <code>https://github.com/내아이디/room-practice</code>를 엽니다.</li>
