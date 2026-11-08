@@ -57,6 +57,9 @@
 - 추가: 명령 **MCP: Add Server**(HTTP 또는 Command), 또는 Chat의 Customizations → MCP Servers, 또는 확장 보기에서 `@mcp` 검색. 개인 설정 파일 `~/.copilot/mcp-config.json`. `.vscode/mcp.json`은 호환용으로만 남음. https://code.visualstudio.com/docs/agent-customization/mcp-servers
 - GitHub MCP 서버 원격 주소 `https://api.githubcopilot.com/mcp/`, 기본 OAuth. (검색 요약) https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/extend-copilot-with-tools-and-context/set-up-the-github-mcp-server
 
+- MCP 서버 끄기, 지우기: **Chat: Open Customizations** → **MCP Servers** → 서버의 **...** → **Disable** 또는 **Uninstall**. 로그인이 필요한 서버는 게시자의 로그인 방법을 따른다. https://code.visualstudio.com/docs/copilot/customization/mcp-servers
+- (화면 확인 2026-11-08) Copilot 하네스의 Agent 선택기에는 Ask, Agent와 확장이 추가한 사용자 지정 에이전트가 보이고 Plan은 없다. 계획은 `/plan`.
+
 ## 6. github.com의 Copilot
 - 코드 리뷰: PR의 **Reviewers**에서 Copilot 옆 **Request**. 기본은 댓글형 리뷰(승인, 변경 요청이 아님). (검색 요약) https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/copilot-code-review
 - PR 요약: PR 설명이나 댓글 칸의 Copilot 메뉴 → **Summary**. Free에서는 안 됨. (검색 요약) https://docs.github.com/en/copilot/responsible-use/pull-request-summaries
