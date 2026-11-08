@@ -107,7 +107,7 @@ Copilot의 답은 **틀릴 수 있습니다.** 표에 "안 됨"이라고 나온 
 1. `rules.py` 편집기 안을 클릭합니다.
 2. Windows는 `Ctrl+Z`, Mac은 `⌘Z`를 여러 번 눌러 추가한 주석과 함수가 모두 사라질 때까지 되돌립니다.
 3. Windows는 `Ctrl+S`, Mac은 `⌘S`로 저장합니다.
-4. 왼쪽 활동 막대의 **소스 제어** 아이콘(가지 모양, Windows `Ctrl+Shift+G`, Mac `⌃⇧G`)을 클릭합니다.
+4. 왼쪽 활동 막대의 **소스 제어** 아이콘(가지 모양)을 클릭합니다. 단축키는 Windows `Ctrl+Shift+G`, Mac `⌃⇧G`입니다.
 
 확인: 소스 제어의 **Changes** 목록에 `rules.py`가 없습니다. 있으면 `rules.py`에 마우스를 올리고 **Discard Changes**(굽은 화살표)를 눌러 되돌립니다.
 

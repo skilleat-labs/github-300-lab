@@ -102,11 +102,19 @@
 ??? failure "예약 데이터(data/reservations.json)가 바뀌었습니다"
     `python -m booking add`로 예약을 넣으면 `data/reservations.json`에 예약이 추가됩니다. 실습용 데이터는 되돌려 둡니다.
 
-    1. 왼쪽 활동 막대의 **소스 제어** 아이콘(Windows `Ctrl+Shift+G`, Mac `⌃⇧G`)을 클릭합니다.
+    1. 왼쪽 활동 막대의 **소스 제어** 아이콘(가지 모양)을 클릭합니다. 단축키는 Windows `Ctrl+Shift+G`, Mac `⌃⇧G`입니다.
     2. **Changes** 목록에서 `reservations.json`에 마우스를 올립니다.
     3. 굽은 화살표 모양의 **Discard Changes**(변경 취소)를 클릭합니다. 확인 창이 뜨면 변경을 버리는 버튼을 한 번 더 누릅니다.
 
     확인: `python -m booking list`에 예약이 #1부터 #5까지 5건만 보입니다.
+
+## VS Code
+
+??? failure "가이드의 단축키(예: 소스 제어 ⌃⇧G)가 동작하지 않습니다"
+    - Mac은 `⌘`(Command)와 `⌃`(Control)를 구분합니다. 소스 제어는 `⌃` + Shift + G입니다.
+    - 한/영이 한글이면 영문으로 바꾸고 다시 누릅니다.
+    - 다른 확장이 같은 키를 쓰는 경우입니다. 명령 팔레트에서 **Preferences: Open Keyboard Shortcuts**를 열고, 검색 칸의 키보드 아이콘(**Record Keys**)을 누른 뒤 그 키를 누릅니다. 원래 명령(예: **View: Show Source Control**) 말고 다른 명령이 있으면 그 줄을 오른쪽 클릭 → **Remove Keybinding**으로 지웁니다.
+    - 수업 중에는 단축키 대신 왼쪽 활동 막대의 아이콘을 눌러도 됩니다.
 
 ## 그래도 안 되면: Copilot에게 묻기 { #copilot }
 
