@@ -2565,6 +2565,62 @@
 </div>
 <p>확인: 실패 없이 <strong>passed</strong>만 나옵니다. 기존 테스트 4개가 그대로 통과해야 합니다(Copilot이 테스트를 추가했다면 숫자가 더 클 수 있습니다).</p>
 <h2 id="step-7-github">STEP 7. 커밋하고 GitHub에 올리기<a class="headerlink" href="#step-7-github" title="Permanent link">&para;</a></h2>
+<p>처음 커밋하기 전에 소스 제어 보기를 한 번 둘러봅니다. 왼쪽 활동 막대의 <strong>소스 제어</strong> 아이콘(가지 모양)을 누릅니다.</p>
+<table>
+<thead>
+<tr>
+<th>부분</th>
+<th>어디에</th>
+<th>하는 일</th>
+<th>같은 Git 명령</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>메시지 입력 칸</td>
+<td>맨 위</td>
+<td>커밋에 남길 한 줄 설명. 반짝이 아이콘으로 Copilot 초안 받기</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Commit</strong> 버튼</td>
+<td>입력 칸 아래</td>
+<td>바뀐 것을 기록으로 남기기. 커밋한 뒤에는 <strong>Sync Changes</strong>로 바뀜</td>
+<td><code>git add</code> + <code>git commit</code></td>
+</tr>
+<tr>
+<td><strong>Changes</strong></td>
+<td>버튼 아래 목록</td>
+<td>커밋하지 않은 변경 파일. 내가 고친 것도, Copilot이 고친 것도 여기 보임</td>
+<td><code>git status</code></td>
+</tr>
+<tr>
+<td>파일 클릭</td>
+<td>Changes 목록</td>
+<td>바뀌기 전과 후를 비교(diff)</td>
+<td><code>git diff</code></td>
+</tr>
+<tr>
+<td><strong>Discard Changes</strong> (굽은 화살표)</td>
+<td>파일에 마우스를 올리면</td>
+<td>그 파일을 마지막 커밋 상태로 되돌리기</td>
+<td><code>git restore</code></td>
+</tr>
+<tr>
+<td><strong>Sync Changes</strong></td>
+<td>커밋한 뒤 버튼 자리</td>
+<td>GitHub의 새 커밋 받고 내 커밋 올리기</td>
+<td><code>git pull</code> + <code>git push</code></td>
+</tr>
+<tr>
+<td><strong>그래프</strong></td>
+<td>맨 아래</td>
+<td>커밋 기록. main과 구름 표시가 같은 줄이면 GitHub와 같은 상태</td>
+<td><code>git log</code></td>
+</tr>
+</tbody>
+</table>
+<p>확인: <strong>Changes</strong>에 <code>booking/rules.py</code>가 있습니다. <code>data/reservations.json</code>도 있으면 STEP 5로 돌아가 되돌립니다.</p>
 <ol>
 <li>소스 제어 보기 위쪽의 메시지 입력 칸을 클릭합니다.</li>
 <li>
