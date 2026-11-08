@@ -1206,6 +1206,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="스킬이란">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        한 번 만들면 여러 곳에서 씁니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1275,7 +1292,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         다 됐는지 확인
@@ -1286,7 +1303,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         막히면
@@ -2254,6 +2271,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="스킬이란">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        한 번 만들면 여러 곳에서 씁니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2323,7 +2357,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         다 됐는지 확인
@@ -2334,7 +2368,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         막히면
@@ -2398,7 +2432,41 @@
 </tr>
 </tbody>
 </table>
-<p>좋은 검토 요청을 스킬로 저장해 두면 <code>/idea</code> 한 번으로 같은 형식의 결과를 받고, 팀과 나눠 쓸 수 있습니다. 스킬은 Copilot 하네스, Copilot CLI 등 여러 곳에서 똑같이 씁니다.</p>
+<p>좋은 검토 요청을 스킬로 저장해 두면 <code>/idea</code> 한 번으로 같은 형식의 결과를 받고, 팀과 나눠 쓸 수 있습니다.</p>
+<h3 id="_2">한 번 만들면 여러 곳에서 씁니다<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>스킬은 GitHub만의 기능이 아니라 <strong>Agent Skills라는 개방형 표준</strong>입니다. "<code>SKILL.md</code>가 든 폴더 하나"라는 같은 형식을 여러 AI 도구가 읽습니다.</p>
+<table>
+<thead>
+<tr>
+<th>어디서</th>
+<th>스킬을 두는 곳 (리포지토리, 내 컴퓨터)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub Copilot</strong>: VS Code, Visual Studio, JetBrains, Copilot CLI, github.com의 클라우드 에이전트와 코드 리뷰</td>
+<td><code>.github/skills/</code>, <code>~/.copilot/skills/</code></td>
+</tr>
+<tr>
+<td>Claude</td>
+<td><code>.claude/skills/</code>, <code>~/.claude/skills/</code></td>
+</tr>
+<tr>
+<td>OpenAI Codex</td>
+<td><code>.agents/skills/</code>, <code>~/.agents/skills/</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>오늘은 <strong><code>.github/skills/</code></strong>에 만듭니다. 리포지토리에 커밋하면 VS Code뿐 아니라 github.com에서 일하는 Copilot 클라우드 에이전트(5-3)와 코드 리뷰(6-1)도 이 스킬을 쓸 수 있습니다.</li>
+<li>GitHub 문서는 리포지토리의 <code>.claude/skills/</code>, <code>.agents/skills/</code>도 Copilot이 읽는 스킬 위치로 안내합니다. 다른 도구용으로 만든 스킬도 리포지토리에 있으면 Copilot이 씁니다.</li>
+<li>읽는 위치와 쓸 수 있는 머리말은 도구마다 조금 다릅니다. 다른 도구에서 쓸 때는 그 도구의 문서를 확인합니다.</li>
+<li>스킬 폴더에는 <code>SKILL.md</code> 말고도 예시, 스크립트, 참고 자료를 함께 넣을 수 있습니다. 오늘은 <code>SKILL.md</code> 하나만 씁니다.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">남이 만든 스킬은 열어 보고 씁니다</p>
+<p>GitHub CLI의 <code>gh skill install</code>로 공개된 스킬을 받아 올 수 있습니다. GitHub는 스킬을 검증하지 않으며, 숨은 지시나 악성 스크립트가 들어 있을 수 있습니다. 받기 전에 <code>gh skill preview</code>로 내용을 먼저 봅니다. (오늘 PC에는 GitHub CLI를 설치하지 않으므로 소개만 합니다.)</p>
+</div>
 <h2 id="step-1-skills">STEP 1. skills 폴더와 파일 만들기<a class="headerlink" href="#step-1-skills" title="Permanent link">&para;</a></h2>
 <ol>
 <li>왼쪽 탐색기에서 <code>.github</code> 폴더를 마우스 오른쪽 버튼으로 클릭하고 <strong>New File...</strong>을 고릅니다.</li>
@@ -2513,7 +2581,7 @@
 <p class="admonition-title">팀에서 재사용하기</p>
 <p>스킬을 리포지토리에 커밋하면 이 리포지토리를 가져간 <strong>팀원 모두</strong>가 같은 <code>/idea</code>를 씁니다. 나만 쓰는 스킬은 내 컴퓨터의 <code>~/.copilot/skills/</code>에 둡니다.</p>
 </div>
-<h2 id="_2">다 됐는지 확인<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">다 됐는지 확인<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>.github/skills/idea/SKILL.md</code>에 머리말(<code>name: idea</code>, <code>description</code>)이 있고, 폴더 이름과 <code>name</code>이 같습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Copilot 하네스 채팅에서 <code>/idea #04_월간집계_업무.md</code>로 실행했습니다.</li>
@@ -2522,7 +2590,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 내 업무 문장으로도 실행해 봤습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 스킬을 커밋하고 GitHub에 올렸습니다.</li>
 </ul>
-<h2 id="_3">막히면<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">막히면<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">먼저 Copilot과 함께 해결합니다</p>
 <p>오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 <a href="../../setup/3-troubleshooting/#copilot">막혔을 때</a>에 있습니다.</p>
