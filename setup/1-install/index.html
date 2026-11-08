@@ -2477,9 +2477,19 @@
 </div>
 </div>
 <p>확인: 새 터미널을 열고 아래 명령을 실행합니다.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>--version
 </span></code></pre></div>
-<p><code>Python 3.12.x</code> 이상이 나오면 됩니다. Mac에서 <code>command not found</code>가 나오거나 3.12보다 낮은 버전이 나오면 <code>python3 --version</code>으로 다시 확인합니다. Mac에서는 오늘 실습 내내 <code>python</code> 대신 <code>python3</code>을 쓰면 됩니다.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>--version
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p><code>Python 3.12.x</code> 이상이 나오면 됩니다. Mac은 오늘 실습 내내 <code>python</code> 대신 <code>python3</code>을 씁니다. 가이드의 명령은 <strong>Windows</strong>, <strong>Mac</strong> 탭으로 나뉘어 있고, 한 번 고르면 모든 페이지에서 같은 탭이 선택됩니다.</p>
 <h2 id="step-5-vs-code-python">STEP 5. VS Code에 Python 확장 설치<a class="headerlink" href="#step-5-vs-code-python" title="Permanent link">&para;</a></h2>
 <ol>
 <li>VS Code를 엽니다.</li>
@@ -2497,12 +2507,12 @@
 <p><strong>설치 권한이 없을 때</strong>: 설치 파일을 실행했는데 관리자 암호를 묻거나 "관리자에게 문의"가 나오면, IT 담당 부서에 VS Code, Git, Python 설치를 요청합니다. 수업 당일에는 시간이 없으니 미리 요청합니다.</p>
 <p><strong>프록시를 쓰는 회사망</strong>: VS Code는 PC의 시스템 프록시 설정을 그대로 따릅니다. 인증서(SSL) 오류가 나면 회사 프록시 인증서를 운영체제의 신뢰 저장소에 넣어야 하므로 IT 담당 부서에 요청합니다.</p>
 <p><strong>방화벽</strong>: Copilot(개인 플랜)이 동작하려면 아래 주소가 열려 있어야 합니다. IT 담당 부서에 이 목록을 그대로 전달합니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>github.com/login/*
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>github.githubassets.com
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>avatars.githubusercontent.com
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>*.individual.githubcopilot.com
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>copilot-proxy.githubusercontent.com
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>origin-tracker.githubusercontent.com
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>github.com/login/*
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>github.githubassets.com
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>avatars.githubusercontent.com
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>*.individual.githubcopilot.com
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>copilot-proxy.githubusercontent.com
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>origin-tracker.githubusercontent.com
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">그래도 안 되면</p>

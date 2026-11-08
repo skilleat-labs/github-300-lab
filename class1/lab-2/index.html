@@ -2525,21 +2525,41 @@
 <li>아래쪽에 터미널이 열리고, 현재 폴더가 <code>room-practice</code>인지 봅니다.</li>
 <li>
 <p>아래 명령을 붙여 넣고 Enter를 누릅니다.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
 </span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+</span></code></pre></div>
+</div>
+</div>
+</div>
 </li>
 </ol>
 <p>확인: 마지막 줄에 <code>Successfully installed ... pytest ...</code> 또는 <code>Requirement already satisfied</code>가 나옵니다.</p>
 <div class="admonition tip">
-<p class="admonition-title">Mac에서 python이 안 되면 python3</p>
-<p>Mac에서 <code>python: command not found</code>가 나오면 <code>python</code> 대신 <code>python3</code>을 씁니다. 예: <code>python3 -m pip install -r requirements-dev.txt</code>. 오늘 가이드의 <code>python</code>은 모두 <code>python3</code>으로 바꿔 읽으면 됩니다.</p>
+<p class="admonition-title">명령은 Windows, Mac 탭에서 고릅니다</p>
+<p>Mac은 <code>python</code> 대신 <code>python3</code>을 씁니다. 명령 위의 <strong>Windows</strong>, <strong>Mac</strong> 탭에서 내 OS를 한 번 고르면, 가이드의 모든 페이지에서 같은 탭이 선택됩니다. 글 속에 <code>python</code>이라고만 쓴 곳도 Mac은 <code>python3</code>으로 읽습니다. 예: <code>python3 -m pip install -r requirements-dev.txt</code>. 오늘 가이드의 <code>python</code>은 모두 <code>python3</code>으로 바꿔 읽으면 됩니다.</p>
 </div>
 <h2 id="step-6">STEP 6. 테스트 실행<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
 </span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pytest
+</span></code></pre></div>
+</div>
+</div>
+</div>
 <p>확인: 아래처럼 <strong>4 passed</strong>가 나옵니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>....                                                                     [100%]
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>4 passed
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>....                                                                     [100%]
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>4 passed
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">테스트가 뭔가요?</p>
@@ -2549,20 +2569,40 @@
 <ol>
 <li>
 <p>회의실 목록을 봅니다.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>R1 소회의실 A (4명, 3층)
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>R2 소회의실 B (4명, 3층)
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>R3 중회의실 (8명, 5층)
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>R4 대회의실 (16명, 7층)
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>R1 소회의실 A (4명, 3층)
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>R2 소회의실 B (4명, 3층)
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>R3 중회의실 (8명, 5층)
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>R4 대회의실 (16명, 7층)
 </span></code></pre></div>
 </li>
 <li>
 <p>11월 10일 예약을 봅니다.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>#1 2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>#2 2026-11-10 13:00~15:00 R3 신규 서비스 킥오프 (이지은, 7명)
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>#1 2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>#2 2026-11-10 13:00~15:00 R3 신규 서비스 킥오프 (이지은, 7명)
 </span></code></pre></div>
 </li>
 </ol>
