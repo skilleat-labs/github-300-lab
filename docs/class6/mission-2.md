@@ -136,14 +136,20 @@ permissions에 pages: write와 id-token: write가 없습니다. 추가해 주세
 6. **Create pull request**를 클릭합니다.
 7. **테스트 / test**가 초록인지 봅니다. "현황판 배포"는 main에 push될 때만 돌기 때문에 PR에서는 보이지 않는 것이 정상입니다.
 
-확인: PR이 열렸고 **테스트 / test**가 초록입니다.
+8. (BA 또는 PO) PR의 **Files changed** 탭에서 `pages.yml` 한 파일만 바뀌었는지 봅니다. 오른쪽 위 **Review changes**를 클릭하고, 아래를 쓰고 **Approve**를 고른 뒤 **Submit review**를 클릭합니다.
+
+    ```text
+    STEP 3 검토 표 7개 항목을 함께 확인했습니다. 승인합니다.
+    ```
+
+확인: PR이 열렸고 **테스트 / test**가 초록이며, **Reviewers**에 BA나 PO의 초록 체크(Approved)가 있습니다.
 
 !!! tip "Copilot 리뷰는 요청하지 않아요"
-    6-1에서 각자 1회씩 썼습니다. 이 PR은 팀이 STEP 3에서 함께 검토했으니 BA나 PO가 **Approve**합니다.
+    6-1에서 각자 1회씩 썼습니다. 이 PR은 팀이 STEP 3에서 함께 검토했으니 사람 리뷰(BA나 PO의 **Approve**)만 받습니다. PR을 연 개발자는 자기 PR을 승인할 수 없습니다.
 
 ## STEP 5. (PM) 병합하고 배포 확인하기
 
-1. BA나 PO의 **Approve**를 확인하고 **Merge pull request** → **Confirm merge**를 클릭합니다.
+1. **Reviewers**에서 BA나 PO 이름 옆에 초록 체크(Approved)가 있는지 확인합니다. 없으면 STEP 4의 8번을 부탁합니다. 있으면 **Merge pull request** → **Confirm merge**를 클릭합니다.
 2. **Delete branch**를 클릭합니다.
 3. 위쪽 **Actions** 탭을 클릭합니다.
 4. 왼쪽 목록에 **현황판 배포**와 **테스트**가 보입니다. **현황판 배포**를 클릭합니다.
@@ -196,8 +202,21 @@ flowchart TB
 !!! tip "먼저 Copilot과 함께 해결합니다"
     오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
 
-??? failure "현황판 배포가 빨간 X이고 Pages 관련 오류가 나와요"
-    PO가 **Settings** → **Pages** → Source를 **GitHub Actions**로 바꿨는지 확인합니다. 바꾼 뒤 **Actions** → **현황판 배포** → **Run workflow** → **Run workflow**로 다시 실행합니다.
+??? failure "configure-pages 단계에서 Get Pages site failed, Not Found가 나와요"
+    로그에 아래처럼 나옵니다.
+
+    ```text
+    Error: Get Pages site failed. Please verify that the repository has Pages enabled and configured to build using GitHub Actions ...
+    Error: HttpError: Not Found
+    ```
+
+    리포지토리에 Pages가 아직 켜지지 않은 것입니다. 미션 5-0 STEP 3을 건너뛰었거나 다른 리포지토리에서 한 경우입니다.
+
+    1. PO가 팀 리포지토리 **Settings** → 왼쪽 **Pages**를 클릭합니다.
+    2. **Build and deployment** 아래 **Source**를 **GitHub Actions**로 바꿉니다.
+    3. **Actions** → 실패한 **현황판 배포** 실행을 열고 오른쪽 위 **Re-run jobs** → **Re-run failed jobs**를 클릭하고, 뜨는 창에서 **Re-run jobs**를 클릭합니다. 또는 왼쪽 **현황판 배포** → **Run workflow** → **Run workflow**로 다시 실행합니다.
+
+    **Source**에 **GitHub Actions**가 없으면 리포지토리가 Private입니다. 무료 계정은 Public이어야 Pages를 쓸 수 있습니다. **Settings** → **General** 맨 아래 **Danger Zone** → **Change visibility**로 Public으로 바꿉니다. PO가 직접 확인하고 합니다.
 
 ??? failure "권한(permission) 오류가 나와요"
     워크플로에 `pages: write`, `id-token: write`가 있는지 봅니다. 없으면 새 브랜치에서 Copilot에게 추가를 요청하고 PR로 다시 병합합니다.
