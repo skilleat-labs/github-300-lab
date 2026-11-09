@@ -46,7 +46,7 @@ BA 아이디:
 | 2 | PO | **Collaborators**로 팀원 초대 |
 | 3 | PO | **Settings** → **Pages** → Source를 **GitHub Actions**로 |
 | 4 | 팀원 | 초대 수락 |
-| 5 | 모두 | VS Code에서 **Git: Clone**으로 가져오기 |
+| 5 | 모두 | VS Code에서 **Git: Clone**으로 가져오고, 테스트 도구 설치 후 테스트 실행 |
 
 ## STEP 1. (PO) 팀 리포지토리 만들기
 
@@ -112,7 +112,23 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
 4. 복사한 주소를 붙여 넣고 ++enter++를 누릅니다.
 5. 저장 위치로 `문서/copilot-lab` 폴더를 고릅니다. `room-practice`와 나란히 놓입니다.
 6. 오른쪽 아래 **Open**(열기)을 클릭합니다. "작성자를 신뢰하느냐"는 창이 뜨면 **Yes, I trust the authors**를 누릅니다.
-7. 터미널을 열고 테스트를 실행합니다.
+7. 터미널을 열고(Windows ``Ctrl+` ``, Mac ``⌃` ``) 테스트 도구를 설치합니다. 새로 받은 리포는 실행하기 전에 필요한 도구부터 설치합니다.
+
+    === "Windows"
+
+        ```bash
+        python -m pip install -r requirements-dev.txt
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m pip install -r requirements-dev.txt
+        ```
+
+    1-2에서 같은 PC에 이미 설치했다면 `Requirement already satisfied`가 나옵니다. 정상입니다.
+
+8. 테스트를 실행합니다.
 
     === "Windows"
 
@@ -159,6 +175,9 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
 
 ??? failure "Clone할 때 로그인 창이 떠요"
     GitHub 계정으로 허용합니다. 1-2에서 로그인한 계정과 같아야 합니다.
+
+??? failure "No module named pytest 라고 나와요"
+    STEP 5의 7번(테스트 도구 설치)을 건너뛰었거나, VS Code가 1-2와 다른 Python을 쓰는 경우입니다. 7번 명령을 이 리포의 터미널에서 다시 실행합니다. 그래도 같으면 [막혔을 때](../setup/3-troubleshooting.md)의 같은 항목을 봅니다.
 
 ??? failure "5명 이상이거나 2명이에요"
     강사에게 알립니다. 2명이면 다른 팀에 합류하고, 5명이면 한 명이 다른 팀으로 가거나 BA를 두 명으로 둡니다.
