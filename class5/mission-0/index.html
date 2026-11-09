@@ -2482,7 +2482,7 @@
 <tr>
 <td>5</td>
 <td>모두</td>
-<td>VS Code에서 <strong>Git: Clone</strong>으로 가져오기</td>
+<td>VS Code에서 <strong>Git: Clone</strong>으로 가져오고, 테스트 도구 설치 후 테스트 실행</td>
 </tr>
 </tbody>
 </table>
@@ -2548,15 +2548,31 @@
 <li>저장 위치로 <code>문서/copilot-lab</code> 폴더를 고릅니다. <code>room-practice</code>와 나란히 놓입니다.</li>
 <li>오른쪽 아래 <strong>Open</strong>(열기)을 클릭합니다. "작성자를 신뢰하느냐"는 창이 뜨면 <strong>Yes, I trust the authors</strong>를 누릅니다.</li>
 <li>
-<p>터미널을 열고 테스트를 실행합니다.</p>
+<p>터미널을 열고(Windows <code>Ctrl+`</code>, Mac <code>⌃`</code>) 테스트 도구를 설치합니다. 새로 받은 리포는 실행하기 전에 필요한 도구부터 설치합니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pytest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>1-2에서 같은 PC에 이미 설치했다면 <code>Requirement already satisfied</code>가 나옵니다. 정상입니다.</p>
+</li>
+<li>
+<p>테스트를 실행합니다.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pytest
 </span></code></pre></div>
 </div>
 </div>
@@ -2601,6 +2617,10 @@
 <details class="failure">
 <summary>Clone할 때 로그인 창이 떠요</summary>
 <p>GitHub 계정으로 허용합니다. 1-2에서 로그인한 계정과 같아야 합니다.</p>
+</details>
+<details class="failure">
+<summary>No module named pytest 라고 나와요</summary>
+<p>STEP 5의 7번(테스트 도구 설치)을 건너뛰었거나, VS Code가 1-2와 다른 Python을 쓰는 경우입니다. 7번 명령을 이 리포의 터미널에서 다시 실행합니다. 그래도 같으면 <a href="../../setup/3-troubleshooting/">막혔을 때</a>의 같은 항목을 봅니다.</p>
 </details>
 <details class="failure">
 <summary>5명 이상이거나 2명이에요</summary>
