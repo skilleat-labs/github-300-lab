@@ -54,10 +54,11 @@
 | Copilot CLI | 터미널에서 대화하며 작업 | 다음 장 |
 | MCP | 외부 도구, 서비스를 Copilot에 연결 | 명령 MCP: Add Server |
 | GitHub MCP 서버 | 이슈, PR을 Copilot이 직접 다룸 | api.githubcopilot.com/mcp/ |
+| github.com 채팅 | 브라우저에서 리포, 이슈, PR에 대해 질문 | github.com/copilot |
 | Spaces | 자료를 모아 두고 질문 | github.com/copilot/spaces |
 | Agents 창 | 여러 에이전트 작업을 한 곳에서 | Open in Agents |
 
-오늘 다 못 했지만 알아 두면 좋은 기능들이에요. Copilot CLI는 다음 장에서 따로 볼게요. MCP는 Model Context Protocol의 약자로, 외부 도구나 서비스를 Copilot에 연결하는 표준이에요. GitHub MCP 서버를 연결하면 Copilot이 이슈나 PR을 직접 다룰 수 있어요. Spaces는 자료를 모아 두고 그걸 근거로 질문하는 공간이에요. Agents 창은 여러 에이전트 작업을 한곳에서 관리해요. 모두 가이드 부록에 시작하는 법을 적어 두었어요.
+오늘 다 못 했지만 알아 두면 좋은 기능들이에요. Copilot CLI는 다음 장에서 따로 볼게요. MCP는 Model Context Protocol의 약자로, 외부 도구나 서비스를 Copilot에 연결하는 표준이에요. GitHub MCP 서버를 연결하면 Copilot이 이슈나 PR을 직접 다룰 수 있어요. github.com 채팅은 브라우저의 github.com/copilot에서 바로 쓰는 Copilot이에요. 5-1에서 이슈 초안을 받을 때도 여기서 해요. Chat과 같이 AI Credits를 써요. Spaces는 자료를 모아 두고 그걸 근거로 질문하는 공간이에요. Agents 창은 여러 에이전트 작업을 한곳에서 관리해요. 모두 가이드 부록에 시작하는 법을 적어 두었어요.
 
 ### Copilot CLI: 터미널에서 일하는 Copilot
 
