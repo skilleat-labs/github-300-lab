@@ -2404,18 +2404,8 @@
 <ol>
 <li>
 <p>터미널에서 실행합니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>tools/monthly_report.py
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>tools/monthly_report.py
-</span></code></pre></div>
-</div>
-</div>
-</div>
 </li>
 <li>
 <p>아래 값과 비교합니다. 표 모양은 달라도 숫자가 같으면 됩니다.</p>
@@ -2467,18 +2457,8 @@
 <li><code>tests/test_monthly_report.py</code>를 열어 <code>assert</code>가 STEP 2의 규칙과 같은지 읽습니다.</li>
 <li>
 <p>터미널에서 실행합니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Mac</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pytest
-</span></code></pre></div>
-</div>
-</div>
-</div>
 </li>
 </ol>
 <p>확인: <code>failed</code>가 없습니다. 테스트를 지워서 통과시킨 것은 아닌지 봅니다.</p>
@@ -2488,7 +2468,7 @@
 <li>탐색기에서 <code>reports/monthly_2026-10.md</code>를 Chat 입력 칸에 끌어다 놓습니다.</li>
 <li>
 <p>Chat에 붙여 넣기</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>첨부한 보고서를 총무팀장에게 보고할 세 줄로 요약해 주세요. 보고서에 있는 숫자만 씁니다. 원인을 추측하면 "추측"이라고 표시해 주세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>첨부한 보고서를 총무팀장에게 보고할 세 줄로 요약해 주세요. 보고서에 있는 숫자만 씁니다. 원인을 추측하면 "추측"이라고 표시해 주세요.
 </span></code></pre></div>
 </li>
 </ol>
@@ -2502,11 +2482,11 @@
 <p>확인: github.com의 <code>room-practice</code>에서 <code>tools/monthly_report.py</code>가 보입니다.</p>
 <h2 id="step-7">STEP 7. 내 업무로 바꾸기<a class="headerlink" href="#step-7" title="Permanent link">&para;</a></h2>
 <p>내 업무에서 반복하는 일 하나를 떠올려 아래 틀을 채웁니다. 실행하지 않아도 됩니다. 메모장에 저장해 가져갑니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[일] 내가 매번 손으로 하는 일:
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>[입력] 어떤 파일을 받는가 (열 이름, 예시 몇 줄. 실제 값 대신 가짜 값으로):
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>[처리] 어떤 규칙으로 계산하는가 (빼는 경우 포함):
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>[출력] 어떤 모양으로 받고 싶은가:
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>[검증] 손으로 계산해 맞춰 볼 숫자 하나:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[일] 내가 매번 손으로 하는 일:
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[입력] 어떤 파일을 받는가 (열 이름, 예시 몇 줄. 실제 값 대신 가짜 값으로):
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[처리] 어떤 규칙으로 계산하는가 (빼는 경우 포함):
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>[출력] 어떤 모양으로 받고 싶은가:
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[검증] 손으로 계산해 맞춰 볼 숫자 하나:
 </span></code></pre></div>
 <p>확인: 틀의 다섯 줄을 채웠습니다.</p>
 <div class="admonition tip">

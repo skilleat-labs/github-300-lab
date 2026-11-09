@@ -2549,18 +2549,8 @@
 </li>
 <li>
 <p>켜진 가상환경에 테스트 도구를 설치합니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">Mac</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
-</span></code></pre></div>
-</div>
-</div>
-</div>
 <p>확인: 마지막 줄에 <code>Successfully installed ... pytest ...</code>가 나옵니다.</p>
 </li>
 </ol>
@@ -2573,25 +2563,16 @@
 </ul>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">명령은 Windows, Mac 탭에서 고릅니다</p>
-<p>Mac은 <code>python</code> 대신 <code>python3</code>을 씁니다. 명령 위의 <strong>Windows</strong>, <strong>Mac</strong> 탭에서 내 OS를 한 번 고르면, 가이드의 모든 페이지에서 같은 탭이 선택됩니다. 글 속에 <code>python</code>이라고만 쓴 곳도 Mac은 <code>python3</code>으로 읽습니다. 예: <code>python3 -m pip install -r requirements-dev.txt</code>. 오늘 가이드의 <code>python</code>은 모두 <code>python3</code>으로 바꿔 읽으면 됩니다.</p>
+<p class="admonition-title">가상환경을 켜면 Mac도 python입니다</p>
+<p>Mac은 처음에 <code>python3</code>만 있어서 가상환경을 만드는 3번만 <code>python3</code>으로 칩니다. 가상환경을 켜서 터미널 줄 앞에 <code>(.venv)</code>가 붙으면, Mac도 Windows와 똑같이 <code>python</code>으로 실행합니다. 오늘 가이드의 다른 명령은 모두 <code>python</code>입니다. <code>python</code>을 찾을 수 없다고 나오면 <code>(.venv)</code>가 있는지부터 봅니다.</p>
+<p>가상환경을 켜는 명령(4번)처럼 OS마다 다른 명령만 <strong>Windows</strong>, <strong>Mac</strong> 탭으로 나뉘어 있습니다. 한 번 고르면 모든 페이지에서 같은 탭이 선택됩니다.</p>
 </div>
 <h2 id="step-6">STEP 6. 테스트 실행<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">Mac</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pytest
-</span></code></pre></div>
-</div>
-</div>
-</div>
 <p>확인: 아래처럼 <strong>4 passed</strong>가 나옵니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>....                                                                     [100%]
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>4 passed
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>....                                                                     [100%]
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>4 passed
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">테스트가 뭔가요?</p>
@@ -2604,13 +2585,13 @@
 <li>Windows는 <code>Ctrl+I</code>, Mac은 <code>⌘I</code>를 누릅니다. 터미널 위에 작은 입력 칸(터미널 인라인 채팅)이 열립니다.</li>
 <li>
 <p>입력하고 Enter를 누릅니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>방금 실행한 python -m pytest가 무슨 뜻인지 단어마다 나눠서 개발을 모르는 사람에게 설명해 주세요. 결과로 나온 점 4개(....)와 4 passed는 무엇을 뜻하나요?
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>방금 실행한 python -m pytest가 무슨 뜻인지 단어마다 나눠서 개발을 모르는 사람에게 설명해 주세요. 결과로 나온 점 4개(....)와 4 passed는 무엇을 뜻하나요?
 </span></code></pre></div>
 </li>
 <li>
 <p>답을 읽습니다. 이런 내용이 들어 있으면 됩니다.</p>
 <ul>
-<li><code>python</code>: 파이썬 프로그램을 실행합니다(Mac은 <code>python3</code>).</li>
+<li><code>python</code>: 파이썬 프로그램을 실행합니다. 가상환경 안의 Python입니다.</li>
 <li><code>-m pytest</code>: 설치한 테스트 도구 pytest를 실행합니다.</li>
 <li>점 하나는 통과한 테스트 하나, <code>4 passed</code>는 테스트 4개가 모두 통과했다는 뜻입니다.</li>
 </ul>
@@ -2626,40 +2607,20 @@
 <ol>
 <li>
 <p>회의실 목록을 봅니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Windows</label><label for="__tabbed_5_2">Mac</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>rooms
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>R1 소회의실 A (4명, 3층)
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>R2 소회의실 B (4명, 3층)
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>R3 중회의실 (8명, 5층)
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>R4 대회의실 (16명, 7층)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>R1 소회의실 A (4명, 3층)
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>R2 소회의실 B (4명, 3층)
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>R3 중회의실 (8명, 5층)
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>R4 대회의실 (16명, 7층)
 </span></code></pre></div>
 </li>
 <li>
 <p>11월 10일 예약을 봅니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Windows</label><label for="__tabbed_6_2">Mac</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>python<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>booking<span class="w"> </span>list<span class="w"> </span>--date<span class="w"> </span><span class="m">2026</span>-11-10
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>#1 2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>#2 2026-11-10 13:00~15:00 R3 신규 서비스 킥오프 (이지은, 7명)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>#1 2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>#2 2026-11-10 13:00~15:00 R3 신규 서비스 킥오프 (이지은, 7명)
 </span></code></pre></div>
 </li>
 </ol>
@@ -2796,12 +2757,12 @@
 </details>
 <details class="failure">
 <summary>python 명령을 찾을 수 없거나 Microsoft Store가 열립니다</summary>
-<p>Mac은 <code>python3</code>으로 실행합니다. Windows는 Python 설치 때 <strong>Add python.exe to PATH</strong>를 체크하지 않은 경우입니다. <a href="../../setup/3-troubleshooting/">막혔을 때</a>의 Python 항목을 봅니다.</p>
+<p>Mac은 가상환경이 꺼진 경우입니다. 터미널 줄 앞에 <code>(.venv)</code>가 없으면 STEP 5의 4번으로 켭니다. Windows는 Python 설치 때 <strong>Add python.exe to PATH</strong>를 체크하지 않은 경우입니다. <a href="../../setup/3-troubleshooting/">막혔을 때</a>의 Python 항목을 봅니다.</p>
 </details>
 <details class="failure">
 <summary>Windows에서 Activate.ps1을 실행하면 '스크립트를 실행할 수 없으므로' 오류가 납니다</summary>
 <p>PowerShell이 스크립트 실행을 막는 설정입니다. Python 문서에 따르면 내 계정에서만 허용하면 됩니다.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Set-ExecutionPolicy<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>RemoteSigned<span class="w"> </span>-Scope<span class="w"> </span>CurrentUser
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Set-ExecutionPolicy<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>RemoteSigned<span class="w"> </span>-Scope<span class="w"> </span>CurrentUser
 </span></code></pre></div>
 <p>회사 PC라서 이 명령이 막히면, 터미널 오른쪽 위 <strong>+</strong> 옆 <strong>∨</strong>에서 <strong>Command Prompt</strong>를 열고 <code>.venv\Scripts\activate.bat</code>로 켭니다.</p>
 </details>

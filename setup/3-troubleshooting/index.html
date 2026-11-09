@@ -2359,7 +2359,7 @@
 <details class="failure">
 <summary>python 명령을 찾을 수 없다고 나옵니다</summary>
 <ul>
-<li><strong>Mac</strong>: <code>python</code> 대신 <code>python3</code>으로 실행합니다. 명령 위의 <strong>Mac</strong> 탭을 고르면 <code>python3</code>으로 보입니다. 글 속의 <code>python</code>도 <code>python3</code>으로 읽습니다.</li>
+<li><strong>Mac</strong>: 터미널 줄 앞에 <code>(.venv)</code>가 있는지 봅니다. 없으면 가상환경이 꺼진 것입니다. <code>source .venv/bin/activate</code>로 켜면 <code>python</code>이 됩니다. <code>.venv</code> 폴더가 아직 없으면(가상환경을 만들기 전) <code>python3</code>으로 실행합니다.</li>
 <li><strong>Windows</strong>: Python을 설치할 때 <strong>Add python.exe to PATH</strong>를 체크하지 않은 경우가 많습니다. Windows <strong>설정</strong> → <strong>앱</strong>에서 Python을 제거하고, 다시 설치하면서 체크합니다. 설치 뒤에는 VS Code를 완전히 닫았다가 다시 엽니다.</li>
 <li>확인: VS Code 터미널에서 <code>python --version</code>(Mac은 <code>python3 --version</code>)이 3.12 이상을 보여 줍니다.</li>
 </ul>
@@ -2371,18 +2371,8 @@
 <details class="failure">
 <summary>No module named pytest 라고 나옵니다</summary>
 <p>가상환경이 꺼져 있거나, 이 리포지토리의 가상환경에 아직 설치하지 않았습니다. 리포지토리 폴더가 열린 VS Code 터미널에서 터미널 줄 앞에 <code>(.venv)</code>가 있는지 먼저 봅니다. 없으면 켭니다(Windows <code>.venv\Scripts\Activate.ps1</code>, Mac <code>source .venv/bin/activate</code>). <code>.venv</code> 폴더 자체가 없으면 <a href="../../class1/lab-2/">실습 1-2 STEP 5</a>처럼 만듭니다. 켠 다음 설치합니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
-</span></code></pre></div>
-</div>
-</div>
-</div>
 <p>설치가 끝나면 <code>python -m pytest</code>를 다시 실행합니다.</p>
 </details>
 <details class="failure">
@@ -2401,8 +2391,8 @@
 <details class="failure">
 <summary>커밋하려는데 user.name, user.email을 설정하라고 나옵니다</summary>
 <p>Git에 내 이름과 이메일이 등록되지 않았습니다. 터미널에서 아래 두 줄을 실행하고 다시 커밋합니다.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"홍길동"</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"my-email@example.com"</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"홍길동"</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"my-email@example.com"</span>
 </span></code></pre></div>
 </details>
 <details class="failure">
@@ -2452,8 +2442,8 @@
 <li>오류 메시지나 터미널 출력을 그대로 복사합니다. 화면 문제라면 캡처 이미지를 Chat 입력 칸에 끌어다 놓아도 됩니다.</li>
 <li>
 <p>Chat(Ask)에 붙여 넣고 묻습니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>실습 중에 아래 오류가 났습니다. 원인을 쉬운 말로 설명하고, 확인할 것과 해결 순서를 하나씩 알려 주세요. 명령을 실행해야 하면 그 명령이 무엇을 하는지도 알려 주세요.
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>(오류 메시지 붙여 넣기)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>실습 중에 아래 오류가 났습니다. 원인을 쉬운 말로 설명하고, 확인할 것과 해결 순서를 하나씩 알려 주세요. 명령을 실행해야 하면 그 명령이 무엇을 하는지도 알려 주세요.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>(오류 메시지 붙여 넣기)
 </span></code></pre></div>
 </li>
 <li>
