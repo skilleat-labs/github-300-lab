@@ -2482,7 +2482,7 @@
 <tr>
 <td>5</td>
 <td>모두</td>
-<td>VS Code에서 <strong>Git: Clone</strong>으로 가져오고, 테스트 도구 설치 후 테스트 실행</td>
+<td>VS Code에서 <strong>Git: Clone</strong>으로 가져오고, 새 가상환경을 만들어 테스트 도구 설치, 테스트 실행</td>
 </tr>
 </tbody>
 </table>
@@ -2548,31 +2548,69 @@
 <li>저장 위치로 <code>문서/copilot-lab</code> 폴더를 고릅니다. <code>room-practice</code>와 나란히 놓입니다.</li>
 <li>오른쪽 아래 <strong>Open</strong>(열기)을 클릭합니다. "작성자를 신뢰하느냐"는 창이 뜨면 <strong>Yes, I trust the authors</strong>를 누릅니다.</li>
 <li>
-<p>터미널을 열고(Windows <code>Ctrl+`</code>, Mac <code>⌃`</code>) 테스트 도구를 설치합니다. 새로 받은 리포는 실행하기 전에 필요한 도구부터 설치합니다.</p>
+<p>터미널을 엽니다(Windows <code>Ctrl+`</code>, Mac <code>⌃`</code>). 현재 폴더가 <code>room-booking-team&lt;번호&gt;</code>인지 봅니다.</p>
+<div class="admonition warning">
+<p class="admonition-title">가상환경을 새로 만들어야 합니다</p>
+<p>1-2에서 만든 가상환경은 <code>room-practice</code> 폴더 안에 있고, <code>.venv</code>는 커밋되지 않아 팀 리포지토리에는 없습니다. 이 폴더에서 새로 만들고 도구도 다시 설치합니다.</p>
+</div>
+</li>
+<li>
+<p>가상환경을 만듭니다. <code>room-booking-team&lt;번호&gt;</code> 폴더 안에 <code>.venv</code> 폴더가 생깁니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 </span></code></pre></div>
 </div>
 </div>
 </div>
-<p>1-2에서 같은 PC에 이미 설치했다면 <code>Requirement already satisfied</code>가 나옵니다. 정상입니다.</p>
 </li>
 <li>
-<p>테스트를 실행합니다.</p>
+<p>가상환경을 켭니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Mac</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>.venv<span class="se">\S</span>cripts<span class="se">\A</span>ctivate.ps1
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pytest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>확인: 터미널 줄 맨 앞에 <code>(.venv)</code>가 붙습니다. 오른쪽 아래에 새 환경을 이 작업 영역에 쓸지 묻는 알림이 뜨면 <strong>Yes</strong>를 누릅니다.</p>
+</li>
+<li>
+<p>켜진 가상환경에 테스트 도구를 설치합니다.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>확인: 마지막 줄에 <code>Successfully installed ... pytest ...</code>가 나옵니다.</p>
+</li>
+<li>
+<p>테스트를 실행합니다.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pytest
 </span></code></pre></div>
 </div>
 </div>
@@ -2595,7 +2633,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (PO) 팀원 모두 Collaborators에 있다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (PO) Pages Source가 <strong>GitHub Actions</strong>다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (팀원) 초대를 수락했다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (모두) VS Code에 팀 리포지토리를 가져왔고 테스트 4개가 통과한다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (모두) VS Code에 팀 리포지토리를 가져와 새 가상환경 <code>(.venv)</code>을 만들었고, 테스트 4개가 통과한다</li>
 </ul>
 <h2 id="_5">막히면<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
@@ -2620,7 +2658,11 @@
 </details>
 <details class="failure">
 <summary>No module named pytest 라고 나와요</summary>
-<p>STEP 5의 7번(테스트 도구 설치)을 건너뛰었거나, VS Code가 1-2와 다른 Python을 쓰는 경우입니다. 7번 명령을 이 리포의 터미널에서 다시 실행합니다. 그래도 같으면 <a href="../../setup/3-troubleshooting/">막혔을 때</a>의 같은 항목을 봅니다.</p>
+<p>이 리포에서 가상환경을 새로 만들지 않았거나, 켜지 않고 설치한 경우입니다. 터미널 앞에 <code>(.venv)</code>가 있는지 보고 STEP 5의 8~10번을 이 리포의 터미널에서 다시 실행합니다. 그래도 같으면 <a href="../../setup/3-troubleshooting/">막혔을 때</a>의 같은 항목을 봅니다.</p>
+</details>
+<details class="failure">
+<summary>Windows에서 Activate.ps1이 '스크립트를 실행할 수 없으므로' 오류를 냅니다</summary>
+<p>1-2와 같은 문제입니다. <a href="../../class1/lab-2/">실습 1-2</a> 맨 아래 "막히면"의 같은 항목대로 합니다.</p>
 </details>
 <details class="failure">
 <summary>5명 이상이거나 2명이에요</summary>

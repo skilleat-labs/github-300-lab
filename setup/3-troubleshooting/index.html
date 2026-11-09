@@ -2400,7 +2400,7 @@
 </details>
 <details class="failure">
 <summary>No module named pytest 라고 나옵니다</summary>
-<p>테스트 도구(pytest)가 아직 설치되지 않았습니다. 리포지토리 폴더(<code>room-practice</code>)가 열린 VS Code 터미널에서 실행합니다.</p>
+<p>가상환경이 꺼져 있거나, 이 리포지토리의 가상환경에 아직 설치하지 않았습니다. 리포지토리 폴더가 열린 VS Code 터미널에서 터미널 줄 앞에 <code>(.venv)</code>가 있는지 먼저 봅니다. 없으면 켭니다(Windows <code>.venv\Scripts\Activate.ps1</code>, Mac <code>source .venv/bin/activate</code>). <code>.venv</code> 폴더 자체가 없으면 <a href="../../class1/lab-2/">실습 1-2 STEP 5</a>처럼 만듭니다. 켠 다음 설치합니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2414,6 +2414,14 @@
 </div>
 </div>
 <p>설치가 끝나면 <code>python -m pytest</code>를 다시 실행합니다.</p>
+</details>
+<details class="failure">
+<summary>Copilot Agent가 테스트를 돌렸더니 No module named pytest 라고 나옵니다</summary>
+<p>Agent가 연 터미널에 가상환경이 켜지지 않은 경우입니다. 명령 팔레트에서 <strong>Python: Select Interpreter</strong>를 열고 <code>.venv</code>가 들어간 Python을 고른 뒤 다시 시킵니다. 또는 Chat에 "가상환경 .venv를 켜고 테스트를 실행해 줘"라고 덧붙입니다.</p>
+</details>
+<details class="failure">
+<summary>Windows에서 Activate.ps1을 실행하면 '스크립트를 실행할 수 없으므로' 오류가 납니다</summary>
+<p>PowerShell이 스크립트 실행을 막는 설정입니다. Python 문서에 따르면 내 계정에서만 허용하면 됩니다: <code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code>. 회사 PC라서 막히면 터미널 <strong>+</strong> 옆 <strong>∨</strong>에서 <strong>Command Prompt</strong>를 열고 <code>.venv\Scripts\activate.bat</code>로 켭니다.</p>
 </details>
 <details class="failure">
 <summary>No module named booking 이라고 나옵니다</summary>
