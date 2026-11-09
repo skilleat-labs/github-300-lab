@@ -2578,7 +2578,7 @@
 <ul>
 <li>라벨 <code>스토리</code>를 만들고 이슈 S1~S4를 등록합니다. (5-1)</li>
 <li>이슈마다 담당자(Assignees)를 1명씩 정합니다. 전원이 하나씩입니다. (5-1)</li>
-<li>6교시에 CI가 초록이고 BA가 승인한 PR을 순서대로 병합합니다. (6-1)</li>
+<li>6교시에 리뷰 짝의 승인과 CI 초록을 최종 확인하고 PR을 순서대로 병합합니다. (6-1)</li>
 <li>5교시 끝에 클라우드 에이전트에게 맡길 이슈를 씁니다. (5-3)</li>
 </ul>
 <p><strong>Copilot에게 시킬 일 (예시)</strong></p>
@@ -2602,8 +2602,8 @@
 <td>팀 전체</td>
 </tr>
 <tr>
-<td>승인된 PR</td>
-<td>BA</td>
+<td>짝이 승인한 PR</td>
+<td>팀원</td>
 <td>병합 결과</td>
 <td>팀 전체</td>
 </tr>
@@ -2616,7 +2616,7 @@
 <p><strong>하는 일</strong></p>
 <ul>
 <li>이슈 S1~S4의 인수 조건(Given-When-Then) 초안을 Copilot으로 만들고, 직접 검토해 이슈 본문에 붙입니다. (5-1)</li>
-<li>6교시에 PR을 인수 조건으로 검토하고 <strong>Approve</strong>합니다. (6-1)</li>
+<li>6교시에 리뷰할 때 인수 조건이 애매하면 기준을 알려 줍니다. 리뷰 자체는 모두가 짝의 PR을 하나씩 맡습니다. (6-1)</li>
 <li>6-3에서 CR-001 영향 분석을 합니다.</li>
 </ul>
 <p><strong>Copilot에게 시킬 일 (예시)</strong></p>
@@ -2640,10 +2640,10 @@
 <td>담당자 전원</td>
 </tr>
 <tr>
-<td>PR</td>
-<td>담당자</td>
-<td>리뷰, Approve</td>
-<td>PM</td>
+<td>인수 조건 질문</td>
+<td>리뷰하는 팀원</td>
+<td>기준 설명</td>
+<td>리뷰하는 팀원</td>
 </tr>
 </tbody>
 </table>
