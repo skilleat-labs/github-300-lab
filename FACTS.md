@@ -116,3 +116,5 @@
 ## 가상환경 (2026-11-09 확인)
 - 만들기 `python -m venv .venv`. 켜기: bash/zsh `source .venv/bin/activate`, cmd `.venv\Scripts\activate.bat`, PowerShell `.venv\Scripts\Activate.ps1`. 끄기 `deactivate`. PowerShell은 `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`가 필요할 수 있음. https://docs.python.org/3/library/venv.html
 - VS Code Python 확장은 새 터미널에서 선택한 환경을 자동 활성화(`python-envs.terminal.autoActivationType`, 기본 command). 기본 이름 `.venv`. `.venv` 폴더는 기계마다 새로 만들어야 함. https://code.visualstudio.com/docs/python/environments
+
+- (2026-11-09 확인) github.com/copilot에서 이슈 초안 만들기(public preview): 프롬프트에 OWNER/REPO, 제목·본문·라벨·담당자 초안, 여러 개를 한 번에 요청하면 각각 초안, 검토 후 Create. 새 라벨을 만드는지는 문서에 없음. 플랜별 제공 여부 문서에 없음. https://docs.github.com/en/copilot/how-tos/copilot-on-github/copilot-for-github-tasks/use-copilot-to-create-or-update-issues
