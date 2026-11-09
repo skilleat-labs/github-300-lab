@@ -1770,10 +1770,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-cr-001" class="md-nav__link">
+  <a href="#step-4-po-cr-001" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 4. (개발자) 브랜치 cr-001에서 구현하기
+        STEP 4. (PO) 브랜치 cr-001에서 구현하기
       
     </span>
   </a>
@@ -1781,10 +1781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5" class="md-nav__link">
+  <a href="#step-5-po" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 5. (개발자) 직접 확인하기
+        STEP 5. (PO) 직접 확인하기
       
     </span>
   </a>
@@ -2290,10 +2290,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-cr-001" class="md-nav__link">
+  <a href="#step-4-po-cr-001" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 4. (개발자) 브랜치 cr-001에서 구현하기
+        STEP 4. (PO) 브랜치 cr-001에서 구현하기
       
     </span>
   </a>
@@ -2301,10 +2301,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5" class="md-nav__link">
+  <a href="#step-5-po" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 5. (개발자) 직접 확인하기
+        STEP 5. (PO) 직접 확인하기
       
     </span>
   </a>
@@ -2366,7 +2366,7 @@
 <p class="admonition-title">이 미션에서 할 일</p>
 <ul>
 <li>현업(강사)이 발표한 변경 요청 CR-001을 PO가 이슈로 등록합니다.</li>
-<li>BA가 Copilot <code>#codebase</code>로 영향 분석을 하고, 개발자가 브랜치 <code>cr-001</code>에서 Agent로 구현합니다.</li>
+<li>BA가 Copilot <code>#codebase</code>로 영향 분석을 하고, PO가 브랜치 <code>cr-001</code>에서 Agent로 구현하고, 개발자가 코드를 기술적으로 검토합니다.</li>
 <li>PR을 병합하면 6-2에서 만든 배포가 현황판을 자동으로 다시 올리는 것을 확인합니다.</li>
 </ul>
 </div>
@@ -2407,7 +2407,7 @@
 </span></code></pre></div>
 </li>
 <li>
-<p><strong>Labels</strong>에서 <code>변경요청</code>, <strong>Assignees</strong>에서 개발자를 고르고 <strong>Create</strong>를 클릭합니다.</p>
+<p><strong>Labels</strong>에서 <code>변경요청</code>, <strong>Assignees</strong>에서 PO 자신을 고르고 <strong>Create</strong>를 클릭합니다.</p>
 </li>
 <li>이슈 번호를 팀에 알립니다.</li>
 </ol>
@@ -2453,7 +2453,11 @@
 <p class="admonition-title">데이터를 지우자는 제안이 나오면</p>
 <p>Copilot이 "<code>reservations.json</code>에서 phone을 지우자"고 할 수 있습니다. 현업은 <strong>현황판에 보이지 않게</strong> 해 달라고 했지, 연락처 기록을 없애라고 하지 않았습니다. 요구를 넘어서는 변경은 받아들이지 않습니다.</p>
 </div>
-<h2 id="step-4-cr-001">STEP 4. (개발자) 브랜치 <code>cr-001</code>에서 구현하기<a class="headerlink" href="#step-4-cr-001" title="Permanent link">&para;</a></h2>
+<h2 id="step-4-po-cr-001">STEP 4. (PO) 브랜치 <code>cr-001</code>에서 구현하기<a class="headerlink" href="#step-4-po-cr-001" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">요청을 받은 PO가 Copilot으로 끝까지 구현합니다</p>
+<p>코드는 개발자만 고치지 않습니다. 변경 요청을 받은 PO가 Copilot Agent로 직접 고치고, 개발자는 6-2에서 배포를 만들었으니 여기서는 옆에서 <strong>기술 검토</strong>를 맡습니다. 막히면 개발자와 화면을 같이 봅니다.</p>
+</div>
 <ol>
 <li>
 <p>상태 표시줄 브랜치 이름 클릭 → <strong>Create new branch...</strong> → 이름 입력</p>
@@ -2478,7 +2482,7 @@
 <li>소스 제어의 <strong>Changes</strong> 목록에서 바뀐 파일이 <code>build_site.py</code>와 테스트 파일뿐인지 봅니다.</li>
 </ol>
 <p>확인: <code>data/reservations.json</code>과 <code>booking/</code> 폴더는 바뀌지 않았습니다.</p>
-<h2 id="step-5">STEP 5. (개발자) 직접 확인하기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
+<h2 id="step-5-po">STEP 5. (PO) 직접 확인하기<a class="headerlink" href="#step-5-po" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>터미널에서 실행합니다.</p>
@@ -2520,13 +2524,14 @@
 <h2 id="step-6-pr">STEP 6. PR, 병합, 자동 재배포 확인<a class="headerlink" href="#step-6-pr" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>(개발자) 커밋 메시지에 CR-001 이슈 번호를 넣어 커밋하고 <strong>Publish Branch</strong>를 클릭합니다.</p>
+<p>(PO) 커밋 메시지에 CR-001 이슈 번호를 넣어 커밋하고 <strong>Publish Branch</strong>를 클릭합니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>CR-001 현황판에서 연락처 제거, 예약자 성+○○ 표시 (#번호)
 </span></code></pre></div>
 </li>
 <li>
-<p>(개발자) github.com에서 PR을 엽니다. 설명 끝에 <code>Closes #번호</code>를 넣습니다.</p>
+<p>(PO) github.com에서 PR을 엽니다. 설명 끝에 <code>Closes #번호</code>를 넣습니다.</p>
 </li>
+<li>(개발자) <strong>Files changed</strong>에서 <code>build_site.py</code>와 테스트만 바뀌었는지, 테스트가 이름 가리기를 실제로 확인하는지 보고 의견이 있으면 댓글을 남깁니다.</li>
 <li>(BA) <strong>Files changed</strong>에서 이슈의 완료 기준 3개를 보고 <strong>Approve</strong>합니다.</li>
 <li>(PM) <strong>테스트 / test</strong>가 초록인지 보고 병합합니다.</li>
 <li>(모두) <strong>Actions</strong> 탭에서 <strong>현황판 배포</strong>가 다시 실행되어 초록이 되는 것을 봅니다. 아무도 배포 버튼을 누르지 않았습니다.</li>

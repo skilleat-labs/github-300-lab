@@ -2213,6 +2213,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="역할 카드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        역할 한눈에 보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2466,16 +2483,60 @@
 </div>
 <p>S1과 S4는 오전에 개인 리포지토리에서 해 본 것입니다. 해 본 사람이 맡으면 빠르고, 처음 하는 S2, S3도 같은 흐름이라 막히지 않습니다.</p>
 <h2 id="role-cards">역할 카드<a class="headerlink" href="#role-cards" title="Permanent link">&para;</a></h2>
+<h3 id="roles">역할 한눈에 보기<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>약자</th>
+<th>풀네임</th>
+<th>우리말</th>
+<th>맡는 일</th>
+<th>직접 고치는 코드 (Copilot과 함께)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PO</strong></td>
+<td>Product Owner</td>
+<td>제품 책임자</td>
+<td>무엇을, 왜 만들지와 정책을 결정</td>
+<td>내 스토리(5-2), 변경 요청 CR-001(6-3)</td>
+</tr>
+<tr>
+<td><strong>PM</strong></td>
+<td>Project Manager</td>
+<td>프로젝트 관리자</td>
+<td>언제, 누가 할지 정리하고 병합을 관리</td>
+<td>내 스토리(5-2), 팀 지침 파일(7-3)</td>
+</tr>
+<tr>
+<td><strong>BA</strong></td>
+<td>Business Analyst</td>
+<td>업무 분석가</td>
+<td>무엇이 되어야 다 된 것인지(인수 조건) 정하고 검토</td>
+<td>내 스토리(5-2)</td>
+</tr>
+<tr>
+<td><strong>개발자</strong></td>
+<td>Developer</td>
+<td>개발 담당</td>
+<td>바꿀 파일과 기술 위험을 보고, 코드를 기술적으로 검토</td>
+<td>내 스토리(5-2), 배포 워크플로(6-2)</td>
+</tr>
+</tbody>
+</table>
+<p>코드는 개발자만 고치지 않습니다. <strong>모두가 Copilot에게 시켜서</strong> 코드를 고치고, 역할은 그 밖에 누가 결정하고 정리하고 검토하는지를 나눈 것입니다. 7-1 보안 수정과 7-2 자동화 도구도 모두 각자 합니다.</p>
 <p>미션을 시작하기 전에 내 역할 카드를 읽습니다. <strong>3인 팀은 BA가 PM 카드도 함께 맡습니다.</strong> 모든 역할은 카드의 일과 별도로 <strong>스토리 하나를 구현</strong>합니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">PO</label><label for="__tabbed_1_2">PM</label><label for="__tabbed_1_3">BA</label><label for="__tabbed_1_4">개발자</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p><strong>풀네임</strong>: Product Owner</p>
 <p><strong>한 줄 정의</strong>: 제품 책임자. <strong>무엇을, 왜</strong> 만들지 정하고 정책을 최종 결정합니다.</p>
 <p><strong>하는 일</strong></p>
 <ul>
 <li>결정 4개 중 MVP 우선순위를 정합니다. (5-1)</li>
 <li>결정 못 한 정책 3개의 결정안을 만들고, 이슈에서 <code>@skilleat-labs</code>(현업 역할 강사)를 멘션해 묻고, 답을 이슈에 남깁니다. (5-1)</li>
-<li>6-3 변경 요청 CR-001을 이슈로 등록합니다.</li>
+<li>6-3 변경 요청 CR-001을 이슈로 등록하고, Copilot Agent로 직접 구현합니다.</li>
 </ul>
 <p><strong>Copilot에게 시킬 일 (예시)</strong></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#codebase docs/01_킥오프_회의록.md의 "결정한 것" 4개를 MVP 우선순위로 정리하고, "결정하지 못한 것" 3개에 대해 PO 결정안 초안과 현업에게 물어볼 질문을 만들어 주세요.
@@ -2507,7 +2568,8 @@
 </table>
 </div>
 <div class="tabbed-block">
-<p><strong>한 줄 정의</strong>: 진행 관리자. <strong>언제, 누가</strong> 할지 정리하고 병합을 관리합니다.</p>
+<p><strong>풀네임</strong>: Project Manager</p>
+<p><strong>한 줄 정의</strong>: 프로젝트 관리자. <strong>언제, 누가</strong> 할지 정리하고 병합을 관리합니다.</p>
 <p><strong>하는 일</strong></p>
 <ul>
 <li>라벨 <code>스토리</code>를 만들고 이슈 S1~S4를 등록합니다. (5-1)</li>
@@ -2545,6 +2607,7 @@
 </table>
 </div>
 <div class="tabbed-block">
+<p><strong>풀네임</strong>: Business Analyst</p>
 <p><strong>한 줄 정의</strong>: 업무 분석가. <strong>구체적으로</strong> 무엇이 되어야 다 된 것인지 정하고 검토합니다.</p>
 <p><strong>하는 일</strong></p>
 <ul>
@@ -2582,12 +2645,13 @@
 </table>
 </div>
 <div class="tabbed-block">
+<p><strong>풀네임</strong>: Developer</p>
 <p><strong>한 줄 정의</strong>: 기술 담당. 바꿀 파일과 <strong>기술 위험</strong>을 미리 보고 팀을 돕습니다.</p>
 <p><strong>하는 일</strong></p>
 <ul>
 <li>스토리마다 바꿀 파일과 충돌 위험을 Copilot으로 분석해 이슈 댓글로 남깁니다. (5-1)</li>
 <li>팀원이 구현하다 막히면 함께 봅니다. (5-2)</li>
-<li>6-2에서 배포 워크플로를 Copilot으로 만들고, 6-3에서 CR-001을 구현합니다.</li>
+<li>6-2에서 배포 워크플로를 Copilot으로 만들고, 6-3에서 PO가 구현한 CR-001을 기술적으로 검토합니다.</li>
 </ul>
 <p><strong>Copilot에게 시킬 일 (예시)</strong></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>#codebase 스토리 S1~S4를 구현하면 각각 어떤 파일의 어떤 함수가 바뀌는지 표로 정리하고, 같은 파일을 동시에 고쳐 병합 충돌이 날 위험이 있는 조합을 알려 주세요.
