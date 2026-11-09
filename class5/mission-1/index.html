@@ -2607,6 +2607,37 @@
 <p>PO의 결정 이슈가 먼저 만들어졌다면 S1은 <code>#2</code>부터 시작합니다. 이 가이드는 이슈 번호를 <code>&lt;번호&gt;</code>로 씁니다. 내 이슈의 실제 번호로 바꿔 읽습니다.</p>
 </div>
 <h2 id="step-4-ba">STEP 4. (BA) 인수 조건 초안 만들고 검토해서 붙이기<a class="headerlink" href="#step-4-ba" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Given-When-Then이 뭔가요?</p>
+<p>인수 조건을 쓰는 흔한 형식입니다. 세 줄로 씁니다.</p>
+<table>
+<thead>
+<tr>
+<th>줄</th>
+<th>뜻</th>
+<th>S1 예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Given</strong></td>
+<td>이런 상황에서 (미리 있는 것)</td>
+<td>소회의실 A에 10:00~11:00 예약이 이미 있을 때</td>
+</tr>
+<tr>
+<td><strong>When</strong></td>
+<td>이렇게 하면 (사용자가 하는 일)</td>
+<td>같은 회의실, 같은 날 10:30~11:30을 예약하면</td>
+</tr>
+<tr>
+<td><strong>Then</strong></td>
+<td>이렇게 된다 (기대하는 결과)</td>
+<td>"이미 예약된 시간"으로 실패한다</td>
+</tr>
+</tbody>
+</table>
+<p>이렇게 쓰면 누가 읽어도 확인 방법이 같고, 그대로 테스트가 됩니다. 3교시 사용자 스토리 장에서 본 인수 조건을 이 형식으로 쓴 것입니다.</p>
+</div>
 <ol>
 <li>VS Code Chat 보기에서 <strong>+</strong>(<strong>New Chat</strong>)를 클릭합니다. Session Target <strong>Copilot</strong>, Agent <strong>Ask</strong>를 고릅니다.</li>
 <li><strong>+</strong>(<strong>Add Context</strong>) → <strong>Files &amp; Folders</strong>로 <code>docs/00_현업요청.md</code>, <code>docs/02_현행_업무.md</code>를 추가합니다.</li>
