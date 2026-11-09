@@ -3,6 +3,7 @@
 !!! abstract "이 미션에서 할 일"
     - 각자 자기 스토리 브랜치로 PR을 열고, Copilot **Summary**로 설명을 쓰고, Copilot 코드 리뷰를 **1회** 요청합니다.
     - Copilot 리뷰 댓글을 사람이 판단해 반영하고, 짝에게 내 구현을 설명한 뒤 서로의 PR을 인수 조건으로 리뷰해 승인합니다.
+    - 5-1에서 맡긴 클라우드 에이전트 PR이 열렸으면 BA가 검토합니다.
     - PM이 짝의 승인과 CI "테스트" 초록을 최종 확인하고 순서대로 병합합니다. 충돌이 나면 Copilot의 설명을 받아 두 검사를 모두 남기도록 해결합니다.
 
 **소요 시간** 약 14분  **실습 장소** 팀 리포지토리 `room-booking-team<번호>` (github.com, VS Code)  **관련 교안** [6교시 교안](index.md)
@@ -138,7 +139,31 @@ Copilot 리뷰는 **댓글형**입니다. 승인(Approve)이나 변경 요청(Re
 
 확인: 내가 리뷰한 PR에 `<내아이디> approved these changes`가 보이고, 내 PR도 짝에게 Approve를 받았습니다.
 
-## STEP 5. (PM) 최종 확인하고 순서대로 병합하기
+## STEP 5. (BA) 클라우드 에이전트가 만든 PR 검토하기 { #agent-review }
+
+5-1에서 PM이 맡긴 작업의 PR이 열려 있으면 BA가 검토합니다. 맡긴 사람(PM)은 승인할 수 없습니다. 아직 안 열렸으면 넘어가고 7-3에서 다시 봅니다.
+
+Copilot은 작업을 마치면 리뷰를 요청합니다. 3인 팀은 맡긴 사람이 BA(PM 겸임)라서 **PO가 검토**합니다. 아래 순서를 지킵니다.
+
+1. **Pull requests** 탭에서 Copilot이 연 PR(제목에 `report.py 테스트와 사용 설명`)을 엽니다.
+2. **Files changed**를 **먼저** 읽습니다. 바뀐 파일이 `tests/test_report.py`와 `README.md` 정도인지 봅니다. `booking/`이나 `.github/workflows/`를 바꿨으면 특히 주의합니다.
+3. 이상이 없으면 쓰기 권한이 있는 사람이 PR 병합 영역의 **Approve and run workflows**를 클릭합니다. 기본 설정에서는 Copilot이 올린 변경에 워크플로가 자동으로 돌지 않으니, 이 버튼 없이 기다려도 검사가 시작되지 않습니다.
+4. **Checks**에서 **테스트 / test**가 초록인지 봅니다.
+5. README의 기준을 코드와 비교합니다. `booking/report.py`는 `> 6`이면 높음, `> 2`이면 보통입니다. "넘으면"이 맞고, "이상"이라고 썼으면 틀린 설명입니다. 테스트도 정확히 2시간을 "낮음"으로 확인하는지 봅니다.
+
+| 검토 결과 | 결정 |
+|---|---|
+| 테스트 통과, 설명이 코드와 같음 | Draft이면 **Ready for review**를 클릭하고, BA가 **Approve**, PM이 병합. 3인 팀은 맡긴 사람이 BA라서 **PO가 Approve**, BA가 병합 |
+| 설명이나 기대값이 코드와 다름 | 병합하지 않음. PR 댓글에 `@copilot`을 붙여 고칠 점을 요청 |
+| 범위 밖 파일을 바꿈 | 병합하지 않음. 이유를 댓글로 남김 |
+
+!!! warning "사람이 해야 하는 일"
+    Copilot은 자기 PR을 **Ready for review**로 바꾸거나 승인, 병합할 수 없습니다. 그리고 Copilot에게 일을 맡긴 사람(PM)은 그 PR을 승인할 수 없습니다. 그래서 BA나 PO가 승인합니다.
+
+!!! tip "시간 안에 안 끝나면"
+    PR 상태만 확인하고 넘어갑니다. 7-3에서 다시 보고, 그래도 안 끝났으면 검토와 병합은 수업 뒤에 해도 됩니다.
+
+## STEP 6. (PM) 최종 확인하고 순서대로 병합하기
 
 5-1에서 개발자가 추천한 순서를 씁니다. 추천이 없으면 충돌이 없는 S3부터, 그다음 S4, S1, S2 순서로 합니다.
 
@@ -153,7 +178,7 @@ Copilot 리뷰는 **댓글형**입니다. 승인(Approve)이나 변경 요청(Re
 
 확인: 병합한 PR이 보라색 **Merged**이고, 이슈가 닫혔습니다.
 
-## STEP 6. 충돌이 나면 해결하기
+## STEP 7. 충돌이 나면 해결하기
 
 S1, S2, S4는 모두 `booking/rules.py`와 `tests/test_rules.py`를 고쳤습니다. 먼저 하나가 병합되면 나머지 PR에 **This branch has conflicts that must be resolved**가 뜰 수 있습니다. 충돌은 **PR 작성자**가 풀고, 개발자가 돕습니다.
 
@@ -210,6 +235,7 @@ S1, S2, S4는 모두 `booking/rules.py`와 `tests/test_rules.py`를 고쳤습니
 
 ## 다 됐는지 확인
 
+- [ ] (BA) 클라우드 에이전트 PR이 열렸으면 Files changed를 읽고 검토했다 (안 열렸으면 7-3에서)
 - [ ] 모두 자기 PR을 열었고 설명에 `Closes #번호`가 있다
 - [ ] 각자 자기 PR에 Copilot 리뷰를 1회 요청했고, 댓글마다 반영 여부를 답했다
 - [ ] 모두 짝에게 내 구현을 설명했고, 짝의 PR을 인수 조건으로 리뷰해 Approve했다
@@ -236,3 +262,12 @@ S1, S2, S4는 모두 `booking/rules.py`와 `tests/test_rules.py`를 고쳤습니
 
 ??? failure "병합했는데 이슈가 안 닫혀요"
     PR 설명에 `Closes #번호`가 없었거나 번호가 틀린 것입니다. 이슈를 직접 열어 **Close issue**를 누릅니다.
+
+??? failure "PR이 열렸는데 테스트가 돌지 않아요"
+    정상입니다. 변경 내용을 읽은 뒤 PR 병합 영역의 **Approve and run workflows**를 누릅니다.
+
+??? failure "병합 버튼이 안 눌려요"
+    Draft 상태입니다. **Ready for review**를 먼저 누릅니다. 승인은 일을 맡긴 사람이 아닌 팀원이 합니다.
+
+??? failure "테스트가 실패한 PR이 열렸어요"
+    병합하지 않습니다. **Details** 로그의 실패 줄을 PR 댓글에 남깁니다. 이것도 검토의 결과입니다.

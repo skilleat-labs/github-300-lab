@@ -5,7 +5,7 @@
     - 인수 조건대로 직접 명령을 실행해 확인하고, 이슈 번호를 넣어 커밋한 뒤 GitHub에 올립니다.
     - PR은 6교시 미션 6-1에서 엽니다.
 
-**소요 시간** 약 17분  **실습 장소** 팀 리포지토리 `room-booking-team<번호>` (VS Code)  **관련 교안** [팀 백로그](index.md#backlog), [실습 4-2](../class4/lab-2.md)
+**소요 시간** 약 19분  **실습 장소** 팀 리포지토리 `room-booking-team<번호>` (VS Code)  **관련 교안** [팀 백로그](index.md#backlog), [실습 4-2](../class4/lab-2.md)
 
 ## 준비
 

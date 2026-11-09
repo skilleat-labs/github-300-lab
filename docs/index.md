@@ -34,8 +34,8 @@ GitHub Copilot 과정의 교안과 실습 가이드입니다. 수업 시간에�
 | Copilot과 VS Code를 처음부터 | 1, 2교시. [VS Code와 Copilot 한 장 정리](appendix/vscode-copilot.md) |
 | 업무용 프로그램, 기능 개발 | 4, 5교시 |
 | 아이디어 검토, 업무 자동화 도구 | [3-3](class3/lab-3.md), [7-2](class7/lab-2.md) |
-| 테스트와 품질 검증 | [4-2](class4/lab-2.md), [5-3](class5/mission-3.md), 7-2 |
-| 코드 설명과 문서 | [2-2](class2/lab-2.md), 5-3 |
+| 테스트와 품질 검증 | [4-2](class4/lab-2.md), [클라우드 에이전트](class5/mission-1.md), 7-2 |
+| 코드 설명과 문서 | [2-2](class2/lab-2.md), 클라우드 에이전트 README (6-1) |
 | 데이터 처리와 분석 | 7-2 |
 | 팀 활용 사례 공유 | [7-3](class7/lab-3.md) |
 

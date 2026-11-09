@@ -290,7 +290,7 @@ CR-001: 현황판이 회의실 앞 태블릿과 사외에서도 보입니다. �
 
 ## 5교시 클라우드 에이전트
 
-**5-3 클라우드 에이전트에게 맡길 이슈** (github.com 이슈 본문, Assignees에 Copilot) [미션 5-3](../class5/mission-3.md)
+**5-1 클라우드 에이전트에게 맡길 이슈** (github.com/copilot, Assign this issue to Copilot) [미션 5-1 STEP 4](../class5/mission-1.md)
 
 ```text
 ## 배경

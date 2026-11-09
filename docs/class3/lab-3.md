@@ -27,7 +27,7 @@
 | Claude | `.claude/skills/`, `~/.claude/skills/` |
 | OpenAI Codex | `.agents/skills/`, `~/.agents/skills/` |
 
-- 오늘은 **`.github/skills/`**에 만듭니다. 리포지토리에 커밋하면 VS Code뿐 아니라 github.com에서 일하는 Copilot 클라우드 에이전트(5-3)와 코드 리뷰(6-1)도 이 스킬을 쓸 수 있습니다.
+- 오늘은 **`.github/skills/`**에 만듭니다. 리포지토리에 커밋하면 VS Code뿐 아니라 github.com에서 일하는 Copilot 클라우드 에이전트(5-1, 6-1)와 코드 리뷰(6-1)도 이 스킬을 쓸 수 있습니다.
 - GitHub 문서는 리포지토리의 `.claude/skills/`, `.agents/skills/`도 Copilot이 읽는 스킬 위치로 안내합니다. 다른 도구용으로 만든 스킬도 리포지토리에 있으면 Copilot이 씁니다.
 - 읽는 위치와 쓸 수 있는 머리말은 도구마다 조금 다릅니다. 다른 도구에서 쓸 때는 그 도구의 문서를 확인합니다.
 - 스킬 폴더에는 `SKILL.md` 말고도 예시, 스크립트, 참고 자료를 함께 넣을 수 있습니다. 오늘은 `SKILL.md` 하나만 씁니다.

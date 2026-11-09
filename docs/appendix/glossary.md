@@ -45,7 +45,7 @@
 |---|---|
 | **Copilot 코드 리뷰** | PR의 **Reviewers**에서 Copilot을 요청하면 리뷰 댓글을 남깁니다. 승인이나 변경 요청이 아니라 댓글형입니다. AI Credits와 Actions 사용 시간을 씁니다. 1회 약 150크레딧(Balanced 기준). (6-1) |
 | **PR 요약**(Summary) | PR 설명 칸의 Copilot 메뉴로 바뀐 내용을 요약합니다. Free에서는 안 됩니다. (4-3) |
-| **클라우드 에이전트** | 이슈의 **Assignees**에 Copilot을 지정하면 GitHub 쪽에서 작업하고 항상 PR을 엽니다. (5-3) |
+| **클라우드 에이전트** | 이슈의 **Assignees**에 Copilot을 지정하면 GitHub 쪽에서 작업하고 항상 PR을 엽니다. (5-1, 6-1) |
 | **Copilot CLI** | 터미널에서 쓰는 Copilot입니다. `copilot`으로 실행합니다. (7-3) |
 
 ## 크레딧과 플랜
