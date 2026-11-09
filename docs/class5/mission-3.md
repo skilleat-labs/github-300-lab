@@ -1,7 +1,7 @@
 # 미션 5-3. 클라우드 에이전트에 이슈 맡기기
 
 !!! abstract "이 미션에서 할 일"
-    - PM이 "테스트와 사용 설명을 추가해 달라"는 이슈를 쓰고 **Assignees**에 **Copilot**을 지정합니다.
+    - PM이 github.com의 Copilot에게 "테스트와 사용 설명을 추가해 달라"는 이슈를 쓰게 하고, 그 이슈를 **Copilot**(클라우드 에이전트)에게 맡깁니다.
     - 클라우드 에이전트가 GitHub에서 일하는 동안 팀은 6교시로 넘어갑니다.
     - 7교시 [실습 7-3](../class7/lab-3.md)에서 돌아와 PR을 검토합니다.
 
@@ -17,16 +17,16 @@
 !!! info "클라우드 에이전트와 VS Code의 Agent는 무엇이 다른가요?"
     VS Code의 Agent는 **내 PC**에서 내가 지켜보며 승인하고 일합니다. 클라우드 에이전트는 **GitHub 쪽**에서 혼자 일하고, 끝나면 항상 PR을 엽니다. 내 PC를 꺼도 일이 진행됩니다.
 
-## STEP 1. (PM) 이슈 쓰고 Copilot에게 맡기기
+## STEP 1. (PM) Copilot에게 이슈를 쓰게 하고 그대로 맡기기
 
-1. github.com 팀 리포지토리 → **Issues** → **New issue**를 클릭합니다.
-2. 제목과 본문을 입력합니다.
+5-1처럼 github.com의 Copilot에게 이슈 초안을 맡기고, 같은 요청에서 **이 이슈를 Copilot에게 맡겨 달라**고 덧붙입니다. 이슈가 만들어지면 클라우드 에이전트가 바로 일을 시작합니다.
 
-    ```text
-    report.py 테스트와 사용 설명 추가 (코드 동작은 그대로)
-    ```
+1. 새 탭에서 `github.com/copilot`을 엽니다.
+2. 아래를 붙여 넣고 `<PO아이디>`, `<번호>`를 바꾼 뒤 Enter를 누릅니다.
 
     ```text
+    In <PO아이디>/room-booking-team<번호>, 아래 내용으로 이슈를 하나 만들어 주세요. 제목은 "report.py 테스트와 사용 설명 추가 (코드 동작은 그대로)"입니다. Assign this issue to Copilot.
+
     ## 배경
     booking/report.py의 이용률 보고서는 테스트와 사용 설명이 없어 담당자가 바뀌면 이해하기 어렵습니다.
 
@@ -40,10 +40,14 @@
     - 기존 테스트는 모두 통과해야 합니다.
     ```
 
-3. 오른쪽 **Assignees** 톱니 → 목록에서 **Copilot**을 고릅니다.
-4. **Create**(화면에 따라 **Submit new issue**)를 클릭합니다.
+3. 초안에서 본문이 위와 같은지, **Assignees**에 **Copilot**이 있는지 확인하고 **Create**를 누릅니다. Copilot이 담당자에 없으면 초안의 담당자 칸에서 **Copilot**을 고릅니다.
 
 확인: 이슈의 **Assignees**에 **Copilot**이 보입니다.
+
+??? note "Copilot 초안 기능이 안 보이면: 직접 만들기"
+    1. github.com 팀 리포지토리 → **Issues** → **New issue**를 클릭합니다.
+    2. 제목 `report.py 테스트와 사용 설명 추가 (코드 동작은 그대로)`와 위 본문(배경, 할 일, 지켜야 할 것)을 입력합니다.
+    3. 오른쪽 **Assignees** 톱니 → 목록에서 **Copilot**을 고르고 **Create**(화면에 따라 **Submit new issue**)를 클릭합니다.
 
 !!! note "화면이 조금 다를 수 있어요"
     이슈의 **Assignees**에서 **Copilot**을 지정하는 방법은 공식 문서 검색 요약으로 확인한 것입니다. 목록에 Copilot이 없으면 아래 "막히면"의 첫 항목을 봅니다. 리포지토리의 **Agents** 탭도 github.com에서 Copilot을 쓰는 입구입니다.

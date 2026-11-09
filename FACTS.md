@@ -118,3 +118,4 @@
 - VS Code Python 확장은 새 터미널에서 선택한 환경을 자동 활성화(`python-envs.terminal.autoActivationType`, 기본 command). 기본 이름 `.venv`. `.venv` 폴더는 기계마다 새로 만들어야 함. https://code.visualstudio.com/docs/python/environments
 
 - (2026-11-09 확인) github.com/copilot에서 이슈 초안 만들기(public preview): 프롬프트에 OWNER/REPO, 제목·본문·라벨·담당자 초안, 여러 개를 한 번에 요청하면 각각 초안, 검토 후 Create. 새 라벨을 만드는지는 문서에 없음. 플랜별 제공 여부 문서에 없음. https://docs.github.com/en/copilot/how-tos/copilot-on-github/copilot-for-github-tasks/use-copilot-to-create-or-update-issues
+- (2026-11-09 강사 확인) Copilot Pro 계정에서 github.com/copilot 이슈 초안 만들기가 동작함. 5-1, 5-3, 6-3 이슈 만들기를 이 방법으로 바꿈.
