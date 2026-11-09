@@ -5,7 +5,7 @@
     - PM이 이슈 S1~S4를 등록하고 한 사람에 하나씩 배정합니다. BA가 인수 조건을, 개발자가 바꿀 파일과 충돌 위험을 Copilot으로 정리해 이슈에 남깁니다.
     - 모든 Copilot 결과는 사람이 읽고 고친 뒤 이슈에 올립니다.
 
-**소요 시간** 약 15분  **실습 장소** 팀 리포지토리 `room-booking-team<번호>` (VS Code, github.com)  **관련 교안** [역할 카드](index.md#role-cards), [팀 백로그](index.md#backlog)
+**소요 시간** 약 12분  **실습 장소** 팀 리포지토리 `room-booking-team<번호>` (VS Code, github.com)  **관련 교안** [역할 카드](index.md#role-cards), [팀 백로그](index.md#backlog)
 
 ## 준비
 
@@ -210,7 +210,7 @@
     오류 메시지나 막힌 상황을 Chat(Ask)에 붙여 넣고 원인과 해결 순서를 묻습니다. 아래는 자주 막히는 경우입니다. 묻는 방법은 [막혔을 때](../setup/3-troubleshooting.md#copilot)에 있습니다.
 
 ??? failure "Assignees 목록에 팀원 이름이 없어요"
-    팀원이 4-4의 초대를 아직 수락하지 않은 것입니다. PO가 **Settings** → **Collaborators**에서 상태를 보고, 팀원은 초대 주소에서 **Accept invitation**을 누릅니다.
+    팀원이 미션 5-0의 초대를 아직 수락하지 않은 것입니다. PO가 **Settings** → **Collaborators**에서 상태를 보고, 팀원은 초대 주소에서 **Accept invitation**을 누릅니다.
 
 ??? failure "Copilot이 첨부한 문서를 읽지 않고 일반적인 답을 해요"
     입력 칸 위에 첨부한 파일 이름이 보이는지 확인합니다. 안 보이면 다시 **+**(**Add Context**)로 추가하거나, 탐색기에서 파일을 입력 칸으로 끌어다 놓습니다.

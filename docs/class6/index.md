@@ -61,7 +61,7 @@ CI/CD 전체 그림이에요. PR이 열리면 ci.yml이 테스트를 돌려요. 
 
 Settings의 Pages Source는 GitHub Actions여야 합니다. 자세한 검토표는 [미션 6-2](mission-2.md)에 있습니다.
 
-Copilot이 만든 워크플로는 이 다섯 곳을 확인해요. 언제 실행되는지, main에 push될 때와 손으로 실행할 때. 권한에 contents read, pages write, id-token write가 있는지. 배포 환경 environment github-pages가 있는지예요. GitHub 문서가 요구하는 항목이라 빠지면 안 돼요. 코드를 받아 Python을 준비하고 build_site.py를 실행하는지. 만든 site 폴더를 올리고 deploy-pages로 배포하는지예요. 리포지토리 Settings의 Pages에서 Source가 GitHub Actions로 되어 있어야 해요. 이건 4교시 팀 구성 때 PO가 미리 바꿔 뒀어요. 가이드에 강사 참고 정답도 접어 두었으니 비교해 보세요.
+Copilot이 만든 워크플로는 이 다섯 곳을 확인해요. 언제 실행되는지, main에 push될 때와 손으로 실행할 때. 권한에 contents read, pages write, id-token write가 있는지. 배포 환경 environment github-pages가 있는지예요. GitHub 문서가 요구하는 항목이라 빠지면 안 돼요. 코드를 받아 Python을 준비하고 build_site.py를 실행하는지. 만든 site 폴더를 올리고 deploy-pages로 배포하는지예요. 리포지토리 Settings의 Pages에서 Source가 GitHub Actions로 되어 있어야 해요. 이건 5교시 팀 리포를 만들 때 PO가 미리 바꿔 뒀어요. 가이드에 강사 참고 정답도 접어 두었으니 비교해 보세요.
 
 ### 변경 요청이 오면 Copilot으로 영향부터 찾습니다
 

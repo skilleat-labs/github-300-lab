@@ -10,7 +10,7 @@
 ## 준비
 
 - 미션 6-1에서 스토리 PR이 모두 병합되어 있으면 좋습니다. 덜 끝났어도 이 미션은 시작할 수 있습니다.
-- 4-4에서 PO가 **Settings** → **Pages** → Source를 **GitHub Actions**로 바꿔 두었어야 합니다.
+- 미션 5-0에서 PO가 **Settings** → **Pages** → Source를 **GitHub Actions**로 바꿔 두었어야 합니다.
 - 작업은 **개발자 한 명**이 VS Code에서 하고, 나머지는 화면을 같이 보며 STEP 3 검토를 함께 합니다.
 
 !!! info "예약 명령과 현황판의 관계"
