@@ -17,17 +17,9 @@
 1. 터미널을 엽니다(Windows ``Ctrl+` ``, Mac ``⌃` ``).
 2. 소회의실 B에 17:00~18:00 예약을 넣어 봅니다. 한 줄로 붙여 넣고 Enter를 누릅니다.
 
-    === "Windows"
-
-        ```bash
-        python -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
-        ```
+    ```bash
+    python -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
+    ```
 
     ```text
     [예약 실패]
@@ -98,17 +90,9 @@
 
 1. 17:00~18:00 예약을 다시 넣습니다.
 
-    === "Windows"
-
-        ```bash
-        python -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
-        ```
+    ```bash
+    python -m booking add --room R2 --title 마감회의 --date 2026-11-10 --start 17:00 --end 18:00 --booker 홍길동 --attendees 2
+    ```
 
     ```text
     [예약 완료] #6 2026-11-10 17:00~18:00 R2 마감회의
@@ -116,17 +100,9 @@
 
 2. 18:00을 넘기는 예약은 여전히 막히는지 봅니다.
 
-    === "Windows"
-
-        ```bash
-        python -m booking add --room R2 --title 늦은회의 --date 2026-11-10 --start 17:30 --end 18:30 --booker 홍길동 --attendees 2
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m booking add --room R2 --title 늦은회의 --date 2026-11-10 --start 17:30 --end 18:30 --booker 홍길동 --attendees 2
-        ```
+    ```bash
+    python -m booking add --room R2 --title 늦은회의 --date 2026-11-10 --start 17:30 --end 18:30 --booker 홍길동 --attendees 2
+    ```
 
     ```text
     [예약 실패]
@@ -147,17 +123,9 @@ STEP 4의 예약 완료로 `data/reservations.json`에 #6이 추가되었습니�
 
 ## STEP 6. 테스트 실행
 
-=== "Windows"
-
-    ```bash
-    python -m pytest
-    ```
-
-=== "Mac"
-
-    ```bash
-    python3 -m pytest
-    ```
+```bash
+python -m pytest
+```
 
 확인: 실패 없이 **passed**만 나옵니다. 기존 테스트 4개가 그대로 통과해야 합니다(Copilot이 테스트를 추가했다면 숫자가 더 클 수 있습니다).
 

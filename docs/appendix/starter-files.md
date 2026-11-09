@@ -45,7 +45,7 @@ meeting-room-starter/
 | `python build_site.py` | 현황판 `site/index.html` 만들기 |
 
 !!! tip "데이터 되돌리기"
-    `add`로 바뀐 `data/reservations.json`은 VS Code **소스 제어**에서 **Discard Changes**로 되돌립니다. Mac은 표의 `python`을 `python3`으로 바꿔 실행합니다.
+    `add`로 바뀐 `data/reservations.json`은 VS Code **소스 제어**에서 **Discard Changes**로 되돌립니다. 명령은 가상환경 `(.venv)`을 켠 터미널에서 실행합니다. 그러면 Mac도 `python`으로 됩니다.
 
 ## booking/rules.py
 

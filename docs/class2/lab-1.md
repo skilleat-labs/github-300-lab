@@ -76,17 +76,9 @@
 1. 터미널을 엽니다(Windows ``Ctrl+` ``, Mac ``⌃` ``).
 2. 아래 명령을 한 줄로 붙여 넣고 Enter를 누릅니다.
 
-    === "Windows"
-
-        ```bash
-        python -c "from booking.store import load_reservations; from booking.format import format_reservation; print(format_reservation(load_reservations()[0]))"
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -c "from booking.store import load_reservations; from booking.format import format_reservation; print(format_reservation(load_reservations()[0]))"
-        ```
+    ```bash
+    python -c "from booking.store import load_reservations; from booking.format import format_reservation; print(format_reservation(load_reservations()[0]))"
+    ```
 
 확인: `2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)`과 비슷한 한 줄이 나옵니다. 오류가 나면 Copilot이 만든 코드에 문제가 있는 것입니다. 터미널의 오류 줄을 복사해 Chat(Ask)에 붙여 넣고 "원인과 고치는 방법을 알려 주세요"라고 묻습니다.
 
@@ -139,7 +131,7 @@
     정상입니다. Copilot 제안은 매번 다릅니다. 받아들인 뒤 고쳐도 되고, **Esc**로 거절하고 주석을 더 구체적으로 써서 다시 받아도 됩니다.
 
 ??? failure "STEP 4에서 No module named booking 오류가 납니다"
-    터미널의 현재 폴더가 `room-practice`가 아닙니다. **File** → **Open Folder**로 `room-practice`를 다시 열고 새 터미널에서 실행합니다. Mac은 `python3`으로 실행합니다.
+    터미널의 현재 폴더가 `room-practice`가 아닙니다. **File** → **Open Folder**로 `room-practice`를 다시 열고 새 터미널에서 실행합니다. 터미널 줄 앞에 `(.venv)`가 있는지도 봅니다.
 
 ??? failure "STEP 4에서 AttributeError가 납니다"
     Copilot이 없는 속성 이름(예: `r.room`)을 썼을 수 있습니다. 예약에 있는 속성은 `id, room_id, title, booker, team, phone, date, start, end, attendees`입니다. 틀린 이름을 고칩니다. 바로 이런 것을 잡는 것이 검토입니다.

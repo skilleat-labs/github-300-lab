@@ -109,17 +109,9 @@
 
 5. 켜진 가상환경에 테스트 도구를 설치합니다.
 
-    === "Windows"
-
-        ```bash
-        python -m pip install -r requirements-dev.txt
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m pip install -r requirements-dev.txt
-        ```
+    ```bash
+    python -m pip install -r requirements-dev.txt
+    ```
 
     확인: 마지막 줄에 `Successfully installed ... pytest ...`가 나옵니다.
 
@@ -128,22 +120,16 @@
     - **커밋되지 않습니다.** `.venv` 폴더는 `.gitignore`에 들어 있어 GitHub에 올라가지 않습니다. 그래서 리포지토리를 새로 clone하면 그 폴더에서 가상환경을 다시 만들고 도구를 다시 설치합니다(5교시 팀 리포지토리에서 한 번 더 합니다).
     - **끄려면** `deactivate`를 입력합니다.
 
-!!! tip "명령은 Windows, Mac 탭에서 고릅니다"
-    Mac은 `python` 대신 `python3`을 씁니다. 명령 위의 **Windows**, **Mac** 탭에서 내 OS를 한 번 고르면, 가이드의 모든 페이지에서 같은 탭이 선택됩니다. 글 속에 `python`이라고만 쓴 곳도 Mac은 `python3`으로 읽습니다. 예: `python3 -m pip install -r requirements-dev.txt`. 오늘 가이드의 `python`은 모두 `python3`으로 바꿔 읽으면 됩니다.
+!!! tip "가상환경을 켜면 Mac도 python입니다"
+    Mac은 처음에 `python3`만 있어서 가상환경을 만드는 3번만 `python3`으로 칩니다. 가상환경을 켜서 터미널 줄 앞에 `(.venv)`가 붙으면, Mac도 Windows와 똑같이 `python`으로 실행합니다. 오늘 가이드의 다른 명령은 모두 `python`입니다. `python`을 찾을 수 없다고 나오면 `(.venv)`가 있는지부터 봅니다.
+
+    가상환경을 켜는 명령(4번)처럼 OS마다 다른 명령만 **Windows**, **Mac** 탭으로 나뉘어 있습니다. 한 번 고르면 모든 페이지에서 같은 탭이 선택됩니다.
 
 ## STEP 6. 테스트 실행
 
-=== "Windows"
-
-    ```bash
-    python -m pytest
-    ```
-
-=== "Mac"
-
-    ```bash
-    python3 -m pytest
-    ```
+```bash
+python -m pytest
+```
 
 확인: 아래처럼 **4 passed**가 나옵니다.
 
@@ -168,7 +154,7 @@
     ```
 
 4. 답을 읽습니다. 이런 내용이 들어 있으면 됩니다.
-    - `python`: 파이썬 프로그램을 실행합니다(Mac은 `python3`).
+    - `python`: 파이썬 프로그램을 실행합니다. 가상환경 안의 Python입니다.
     - `-m pytest`: 설치한 테스트 도구 pytest를 실행합니다.
     - 점 하나는 통과한 테스트 하나, `4 passed`는 테스트 4개가 모두 통과했다는 뜻입니다.
 5. 답에 명령을 실행하는 버튼이 함께 보여도 누르지 않습니다. **Esc**로 닫습니다.
@@ -182,17 +168,9 @@
 
 1. 회의실 목록을 봅니다.
 
-    === "Windows"
-
-        ```bash
-        python -m booking rooms
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m booking rooms
-        ```
+    ```bash
+    python -m booking rooms
+    ```
 
     ```text
     R1 소회의실 A (4명, 3층)
@@ -203,17 +181,9 @@
 
 2. 11월 10일 예약을 봅니다.
 
-    === "Windows"
-
-        ```bash
-        python -m booking list --date 2026-11-10
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m booking list --date 2026-11-10
-        ```
+    ```bash
+    python -m booking list --date 2026-11-10
+    ```
 
     ```text
     #1 2026-11-10 10:00~11:00 R1 주간 업무 회의 (김민수, 4명)
@@ -289,7 +259,7 @@
     VS Code가 GitHub 접근을 허락해 달라는 창입니다. 허락하고, 열리는 브라우저에서 내 계정으로 로그인한 뒤 VS Code로 돌아옵니다.
 
 ??? failure "python 명령을 찾을 수 없거나 Microsoft Store가 열립니다"
-    Mac은 `python3`으로 실행합니다. Windows는 Python 설치 때 **Add python.exe to PATH**를 체크하지 않은 경우입니다. [막혔을 때](../setup/3-troubleshooting.md)의 Python 항목을 봅니다.
+    Mac은 가상환경이 꺼진 경우입니다. 터미널 줄 앞에 `(.venv)`가 없으면 STEP 5의 4번으로 켭니다. Windows는 Python 설치 때 **Add python.exe to PATH**를 체크하지 않은 경우입니다. [막혔을 때](../setup/3-troubleshooting.md)의 Python 항목을 봅니다.
 
 ??? failure "Windows에서 Activate.ps1을 실행하면 '스크립트를 실행할 수 없으므로' 오류가 납니다"
     PowerShell이 스크립트 실행을 막는 설정입니다. Python 문서에 따르면 내 계정에서만 허용하면 됩니다.

@@ -134,7 +134,7 @@
     python3 --version
     ```
 
-`Python 3.12.x` 이상이 나오면 됩니다. Mac은 오늘 실습 내내 `python` 대신 `python3`을 씁니다. 가이드의 명령은 **Windows**, **Mac** 탭으로 나뉘어 있고, 한 번 고르면 모든 페이지에서 같은 탭이 선택됩니다.
+`Python 3.12.x` 이상이 나오면 됩니다. Mac은 아직 `python`이 없고 `python3`만 있는 경우가 많습니다. 실습 1-2에서 가상환경을 켠 뒤에는 Mac도 Windows와 같이 `python`으로 실행합니다.
 
 ## STEP 5. VS Code에 Python 확장 설치
 

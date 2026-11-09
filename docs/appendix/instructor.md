@@ -71,7 +71,7 @@
 
 | 교시 | 자주 막히는 곳 | 대처 |
 |---|---|---|
-| 1 | 회사 프록시, 로그인 계정 혼동, Mac `python` | `python3` 안내, 계정 메뉴에서 로그인 계정 확인 |
+| 1 | 회사 프록시, 로그인 계정 혼동, Mac `python` 못 찾음 | 가상환경 만들기만 `python3`, 그 뒤엔 `(.venv)` 켜고 `python`. 계정 메뉴에서 로그인 계정 확인 |
 | 2 | Agent가 `data/` 파일까지 바꿈 | **Discard Changes** 습관을 이때 잡아 둡니다 |
 | 3 | `/idea`가 안 뜸 | `.github/skills/idea/SKILL.md` 위치, `name: idea`가 폴더 이름과 같은지, 저장 후 새 채팅인지 |
 | 4 | `/plan`이 Copilot 하네스가 아닌 채팅에서 실행됨, 승인을 읽지 않고 누름 | 새 채팅 + Session Target 확인. 승인 내용을 소리 내어 읽게 합니다 |

@@ -138,7 +138,7 @@ $ python build_site.py
 [완료] site/index.html 에 예약 5건을 썼습니다.
 ```
 
-- Windows에서는 `python`, Mac에서는 `python3`일 수 있다. 가이드는 `python`으로 쓰고 "Mac에서 안 되면 python3"을 1-2에 한 번 안내한다.
+- Mac은 처음에 `python3`만 있다. 가상환경을 만들기 전 명령(`--version`, `-m venv .venv`)만 Windows/Mac 탭으로 나누고, 가상환경을 켠 뒤의 명령은 탭 없이 `python` 하나로 쓴다. Mac에서 `python`을 못 찾으면 `(.venv)`가 꺼진 것으로 안내한다(2026-11-09).
 - 실습 중 `add`로 데이터가 바뀐다. 되돌리려면 VS Code 소스 제어에서 `data/reservations.json` 변경을 **Discard Changes**.
 - 참고 정답(강사용): 18시 버그는 `end >= to_minutes(CLOSE_TIME)`를 `end > ...`로. 겹침은 같은 room_id, 같은 date, id가 다른 예약 중 `start < 기존end and 기존start < end`. XSS는 `html.escape()`. 이 정답으로 테스트 8개가 통과하는 것을 확인했다.
 

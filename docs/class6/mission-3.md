@@ -121,29 +121,13 @@
 
 1. 터미널에서 실행합니다.
 
-    === "Windows"
+    ```bash
+    python -m pytest
+    ```
 
-        ```bash
-        python -m pytest
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m pytest
-        ```
-
-    === "Windows"
-
-        ```bash
-        python build_site.py
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 build_site.py
-        ```
+    ```bash
+    python build_site.py
+    ```
 
     ```text
     [완료] site/index.html 에 예약 5건을 썼습니다.

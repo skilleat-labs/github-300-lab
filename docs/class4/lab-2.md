@@ -101,33 +101,17 @@ Copilot이 "통과했습니다"라고 말해도 내 눈으로 한 번 더 봅니
 1. 위쪽 메뉴 **Terminal** → **New Terminal**로 터미널을 엽니다.
 2. 테스트를 실행합니다.
 
-    === "Windows"
-
-        ```bash
-        python -m pytest
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m pytest
-        ```
+    ```bash
+    python -m pytest
+    ```
 
     `failed`가 없으면 됩니다. 필요한 경우가 모두 테스트에 있는지는 STEP 3에서 봤습니다.
 
 3. 겹치는 예약을 직접 넣어 봅니다.
 
-    === "Windows"
-
-        ```bash
-        python -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
-        ```
+    ```bash
+    python -m booking add --room R1 --title 겹침 --date 2026-11-10 --start 10:30 --end 11:30 --booker 홍길동 --attendees 2
+    ```
 
     이런 결과가 나오면 됩니다. 메시지 문장은 조금 다를 수 있습니다.
 
@@ -138,17 +122,9 @@ Copilot이 "통과했습니다"라고 말해도 내 눈으로 한 번 더 봅니
 
 4. 맞닿은 시간을 넣어 봅니다.
 
-    === "Windows"
-
-        ```bash
-        python -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
-        ```
+    ```bash
+    python -m booking add --room R1 --title 이어서 --date 2026-11-10 --start 11:00 --end 12:00 --booker 홍길동 --attendees 2
+    ```
 
     ```text
     [예약 완료] #6 2026-11-10 11:00~12:00 R1 이어서
@@ -181,17 +157,9 @@ Copilot이 "통과했습니다"라고 말해도 내 눈으로 한 번 더 봅니
 3. 승인 요청이 뜨면 STEP 2처럼 읽고 승인합니다.
 4. 터미널에서 다시 실행합니다.
 
-    === "Windows"
-
-        ```bash
-        python -m pytest
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m pytest
-        ```
+    ```bash
+    python -m pytest
+    ```
 
 확인: 세 경우의 테스트가 있고 `failed`가 없습니다. 이미 있던 경우라면 수가 늘지 않아도 정상입니다.
 
@@ -237,7 +205,7 @@ Copilot이 "통과했습니다"라고 말해도 내 눈으로 한 번 더 봅니
     구현이 아직 저장되지 않았거나 다른 브랜치일 수 있습니다. 상태 표시줄이 `overlap-check`인지, `rules.py` 탭에 저장 안 됨 표시(흰 점)가 없는지 봅니다. 그다음 **Discard Changes**로 데이터를 되돌리고 다시 실행합니다.
 
 ??? failure "python을 찾을 수 없다고 나와요 (Mac)"
-    `python` 대신 `python3`로 실행합니다. 예: `python3 -m pytest`
+    가상환경이 꺼진 것입니다. 터미널 줄 앞에 `(.venv)`가 없으면 `source .venv/bin/activate`로 켜고 다시 실행합니다.
 
 ??? failure "Copilot이 README나 다른 파일도 바꿨어요"
     **소스 제어**에서 그 파일 오른쪽 되돌리기 아이콘(**Discard Changes**)으로 그 파일만 되돌립니다. 전체가 마음에 안 들면 STEP 4의 **Restore Checkpoint**를 씁니다.

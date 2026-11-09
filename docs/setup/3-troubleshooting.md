@@ -45,7 +45,7 @@
 ## Python과 테스트
 
 ??? failure "python 명령을 찾을 수 없다고 나옵니다"
-    - **Mac**: `python` 대신 `python3`으로 실행합니다. 명령 위의 **Mac** 탭을 고르면 `python3`으로 보입니다. 글 속의 `python`도 `python3`으로 읽습니다.
+    - **Mac**: 터미널 줄 앞에 `(.venv)`가 있는지 봅니다. 없으면 가상환경이 꺼진 것입니다. `source .venv/bin/activate`로 켜면 `python`이 됩니다. `.venv` 폴더가 아직 없으면(가상환경을 만들기 전) `python3`으로 실행합니다.
     - **Windows**: Python을 설치할 때 **Add python.exe to PATH**를 체크하지 않은 경우가 많습니다. Windows **설정** → **앱**에서 Python을 제거하고, 다시 설치하면서 체크합니다. 설치 뒤에는 VS Code를 완전히 닫았다가 다시 엽니다.
     - 확인: VS Code 터미널에서 `python --version`(Mac은 `python3 --version`)이 3.12 이상을 보여 줍니다.
 
@@ -55,17 +55,9 @@
 ??? failure "No module named pytest 라고 나옵니다"
     가상환경이 꺼져 있거나, 이 리포지토리의 가상환경에 아직 설치하지 않았습니다. 리포지토리 폴더가 열린 VS Code 터미널에서 터미널 줄 앞에 `(.venv)`가 있는지 먼저 봅니다. 없으면 켭니다(Windows `.venv\Scripts\Activate.ps1`, Mac `source .venv/bin/activate`). `.venv` 폴더 자체가 없으면 [실습 1-2 STEP 5](../class1/lab-2.md)처럼 만듭니다. 켠 다음 설치합니다.
 
-    === "Windows"
-
-        ```bash
-        python -m pip install -r requirements-dev.txt
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m pip install -r requirements-dev.txt
-        ```
+    ```bash
+    python -m pip install -r requirements-dev.txt
+    ```
 
     설치가 끝나면 `python -m pytest`를 다시 실행합니다.
 

@@ -205,33 +205,17 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
 
 10. 켜진 가상환경에 테스트 도구를 설치합니다.
 
-    === "Windows"
-
-        ```bash
-        python -m pip install -r requirements-dev.txt
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m pip install -r requirements-dev.txt
-        ```
+    ```bash
+    python -m pip install -r requirements-dev.txt
+    ```
 
     확인: 마지막 줄에 `Successfully installed ... pytest ...`가 나옵니다.
 
 11. 테스트를 실행합니다.
 
-    === "Windows"
-
-        ```bash
-        python -m pytest
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m pytest
-        ```
+    ```bash
+    python -m pytest
+    ```
 
 확인: VS Code 탐색기 맨 위에 `ROOM-BOOKING-TEAM<번호>`가 보이고, `.github/copilot-instructions.md`가 있고, `4 passed`가 나옵니다.
 

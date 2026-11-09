@@ -12,17 +12,9 @@
 - VS Code에서 `문서/copilot-lab/room-practice` 폴더가 열려 있어야 합니다.
 - 2-3에서 고친 18시 버그가 main에 커밋되어 있어야 합니다. 터미널에서 테스트를 한 번 돌려 봅니다.
 
-    === "Windows"
-
-        ```bash
-        python -m pytest
-        ```
-
-    === "Mac"
-
-        ```bash
-        python3 -m pytest
-        ```
+    ```bash
+    python -m pytest
+    ```
 
 - 소스 제어에 커밋하지 않은 변경이 남아 있으면 먼저 정리합니다. `data/reservations.json` 변경은 **Discard Changes**(변경 취소)로 되돌립니다.
 
