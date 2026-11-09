@@ -2490,9 +2490,10 @@
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>- 정상 동작 1개, 실패 동작 1개, 경계값 1개를 넣어 주세요.
 </span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>- 실제로 실행해 볼 수 있게 회의실 ID, 날짜, 시간, 인원을 구체적으로 써 주세요.
 </span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>- 첨부 문서에 없는 정책은 만들지 말고 "확인 필요"로 표시해 주세요.
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>스토리: [S1] 같은 회의실, 같은 날짜에 시간이 겹치는 예약을 막는다
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>완료 기준: 10:00~11:00이 있으면 10:30~11:30은 "이미 예약된 시간"으로 실패. 11:00~12:00은 성공(맞닿음은 겹침 아님)
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>- 시간 범위는 물결표(~) 대신 10:00-11:00처럼 하이픈(-)으로 써 주세요. GitHub 이슈에 붙여 넣을 글입니다.
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>스토리: [S1] 같은 회의실, 같은 날짜에 시간이 겹치는 예약을 막는다
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>완료 기준: 10:00-11:00이 있으면 10:30-11:30은 "이미 예약된 시간"으로 실패. 11:00-12:00은 성공(맞닿음은 겹침 아님)
 </span></code></pre></div>
 <p><strong>5-1 개발자: 바꿀 파일과 충돌 위험</strong> (Ask)</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>#codebase 이 리포지토리에서 아래 스토리 4개를 각각 다른 사람이 동시에 구현합니다.

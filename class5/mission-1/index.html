@@ -2525,16 +2525,21 @@
 <p>아래를 붙여 넣고 <code>&lt;PO아이디&gt;</code>, <code>&lt;번호&gt;</code>, 담당자 아이디를 5-0에서 메모한 팀원 아이디로 바꾼 뒤 Enter를 누릅니다. 3인 팀은 4) 줄을 지웁니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>In &lt;PO아이디&gt;/room-booking-team&lt;번호&gt;, 아래 스토리로 이슈를 하나씩 만들어 주세요.
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>각 이슈 본문은 "## 스토리"(누구로서, 무엇을 원한다, 왜냐하면 한 문장), "## 바꿀 곳", "## 완료 기준", "## 인수 조건"(내용은 "BA가 채웁니다")으로 쓰고, 라벨은 스토리를 붙여 주세요.
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>1) [S1] 같은 회의실, 같은 날짜에 시간이 겹치는 예약을 막는다 / 바꿀 곳 booking/rules.py / 완료 기준 10:00~11:00이 있으면 10:30~11:30은 "이미 예약된 시간"으로 실패, 11:00~12:00은 성공 / 담당 아이디1
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>1) [S1] 같은 회의실, 같은 날짜에 시간이 겹치는 예약을 막는다 / 바꿀 곳 booking/rules.py / 완료 기준 10:00-11:00이 있으면 10:30-11:30은 "이미 예약된 시간"으로 실패, 11:00-12:00은 성공 / 담당 아이디1
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2) [S2] 회의실 정원을 넘는 예약을 막는다 / 바꿀 곳 booking/rules.py / 완료 기준 소회의실 A(정원 4)에 5명이면 "정원을 넘었습니다"로 실패 / 담당 아이디2
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>3) [S3] 예약을 취소할 수 있다 / 바꿀 곳 booking/service.py, booking/__main__.py / 완료 기준 python -m booking cancel --id 3이면 #3이 목록에서 사라지고 "[취소 완료]" 출력. 없는 번호면 "[취소 실패] 없는 예약 번호입니다" / 담당 아이디3
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>4) [S4] 18:00에 끝나는 예약이 되게 고친다 / 바꿀 곳 booking/rules.py / 완료 기준 17:00~18:00 성공, 17:30~18:30 실패 / 담당 아이디4
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>4) [S4] 18:00에 끝나는 예약이 되게 고친다 / 바꿀 곳 booking/rules.py / 완료 기준 17:00-18:00 성공, 17:30-18:30 실패 / 담당 아이디4
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>문서에 없는 정책(최대 예약 시간, 노쇼 자동 취소 등)은 넣지 마세요.
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>시간 범위는 물결표(~) 대신 10:00-11:00처럼 하이픈(-)으로 써 주세요.
 </span></code></pre></div>
 </li>
-<li>
-<p>초안이 이슈마다 따로 나옵니다. 하나씩 아래를 확인하고 고친 뒤 <strong>Create</strong>를 누릅니다.</p>
-<ul>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">시간은 10:00-11:00처럼 하이픈으로 씁니다</p>
+<p>GitHub의 이슈, PR, 댓글에서는 <code>~글자~</code>처럼 물결표 두 개 사이의 글자가 <strong>취소선</strong>으로 바뀝니다. "10:00~11:00이 있으면 10:30~11:30"이라고 쓰면 가운데가 줄 그어져 보입니다. 시간 범위는 <code>10:00-11:00</code>처럼 하이픈으로 쓰거나, 백틱으로 감싸 <code>`10:00~11:00`</code>처럼 씁니다. 이미 줄이 그어졌다면 이슈 본문의 <strong>Edit</strong>에서 <code>~</code>를 <code>-</code>로 바꿉니다.</p>
+</div>
+<ol>
+<li>초안이 이슈마다 따로 나옵니다. 하나씩 아래를 확인하고 고친 뒤 <strong>Create</strong>를 누릅니다.<ul>
 <li>제목이 <code>[S1]</code>처럼 번호로 시작하는가</li>
 <li>본문에 스토리, 바꿀 곳, 완료 기준, 인수 조건 네 칸이 있는가</li>
 <li>라벨이 <code>스토리</code>이고, 담당자가 <strong>한 명</strong>인가</li>
@@ -2563,7 +2568,7 @@
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>booking/rules.py
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>## 완료 기준
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>10:00~11:00이 있으면 10:30~11:30은 "이미 예약된 시간"으로 실패. 11:00~12:00은 성공(맞닿음은 겹침 아님)
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>10:00-11:00이 있으면 10:30-11:30은 "이미 예약된 시간"으로 실패. 11:00-12:00은 성공(맞닿음은 겹침 아님)
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>## 인수 조건
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>(BA가 채웁니다)
@@ -2647,9 +2652,10 @@
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>- 정상 동작 1개, 실패 동작 1개, 경계값 1개를 넣어 주세요.
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>- 실제로 실행해 볼 수 있게 회의실 ID, 날짜, 시간, 인원을 구체적으로 써 주세요.
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>- 첨부 문서에 없는 정책은 만들지 말고 "확인 필요"로 표시해 주세요.
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>스토리: [S1] 같은 회의실, 같은 날짜에 시간이 겹치는 예약을 막는다
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>완료 기준: 10:00~11:00이 있으면 10:30~11:30은 "이미 예약된 시간"으로 실패. 11:00~12:00은 성공(맞닿음은 겹침 아님)
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>- 시간 범위는 물결표(~) 대신 10:00-11:00처럼 하이픈(-)으로 써 주세요. GitHub 이슈에 붙여 넣을 글입니다.
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>스토리: [S1] 같은 회의실, 같은 날짜에 시간이 겹치는 예약을 막는다
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>완료 기준: 10:00-11:00이 있으면 10:30-11:30은 "이미 예약된 시간"으로 실패. 11:00-12:00은 성공(맞닿음은 겹침 아님)
 </span></code></pre></div>
 </li>
 <li>
