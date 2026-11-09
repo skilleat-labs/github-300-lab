@@ -2349,7 +2349,7 @@
 <p>GitHub Actions는 '이런 일이 생기면 이 작업을 자동으로 해라'를 정해 두는 기능이에요. Starter에는 PR이 열릴 때마다 테스트를 자동으로 돌리는 워크플로가 이미 들어 있어요. 이게 CI, 지속적 통합이에요. 그리고 6교시에는 Copilot에게 배포 워크플로를 만들게 해서, main에 병합하면 예약 현황판 웹페이지가 GitHub Pages로 자동 배포되게 만들어요. 이게 CD, 지속적 배포예요. 오늘 하루의 마지막 결과물이 바로 이 CI/CD예요.</p>
 <h3 id="github-copilot">GitHub Copilot은 세 곳에서 씁니다<a class="headerlink" href="#github-copilot" title="Permanent link">&para;</a></h3>
 <p>지금까지 본 협업 과정의 어느 단계에서 Copilot이 도와주는지 볼게요.</p>
-<p>GitHub Copilot은 AI 코딩 도우미예요. 오늘의 주 무대는 VS Code예요. 코드를 쓰는 중에 회색으로 다음 내용을 제안하는 인라인 제안, 대화로 묻고 시키는 Chat, 스스로 계획하고 파일을 고치고 명령을 실행하는 에이전트가 있어요. github.com에서는 PR을 요약하고 코드 리뷰를 하고, 이슈를 맡기면 클라우드에서 작업해 PR을 열어 주는 클라우드 에이전트도 있어요. 터미널에서 쓰는 Copilot CLI도 있어요. 이건 7교시에 소개만 할게요.</p>
+<p>GitHub Copilot은 AI 코딩 도우미예요. 오늘의 주 무대는 VS Code예요. 코드를 쓰는 중에 회색으로 다음 내용을 제안하는 인라인 제안, 대화로 묻고 시키는 Chat, 스스로 계획하고 파일을 고치고 명령을 실행하는 에이전트가 있어요. github.com에서는 github.com/copilot에서 브라우저로 바로 채팅할 수 있어요. VS Code를 열지 않아도 리포, 이슈, PR에 대해 묻고, 이슈 초안도 받을 수 있어요. 어느 페이지에서든 오른쪽 위 Copilot 아이콘으로 열 수 있어요. 그리고 PR을 요약하고 코드 리뷰를 하고, 이슈를 맡기면 클라우드에서 작업해 PR을 열어 주는 클라우드 에이전트도 있어요. 터미널에서 쓰는 Copilot CLI도 있어요. 이건 7교시에 소개만 할게요.</p>
 <h3 id="copilot">Copilot은 내 요청과 맥락을 모아 답을 만듭니다<a class="headerlink" href="#copilot" title="Permanent link">&para;</a></h3>
 <p>Copilot이 답을 만드는 과정을 간단히 보면, 내 요청에 맥락을 붙여서 언어 모델에 보내고, 모델이 만든 결과를 돌려받아요. 맥락은 지금 열려 있는 파일, 내가 첨부한 파일, 지침 파일, 지금까지의 대화 같은 것들이에요. 언어 모델은 사실을 찾아보는 게 아니라 가장 그럴듯한 다음 내용을 만들어 내요. 그래서 맥락이 좋을수록 답이 좋아지고, 맥락에 없는 건 그럴듯하게 지어낼 수 있어요. 3교시에 이걸 직접 확인해요. GH-300 시험에서도 데이터 흐름과 한계가 한 영역이에요.</p>
 <h3 id="copilot-pro-ai-credits-1500">Copilot Pro는 매월 AI Credits 1,500을 씁니다<a class="headerlink" href="#copilot-pro-ai-credits-1500" title="Permanent link">&para;</a></h3>
@@ -2431,7 +2431,7 @@
 <p>단축키는 <a href="../appendix/vscode-copilot/">VS Code와 Copilot 한 장 정리</a>에 있습니다.</p>
 <p>Copilot을 보기 전에 VS Code 화면부터 익혀요.</p>
 <p>처음 쓰시는 분이 많아서 천천히 할게요. 맨 왼쪽 아이콘 줄이 Activity Bar예요. 누르면 옆의 Primary Side Bar가 탐색기나 소스 제어로 바뀌어요. 가운데가 파일을 고치는 Editor, 오른쪽 Secondary Side Bar에 Copilot Chat이 기본으로 있어요. 아래 Panel에 터미널이 있고, 맨 아래 줄 Status Bar에 지금 브랜치와 Copilot 아이콘이 보여요. 단축키는 다섯 개만 쓸게요. 모든 명령을 찾는 명령 팔레트 하나만 외워도 메뉴를 몰라도 돼요. 이 그림은 구조를 그린 것이고, 실제 화면은 제 화면으로 같이 볼게요. 실습 1-2에서 직접 눌러 봐요.</p>
-<p>하나 더, 터미널 명령은 Windows는 python, Mac은 python3예요. 가이드에는 명령마다 Windows, Mac 탭을 나눠 두었으니 처음에 한 번만 내 OS를 고르세요.</p>
+<p>하나 더, 터미널 명령은 Windows는 python, Mac은 python3예요. 가이드에는 명령마다 Windows, Mac 탭을 나눠 두었으니 처음에 한 번만 내 OS를 고르세요. 그리고 테스트 도구는 리포지토리마다 가상환경을 만들어 그 안에 설치해요. 터미널 앞에 (.venv)가 보이면 켜진 거예요.</p>
 <h3 id="vs-code-copilot">VS Code에서 Copilot은 여기에 있습니다<a class="headerlink" href="#vs-code-copilot" title="Permanent link">&para;</a></h3>
 <p>VS Code에서 Copilot은 여기에 있어요. 아래쪽 상태 표시줄의 Copilot 아이콘으로 로그인하고 사용량을 봐요. Chat 보기는 Mac은 Control Command I, Windows는 Ctrl Alt I로 열어요. 채팅 입력 칸 주변에 선택할 게 몇 개 있어요. Session Target은 하네스라고 하는데, Copilot이 일하는 엔진 같은 거예요. 입력 칸 아래 줄에 Copilot이라고 적힌 곳이에요. 오늘은 모두 기본인 Copilot을 써요. Agent 선택기에서 역할을 고르는데, Ask는 묻기만, Agent는 직접 고치기예요. 계획 세우기는 선택기에 없고 /plan 명령으로 불러요. 선택기 목록에 다른 이름이 더 보이면 설치한 확장이 추가한 사용자 지정 에이전트예요. 오늘은 쓰지 않아요. 모델은 Copilot Fusion, 권한은 Manual로 둬요. Manual이면 자동 승인되지 않은 작업은 나에게 확인을 요청해요. 읽기만 하는 명령처럼 자동으로 넘어가는 것도 있으니, 승인창이 안 떠도 설정 오류가 아니에요. 승인창이 뜨면 범위와 명령을 읽어요.</p>
 <h2 id="_4">실습<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
