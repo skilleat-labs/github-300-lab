@@ -10,7 +10,7 @@
 ## 준비
 
 - 팀 리포지토리가 아니라 **개인 리포지토리**에서 합니다. 팀원끼리 같은 파일을 동시에 고쳐 충돌이 나지 않게 하려는 것입니다.
-- VS Code에서 **File** → **Open Recent**(또는 **Open Folder**)로 `문서/copilot-lab/room-practice`를 엽니다.
+- VS Code에서 **File** → **Open Recent**(또는 **Open Folder**)로 `문서/copilot-lab/room-practice`를 엽니다. 새 터미널 앞에 `(.venv)`가 보이는지 봅니다. 없으면 켭니다(Windows `.venv\Scripts\Activate.ps1`, Mac `source .venv/bin/activate`).
 - 상태 표시줄 브랜치가 `main`인지 보고, 동기화 아이콘을 눌러 최신으로 맞춥니다.
 
 !!! info "XSS가 뭔가요?"

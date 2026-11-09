@@ -53,7 +53,7 @@
     Python이 설치되지 않았거나 PATH에 없는 경우입니다. 위 항목처럼 python.org에서 받은 설치 파일로 **Add python.exe to PATH**를 체크해 다시 설치합니다.
 
 ??? failure "No module named pytest 라고 나옵니다"
-    테스트 도구(pytest)가 아직 설치되지 않았습니다. 리포지토리 폴더(`room-practice`)가 열린 VS Code 터미널에서 실행합니다.
+    가상환경이 꺼져 있거나, 이 리포지토리의 가상환경에 아직 설치하지 않았습니다. 리포지토리 폴더가 열린 VS Code 터미널에서 터미널 줄 앞에 `(.venv)`가 있는지 먼저 봅니다. 없으면 켭니다(Windows `.venv\Scripts\Activate.ps1`, Mac `source .venv/bin/activate`). `.venv` 폴더 자체가 없으면 [실습 1-2 STEP 5](../class1/lab-2.md)처럼 만듭니다. 켠 다음 설치합니다.
 
     === "Windows"
 
@@ -68,6 +68,12 @@
         ```
 
     설치가 끝나면 `python -m pytest`를 다시 실행합니다.
+
+??? failure "Copilot Agent가 테스트를 돌렸더니 No module named pytest 라고 나옵니다"
+    Agent가 연 터미널에 가상환경이 켜지지 않은 경우입니다. 명령 팔레트에서 **Python: Select Interpreter**를 열고 `.venv`가 들어간 Python을 고른 뒤 다시 시킵니다. 또는 Chat에 "가상환경 .venv를 켜고 테스트를 실행해 줘"라고 덧붙입니다.
+
+??? failure "Windows에서 Activate.ps1을 실행하면 '스크립트를 실행할 수 없으므로' 오류가 납니다"
+    PowerShell이 스크립트 실행을 막는 설정입니다. Python 문서에 따르면 내 계정에서만 허용하면 됩니다: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`. 회사 PC라서 막히면 터미널 **+** 옆 **∨**에서 **Command Prompt**를 열고 `.venv\Scripts\activate.bat`로 켭니다.
 
 ??? failure "No module named booking 이라고 나옵니다"
     터미널의 현재 폴더가 `room-practice`가 아닙니다. VS Code에서 **File** → **Open Folder**로 `room-practice` 폴더를 연 다음, **Terminal** → **New Terminal**로 터미널을 새로 엽니다.

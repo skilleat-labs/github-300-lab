@@ -46,7 +46,7 @@ BA 아이디:
 | 2 | PO | **Collaborators**로 팀원 초대 |
 | 3 | PO | **Settings** → **Pages** → Source를 **GitHub Actions**로 |
 | 4 | 팀원 | 초대 수락 |
-| 5 | 모두 | VS Code에서 **Git: Clone**으로 가져오고, 테스트 도구 설치 후 테스트 실행 |
+| 5 | 모두 | VS Code에서 **Git: Clone**으로 가져오고, 새 가상환경을 만들어 테스트 도구 설치, 테스트 실행 |
 
 ## STEP 1. (PO) 팀 리포지토리 만들기
 
@@ -112,7 +112,42 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
 4. 복사한 주소를 붙여 넣고 ++enter++를 누릅니다.
 5. 저장 위치로 `문서/copilot-lab` 폴더를 고릅니다. `room-practice`와 나란히 놓입니다.
 6. 오른쪽 아래 **Open**(열기)을 클릭합니다. "작성자를 신뢰하느냐"는 창이 뜨면 **Yes, I trust the authors**를 누릅니다.
-7. 터미널을 열고(Windows ``Ctrl+` ``, Mac ``⌃` ``) 테스트 도구를 설치합니다. 새로 받은 리포는 실행하기 전에 필요한 도구부터 설치합니다.
+7. 터미널을 엽니다(Windows ``Ctrl+` ``, Mac ``⌃` ``). 현재 폴더가 `room-booking-team<번호>`인지 봅니다.
+
+    !!! warning "가상환경을 새로 만들어야 합니다"
+        1-2에서 만든 가상환경은 `room-practice` 폴더 안에 있고, `.venv`는 커밋되지 않아 팀 리포지토리에는 없습니다. 이 폴더에서 새로 만들고 도구도 다시 설치합니다.
+
+8. 가상환경을 만듭니다. `room-booking-team<번호>` 폴더 안에 `.venv` 폴더가 생깁니다.
+
+    === "Windows"
+
+        ```bash
+        python -m venv .venv
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m venv .venv
+        ```
+
+9. 가상환경을 켭니다.
+
+    === "Windows"
+
+        ```bash
+        .venv\Scripts\Activate.ps1
+        ```
+
+    === "Mac"
+
+        ```bash
+        source .venv/bin/activate
+        ```
+
+    확인: 터미널 줄 맨 앞에 `(.venv)`가 붙습니다. 오른쪽 아래에 새 환경을 이 작업 영역에 쓸지 묻는 알림이 뜨면 **Yes**를 누릅니다.
+
+10. 켜진 가상환경에 테스트 도구를 설치합니다.
 
     === "Windows"
 
@@ -126,9 +161,9 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
         python3 -m pip install -r requirements-dev.txt
         ```
 
-    1-2에서 같은 PC에 이미 설치했다면 `Requirement already satisfied`가 나옵니다. 정상입니다.
+    확인: 마지막 줄에 `Successfully installed ... pytest ...`가 나옵니다.
 
-8. 테스트를 실행합니다.
+11. 테스트를 실행합니다.
 
     === "Windows"
 
@@ -157,7 +192,7 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
 - [ ] (PO) 팀원 모두 Collaborators에 있다
 - [ ] (PO) Pages Source가 **GitHub Actions**다
 - [ ] (팀원) 초대를 수락했다
-- [ ] (모두) VS Code에 팀 리포지토리를 가져왔고 테스트 4개가 통과한다
+- [ ] (모두) VS Code에 팀 리포지토리를 가져와 새 가상환경 `(.venv)`을 만들었고, 테스트 4개가 통과한다
 
 ## 막히면
 
@@ -177,7 +212,10 @@ PO도 포함해 모두 각자 PC로 가져옵니다.
     GitHub 계정으로 허용합니다. 1-2에서 로그인한 계정과 같아야 합니다.
 
 ??? failure "No module named pytest 라고 나와요"
-    STEP 5의 7번(테스트 도구 설치)을 건너뛰었거나, VS Code가 1-2와 다른 Python을 쓰는 경우입니다. 7번 명령을 이 리포의 터미널에서 다시 실행합니다. 그래도 같으면 [막혔을 때](../setup/3-troubleshooting.md)의 같은 항목을 봅니다.
+    이 리포에서 가상환경을 새로 만들지 않았거나, 켜지 않고 설치한 경우입니다. 터미널 앞에 `(.venv)`가 있는지 보고 STEP 5의 8~10번을 이 리포의 터미널에서 다시 실행합니다. 그래도 같으면 [막혔을 때](../setup/3-troubleshooting.md)의 같은 항목을 봅니다.
+
+??? failure "Windows에서 Activate.ps1이 '스크립트를 실행할 수 없으므로' 오류를 냅니다"
+    1-2와 같은 문제입니다. [실습 1-2](../class1/lab-2.md) 맨 아래 "막히면"의 같은 항목대로 합니다.
 
 ??? failure "5명 이상이거나 2명이에요"
     강사에게 알립니다. 2명이면 다른 팀에 합류하고, 5명이면 한 명이 다른 팀으로 가거나 BA를 두 명으로 둡니다.

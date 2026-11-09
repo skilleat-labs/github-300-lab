@@ -71,11 +71,43 @@
 !!! warning "모르는 폴더는 신뢰하지 마세요"
     신뢰하면 그 폴더의 설정과 작업이 실행될 수 있습니다. 출처를 모르는 코드를 열 때는 **No**를 고르는 습관을 들입니다.
 
-## STEP 5. 터미널 열고 테스트 도구 설치
+## STEP 5. 터미널 열고 가상환경 만들기
+
+**가상환경**은 이 리포지토리만 쓰는 Python 작업 공간입니다. 여기에 설치한 도구는 다른 프로젝트와 섞이지 않습니다.
 
 1. Windows는 ``Ctrl+` ``, Mac은 ``⌃` ``(Control과 숫자 1 왼쪽 키)를 누릅니다. 위쪽 메뉴 **Terminal** → **New Terminal**을 눌러도 됩니다.
 2. 아래쪽에 터미널이 열리고, 현재 폴더가 `room-practice`인지 봅니다.
-3. 아래 명령을 붙여 넣고 Enter를 누릅니다.
+3. 가상환경을 만듭니다. `room-practice` 폴더 안에 `.venv` 폴더가 생깁니다.
+
+    === "Windows"
+
+        ```bash
+        python -m venv .venv
+        ```
+
+    === "Mac"
+
+        ```bash
+        python3 -m venv .venv
+        ```
+
+4. 가상환경을 켭니다.
+
+    === "Windows"
+
+        ```bash
+        .venv\Scripts\Activate.ps1
+        ```
+
+    === "Mac"
+
+        ```bash
+        source .venv/bin/activate
+        ```
+
+    확인: 터미널 줄 맨 앞에 `(.venv)`가 붙습니다. 오른쪽 아래에 새 환경을 이 작업 영역에 쓸지 묻는 알림이 뜨면 **Yes**를 누릅니다.
+
+5. 켜진 가상환경에 테스트 도구를 설치합니다.
 
     === "Windows"
 
@@ -89,7 +121,12 @@
         python3 -m pip install -r requirements-dev.txt
         ```
 
-확인: 마지막 줄에 `Successfully installed ... pytest ...` 또는 `Requirement already satisfied`가 나옵니다.
+    확인: 마지막 줄에 `Successfully installed ... pytest ...`가 나옵니다.
+
+!!! info "가상환경에서 알아 둘 것"
+    - **다음부터는 자동으로 켜집니다.** VS Code의 Python 확장이 새 터미널을 열 때 이 가상환경을 켜 줍니다. 터미널 앞에 `(.venv)`가 없으면 위 2번 명령으로 켭니다.
+    - **커밋되지 않습니다.** `.venv` 폴더는 `.gitignore`에 들어 있어 GitHub에 올라가지 않습니다. 그래서 리포지토리를 새로 clone하면 그 폴더에서 가상환경을 다시 만들고 도구를 다시 설치합니다(5교시 팀 리포지토리에서 한 번 더 합니다).
+    - **끄려면** `deactivate`를 입력합니다.
 
 !!! tip "명령은 Windows, Mac 탭에서 고릅니다"
     Mac은 `python` 대신 `python3`을 씁니다. 명령 위의 **Windows**, **Mac** 탭에서 내 OS를 한 번 고르면, 가이드의 모든 페이지에서 같은 탭이 선택됩니다. 글 속에 `python`이라고만 쓴 곳도 Mac은 `python3`으로 읽습니다. 예: `python3 -m pip install -r requirements-dev.txt`. 오늘 가이드의 `python`은 모두 `python3`으로 바꿔 읽으면 됩니다.
@@ -228,7 +265,7 @@
 
 - [ ] github.com에 `내아이디/room-practice`(Public)가 있습니다.
 - [ ] VS Code에서 `room-practice` 폴더가 열려 있고 신뢰했습니다.
-- [ ] `python -m pytest`가 **4 passed**입니다.
+- [ ] 터미널 앞에 `(.venv)`가 보이고, `python -m pytest`가 **4 passed**입니다.
 - [ ] 터미널 인라인 채팅으로 `python -m pytest`의 뜻을 물어봤습니다.
 - [ ] `python -m booking rooms`와 `python -m booking list --date 2026-11-10`이 위 결과와 같습니다.
 - [ ] 왼쪽 사이드바, 파일 열기(`Ctrl+P` / `⌘P`), 명령 팔레트, Chat 보기를 열어 봤습니다.
@@ -253,6 +290,18 @@
 
 ??? failure "python 명령을 찾을 수 없거나 Microsoft Store가 열립니다"
     Mac은 `python3`으로 실행합니다. Windows는 Python 설치 때 **Add python.exe to PATH**를 체크하지 않은 경우입니다. [막혔을 때](../setup/3-troubleshooting.md)의 Python 항목을 봅니다.
+
+??? failure "Windows에서 Activate.ps1을 실행하면 '스크립트를 실행할 수 없으므로' 오류가 납니다"
+    PowerShell이 스크립트 실행을 막는 설정입니다. Python 문서에 따르면 내 계정에서만 허용하면 됩니다.
+
+    ```bash
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
+
+    회사 PC라서 이 명령이 막히면, 터미널 오른쪽 위 **+** 옆 **∨**에서 **Command Prompt**를 열고 `.venv\Scripts\activate.bat`로 켭니다.
+
+??? failure "(.venv)가 있는데 No module named pytest 라고 나옵니다"
+    가상환경을 켠 뒤 설치하지 않았거나, 다른 폴더의 터미널입니다. 현재 폴더가 이 리포지토리인지 보고 STEP 5의 설치 명령을 다시 실행합니다.
 
 ??? failure "No module named booking 이라고 나옵니다"
     터미널의 현재 폴더가 `room-practice`가 아닙니다. VS Code에서 **File** → **Open Folder**로 `문서/copilot-lab/room-practice`를 열고 터미널을 새로 엽니다.
