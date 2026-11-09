@@ -1184,8 +1184,6 @@
       
         
       
-        
-      
     
     
     
@@ -1327,34 +1325,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="lab-4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    실습 4-4 팀 구성
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1373,6 +1343,8 @@
       
         
           
+        
+      
         
       
         
@@ -1435,6 +1407,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class5/mission-0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-0 팀 리포지토리 만들기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -2177,24 +2177,13 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        오후에는 팀이 같은 서비스를 함께 만듭니다
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         실습
@@ -2240,18 +2229,14 @@
 </tr>
 <tr>
 <td>실습 4-1</td>
-<td>6분</td>
+<td>8분</td>
 </tr>
 <tr>
 <td>실습 4-2</td>
-<td>13분</td>
+<td>17분</td>
 </tr>
 <tr>
 <td>실습 4-3</td>
-<td>6분</td>
-</tr>
-<tr>
-<td>실습 4-4 팀 구성</td>
 <td>10분</td>
 </tr>
 </tbody>
@@ -2261,7 +2246,6 @@
 <li><a href="lab-1/">실습 4-1 브랜치와 계획</a></li>
 <li><a href="lab-2/">실습 4-2 에이전트로 구현하고 테스트</a></li>
 <li><a href="lab-3/">실습 4-3 PR과 CI</a></li>
-<li><a href="lab-4/">실습 4-4 팀 구성</a></li>
 </ul>
 <h2 id="lecture">교안<a class="headerlink" href="#lecture" title="Permanent link">&para;</a></h2>
 <h3 id="_1">에이전트는 스스로 고치고, 실행하고, 확인합니다<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
@@ -2323,50 +2307,11 @@
 <p>버그는 대부분 경계에서 생겨요. 10시에서 11시 예약이 있을 때 10시 반 시작은 당연히 겹치지만, 11시 시작은 끝과 시작이 맞닿을 뿐 겹치지 않아요. 부등호 하나를 잘못 쓰면 11시 예약까지 막혀요. 2교시에 고친 18시 버그도 같은 종류였죠. 그래서 테스트는 이런 경계를 꼭 넣어요. /tests로 Copilot에게 경계값 테스트를 더 만들어 달라고 할 수 있어요. 하지만 어떤 경우를 테스트할지 정하고, 그 테스트가 정말 맞는 내용인지 읽는 건 사람의 몫이에요. 테스트는 세 부분만 보면 돼요. 어떤 입력을 준비했는지, 어떤 기능을 실행했는지, assert에서 무엇이 나오면 맞다고 보는지예요. 기대값 자체가 인수 조건과 맞는지도 확인하고, 테스트를 지워서 통과시킨 건 아닌지도 봐요.</p>
 <h3 id="pr">PR을 열면 테스트가 자동으로 돕니다<a class="headerlink" href="#pr" title="Permanent link">&para;</a></h3>
 <p>고친 걸 커밋하고 push한 다음 github.com에서 PR을 열어요. PR 설명은 Copilot 메뉴의 Summary로 자동 요약을 받을 수 있어요. PR이 열리면 Starter에 들어 있는 테스트 워크플로가 자동으로 돌아요. 초록 체크면 병합하고, 빨간 X면 Details에서 어떤 테스트가 실패했는지 보고 그 내용을 Copilot에게 붙여서 고쳐요. 이게 1교시에 말한 CI예요.</p>
-<h3 id="_4">오후에는 팀이 같은 서비스를 함께 만듭니다<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>역할</th>
-<th>결정하고 정리하는 일</th>
-<th>Copilot에게 시키는 일</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PO</td>
-<td>무엇부터 할지, 정책 결정</td>
-<td>요청과 회의록으로 우선순위 초안</td>
-</tr>
-<tr>
-<td>PM</td>
-<td>이슈 만들고 사람에게 배분, 병합</td>
-<td>스토리별 바뀔 파일과 충돌 위험 정리</td>
-</tr>
-<tr>
-<td>BA</td>
-<td>인수 조건 확정, 결과 검토</td>
-<td>스토리별 인수 조건 초안</td>
-</tr>
-<tr>
-<td>개발자</td>
-<td>기술 검토, 배포 설정</td>
-<td>영향 분석, 배포 워크플로</td>
-</tr>
-<tr>
-<td>모두</td>
-<td>스토리 하나씩 구현</td>
-<td>에이전트로 구현, 테스트</td>
-</tr>
-</tbody>
-</table>
-<p>오후에는 3명에서 4명이 한 팀이 돼요. 역할은 PO, PM, BA, 개발자예요. 역할은 무엇을 결정하고 정리하고 검토하느냐의 차이예요. PO는 무엇부터 할지와 정책을 정하고, PM은 이슈를 만들어 사람에게 나누고, BA는 인수 조건을 확정하고, 개발자는 기술 검토와 배포 설정을 맡아요. 그리고 중요한 건 맨 아래 줄이에요. 구현은 모두가 해요. 각자 스토리 하나씩 맡아 에이전트로 구현해요. 개발 경험이 없어도 오전에 한 그대로 하면 돼요. 팀 리포지토리는 Starter 상태로 새로 시작해서, 오전에 고친 코드와 지침 파일은 따라오지 않아요. 그래서 오전에 해 본 겹침 검사를 팀에서 다시 구현해요. 3인 팀은 PO가 PM을 겸해요.</p>
-<h2 id="_5">실습<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_4">실습<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="lab-1/">실습 4-1 브랜치와 계획</a></li>
 <li><a href="lab-2/">실습 4-2 에이전트로 구현하고 테스트</a></li>
 <li><a href="lab-3/">실습 4-3 PR과 CI</a></li>
-<li><a href="lab-4/">실습 4-4 팀 구성</a></li>
 </ul>
 
 
