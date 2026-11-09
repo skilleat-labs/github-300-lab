@@ -121,3 +121,9 @@
 
 - (2026-11-09 확인) github.com/copilot에서 이슈 초안 만들기(public preview): 프롬프트에 OWNER/REPO, 제목·본문·라벨·담당자 초안, 여러 개를 한 번에 요청하면 각각 초안, 검토 후 Create. 새 라벨을 만드는지는 문서에 없음. 플랜별 제공 여부 문서에 없음. https://docs.github.com/en/copilot/how-tos/copilot-on-github/copilot-for-github-tasks/use-copilot-to-create-or-update-issues
 - (2026-11-09 강사 확인) Copilot Pro 계정에서 github.com/copilot 이슈 초안 만들기가 동작함. 5-1, 5-3, 6-3 이슈 만들기를 이 방법으로 바꿈.
+
+## Copilot 가족 (2026-11-09 확인, 오프닝 장)
+- Microsoft 365 Copilot (Premium): Word, Excel, PowerPoint, OneNote, Outlook, Teams 안에서 쓰고, 회사 데이터(메일, 파일, 회의, 일정 등)를 Microsoft Graph로 근거 삼아 답함. "Access scoped by user permissions". Copilot Chat (Basic)은 웹 데이터 기반, 회사 자료는 직접 올리거나 열린 내용으로. "The Microsoft 365 Copilot app is now called Microsoft Copilot." 다른 Copilot 제품(Security Copilot, GitHub Copilot, Copilot Studio)은 "independently licensed". https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-overview
+- Copilot Studio: "a graphical, low-code studio for building and managing AI-powered agents and workflows", 회사 데이터와 시스템에 연결. 하네스 중 하나가 "GitHub Copilot harness". https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio
+- Security Copilot: 보안 담당자용. incident response, threat hunting, intelligence gathering, posture management. Defender XDR, Sentinel, Intune 등과 연동. https://learn.microsoft.com/en-us/copilot/security/microsoft-security-copilot
+- GitHub Copilot: "an AI assistant that helps you write, understand, and ship software." 코드 이해, 에이전트로 계획과 구현 후 PR, 코드 변경, 응답 사용자 지정, 코드와 PR 리뷰. "A change can start as an issue, be picked up by an agent, return as a pull request." https://docs.github.com/en/copilot/get-started/what-is-github-copilot
