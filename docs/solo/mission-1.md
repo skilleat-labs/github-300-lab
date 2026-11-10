@@ -25,7 +25,8 @@ flowchart LR
     B --> C["브랜치에서<br/>Copilot으로 구현"]
     C --> D["PR 열기, CI"]
     D --> E["충돌 해결"]
-    E --> F["병합, 이슈 닫힘"]
+    E --> R["Copilot 리뷰"]
+    R --> F["병합, 이슈 닫힘"]
 ```
 
 ## STEP 1. 이슈 4개 등록하기
@@ -283,7 +284,26 @@ python -m booking add --room R1 --title 정원딱맞음 --date 2026-11-13 --star
 !!! warning "충돌 해결은 최종 내용을 정하는 일입니다"
     같은 파일이라도 다른 줄을 고쳤으면 보통 자동으로 합쳐집니다. 같은 자리를 서로 다르게 고쳤을 때만 사람이 정합니다. 이번에는 둘 다 필요하므로 모두 남깁니다. 빨리 없애려고 한쪽을 지우면 기능이 조용히 사라집니다. Copilot이 합친 코드도 그대로 믿지 말고 직접 봅니다.
 
-## STEP 9. 병합하고 마무리하기
+## STEP 9. Copilot에게 코드 리뷰 받기
+
+혼자 하는 리포지토리에는 리뷰해 줄 동료가 없습니다. 내 PR은 내가 승인할 수도 없습니다. 대신 Copilot을 리뷰어로 지정합니다.
+
+!!! warning "이 PR에 1회만 합니다"
+    Copilot 코드 리뷰는 AI Credits를 씁니다. 1회 약 150크레딧(Balanced 기준)입니다.
+
+1. PR 오른쪽 **Reviewers**(검토자)를 봅니다.
+2. **Copilot** 옆 **Request**(요청)를 클릭합니다. 목록에 없으면 톱니를 눌러 **Copilot**을 고릅니다.
+3. 몇 분 기다리면 **Conversation** 탭에 Copilot의 리뷰와 줄별 댓글이 달립니다.
+4. 댓글을 하나씩 읽고 판단합니다.
+    - 맞는 지적이면 VS Code `capacity-check` 브랜치에서 Copilot과 고치고 커밋, **Sync Changes**를 합니다. 같은 PR에 이어 붙습니다.
+    - 이번 범위가 아니거나 틀린 지적이면 댓글에 이유를 한 줄 답하고 **Resolve conversation**을 클릭합니다.
+
+확인: **Conversation** 탭에 Copilot 리뷰가 있고, 댓글마다 반영했거나 이유를 답했습니다.
+
+!!! note "Copilot 리뷰는 의견입니다"
+    Copilot은 댓글만 남기고 승인이나 반려는 하지 않습니다. 받아들일지는 사람이 정합니다. **Reviewers**에 Copilot이 안 보이면 계정이나 조직 정책에서 꺼져 있는 것입니다. 이 STEP을 건너뜁니다.
+
+## STEP 10. 병합하고 마무리하기
 
 1. **테스트 / test**가 초록이면 **Merge pull request** → **Confirm merge**를 클릭합니다.
 2. **Delete branch**를 클릭합니다.
@@ -302,6 +322,7 @@ python -m booking add --room R1 --title 정원딱맞음 --date 2026-11-13 --star
 - [ ] 이슈 4개를 등록했고, S1과 S4는 닫았다
 - [ ] `capacity-check` 브랜치에서 Copilot으로 S2를 구현하고 직접 확인했다
 - [ ] PR에서 충돌을 보고, 양쪽을 모두 남겨 해결했다
+- [ ] Copilot 코드 리뷰를 1회 받고 댓글을 판단했다
 - [ ] **테스트 / test**가 초록인 상태에서 병합했다
 - [ ] S2 이슈가 자동으로 닫혔다
 
@@ -310,7 +331,7 @@ python -m booking add --room R1 --title 정원딱맞음 --date 2026-11-13 --star
 ## 막히면
 
 ??? failure "PR에 충돌 표시가 안 나와요"
-    STEP 6의 주석을 `return errors` 바로 윗줄이 아닌 곳에 넣었거나, Copilot이 정원 검사를 다른 자리에 넣은 경우입니다. Git이 자동으로 합친 것이라 문제는 아닙니다. 그대로 STEP 9로 갑니다. 충돌을 꼭 보고 싶으면 github.com에서 main의 `rules.py`에서 내 PR이 고친 줄(**Files changed** 탭의 초록 줄 바로 위아래)을 한 번 더 고칩니다.
+    STEP 6의 주석을 `return errors` 바로 윗줄이 아닌 곳에 넣었거나, Copilot이 정원 검사를 다른 자리에 넣은 경우입니다. Git이 자동으로 합친 것이라 문제는 아닙니다. 그대로 STEP 9로 넘어갑니다. 충돌을 꼭 보고 싶으면 github.com에서 main의 `rules.py`에서 내 PR이 고친 줄(**Files changed** 탭의 초록 줄 바로 위아래)을 한 번 더 고칩니다.
 
 ??? failure "Resolve conflicts 버튼이 회색이에요"
     github.com 편집기로 풀 수 없는 충돌입니다. STEP 8의 **VS Code에서** 탭으로 합니다.
