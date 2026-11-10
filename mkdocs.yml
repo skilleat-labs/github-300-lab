@@ -68,6 +68,9 @@ nav:
       - 실습 4-1 브랜치와 계획: class4/lab-1.md
       - 실습 4-2 에이전트로 구현하고 테스트: class4/lab-2.md
       - 실습 4-3 PR과 CI: class4/lab-3.md
+  - 5~6교시 개인 실습 (팀 실습 대신):
+      - 개인 미션 1 스토리 하나를 끝까지: solo/mission-1.md
+      - 개인 미션 2 배포 자동화: solo/mission-2.md
   - 5교시 팀 실습 ①:
       - 교안과 역할 카드: class5/index.md
       - 미션 5-0 팀 리포지토리 만들기: class5/mission-0.md
